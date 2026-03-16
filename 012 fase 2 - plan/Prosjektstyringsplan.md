@@ -40,7 +40,7 @@ Bedriften håndterer et stort volum av fakturaer, og sen betaling etter forfalls
 
 ### Sponsor
 
-[Veileder ved Handelshøyskolen BI / Bedriften] er sponsor for dette prosjektet, ansvarlig for prosjektbudsjettet og myndighet for godkjenning av denne prosjektplanen og eventuelle endringer under gjennomføringen.
+Veileder fra HIM er sponsor for dette prosjektet, ansvarlig for godkjenning av denne prosjektplanen og eventuelle endringer under gjennomføringen.
 
 ### Kunde
 
@@ -194,20 +194,34 @@ Basert på Appel et al. (2020), som oppnådde 77 % nøyaktighet i tilsvarende pr
 
 ### Arbeidsnedbrytningsstruktur (WBS)
 
-| ID  | Leveranse                          | Eier            |
-|-----|------------------------------------|-----------------|
-| 1.0 | Fase 1 – Proposal                  | Magnus Ødegård  |
-| 2.0 | Fase 2 – Prosjektstyringsplan      | Magnus Ødegård  |
-| 3.0 | Datainnsamling og forberedelse     | Magnus Ødegård  |
-| 3.1 | Anonymisering og datarensing       | Magnus Ødegård  |
-| 3.2 | Eksplorativ dataanalyse (EDA)      | Magnus Ødegård  |
-| 4.0 | Modellutvikling                    | Magnus Ødegård  |
-| 4.1 | Feature engineering – fakturadata  | Magnus Ødegård  |
-| 4.2 | Feature engineering – historiske betalingsvariabler | Magnus Ødegård  |
-| 4.3 | Trening av kandidatmodeller        | Magnus Ødegård  |
-| 4.4 | Evaluering og modellvalg           | Magnus Ødegård  |
-| 5.0 | Fase 3 – Review                    | Magnus Ødegård  |
-| 6.0 | Fase 4 – Rapport og presentasjon   | Magnus Ødegård  |
+| ID    | Leveranse                                                         | Eier            |
+|-------|-------------------------------------------------------------------|-----------------|
+| 1.0   | Fase 1 – Proposal                                                 | Magnus Ødegård  |
+| 2.0   | Fase 2 – Prosjektstyringsplan                                     | Magnus Ødegård  |
+| 2.1   | Utarbeide og strukturere prosjektstyringsplan                     | Magnus Ødegård  |
+| 2.2   | Gjennomgang og godkjenning av veileder                            | Magnus Ødegård  |
+| 3.0   | Fase 3 – Gjennomføring (9. mar – 27. apr)                         | Magnus Ødegård  |
+| 3.1   | Introduksjon og problemstilling – første utkast                   | Magnus Ødegård  |
+| 3.2   | Teori og litteratursøk                                            | Magnus Ødegård  |
+| 3.2.1 | Søk og gjennomgang av relevante artikler                          | Magnus Ødegård  |
+| 3.2.2 | Oppsummering av teorigrunnlag for rapporten                       | Magnus Ødegård  |
+| 3.3   | Casebeskrivelse og datainnsamling                                 | Magnus Ødegård  |
+| 3.3.1 | Anonymisering og klargjøring av fakturadatasett                   | Magnus Ødegård  |
+| 3.3.2 | Eksplorativ dataanalyse (EDA)                                     | Magnus Ødegård  |
+| 3.4   | Data, metode og modellering (KI-implementasjon)                   | Magnus Ødegård  |
+| 3.4.1 | Feature engineering – fakturaspesifikke variabler                 | Magnus Ødegård  |
+| 3.4.2 | Feature engineering – historiske betalingsvariabler               | Magnus Ødegård  |
+| 3.4.3 | Trening av kandidatmodeller                                       | Magnus Ødegård  |
+| 3.4.4 | Hyperparameterjustering og modellvalg                             | Magnus Ødegård  |
+| 3.5   | Analyse og resultater – kjøre modeller og dokumentere funn        | Magnus Ødegård  |
+| 3.5.1 | Evaluering av modellytelse (AUC-ROC, F1-score, presisjon/recall)  | Magnus Ødegård  |
+| 3.5.2 | Klassifisering av fakturaer i risikoategorier                     | Magnus Ødegård  |
+| 3.6   | Diskusjon – tolke funn mot teori og problemstilling               | Magnus Ødegård  |
+| 3.7   | Peer-to-peer review av annen gruppes utkast                       | Magnus Ødegård  |
+| 4.0   | Fase 4 – Avslutning (27. apr – 31. mai)                           | Magnus Ødegård  |
+| 4.1   | Konklusjon – besvar problemstillingen eksplisitt                  | Magnus Ødegård  |
+| 4.2   | Ferdigstille introduksjon                                         | Magnus Ødegård  |
+| 4.3   | Kvalitetssikring, korrektur og referanseliste                     | Magnus Ødegård  |
 
 ### Omfangsverifikasjon
 
@@ -225,17 +239,7 @@ Proposal → Prosjektstyringsplan → Datainnsamling → EDA → Modellutvikling
 
 ### Gantt-plan
 
-| Fase / Leveranse                   | Start      | Slutt      |
-|------------------------------------|------------|------------|
-| Fase 1 – Proposal                  | 2026-01-13 | 2026-02-23 | Ferdig
-| Fase 2 – Prosjektstyringsplan      | 2026-02-23 | 2026-03-27 | Jobbes med
-| Datainnsamling og forberedelse     | 2026-02-23 | 2026-04-11 | Behov for data fra veileder
-| Eksplorativ dataanalyse (EDA)      | 2026-04-04 | 2026-04-18 |
-| Modellutvikling og evaluering      | 2026-04-18 | 2026-05-09 |
-| Fase 3 – Review                    | 2026-05-09 | 2026-05-16 |
-| Fase 4 – Rapport og presentasjon   | 2026-05-16 | 2026-05-30 |
-
-Siste first 1.Juni
+Skrives i MS-project og legges ved i TEAMS-delt mappe ved "G-17 - MAGNUS INDIVIDUELL" . Oppdateres jevnlig ved nådde tidsfrister og vis det oppdages ekstra oppgaver som kreves planlegging i henhold til gantt plan. 
 
 ### Kritisk linje
 
@@ -249,12 +253,12 @@ Forsinkelse i noen av disse fasene vil direkte påvirke sluttleveransen.
 
 | Milepæl                              | Planlagt dato |
 |--------------------------------------|---------------|
-| Godkjent proposal (Fase 1)           | 2026-02-23    |
-| Godkjent prosjektstyringsplan        | 2026-03-27    |
-| Ferdig datagrunnlag                  | 2026-04-11    | Behov for data fra veileder
+| Godkjent proposal (Fase 1)           | 2026-02-09    |
+| Godkjent prosjektstyringsplan(fase 2)| 2026-03-17    |
+| Ferdig datagrunnlag (fase 3)         | 2026-04-11    | Behov for data fra veileder
 | Ferdig EDA og feature engineering    | 2026-04-18    |
 | Ferdig og evaluert modell            | 2026-05-09    |
-| Innlevert endelig rapport (Fase 4)   | 2026-05-30    |
+| Innlevert endelig rapport (Fase 4)   | 2026-05-31    |
 
 ---
 
@@ -351,7 +355,7 @@ Appel et al. (2020) oppnådde 77 % nøyaktighet i et tilsvarende prediksjonsprob
 
 ## Anskaffelser
 
-Prosjektet benytter kun åpen kildekode-programvare (Python, scikit-learn, pandas m.fl.) og internt datasett fra Bedriften. Ingen eksterne anskaffelser er planlagt.
+Prosjektet benytter kun åpen kildekode-programvare som Python og internt datasett fra Bedriften. Ingen eksterne anskaffelser er planlagt.
 
 ---
 
@@ -377,27 +381,4 @@ Mindre justeringer som ikke påvirker prosjektmålet eller sluttleveransen kan g
 
 *(Se tabell under Omfang)*
 
-### Vedlegg C – Saksliste
 
-| Sak | Status | Ansvarlig | Frist |
-|-----|--------|-----------|-------|
-| –   | –      | –         | –     |
-
-### Vedlegg D – Mal for månedlig rapport
-
-*(Ikke aktuelt for individuelt studentprosjekt – erstattes av statusoppdatering til veileder)*
-
-### Vedlegg E – Mal for brukerreview
-
-*(Ikke aktuelt – gjennomføres som egenvurdering og veiledertilbakemelding)*
-
-### Vedlegg F – Skjema for endringsforespørsel
-
-| Felt                        | Beskrivelse |
-|-----------------------------|-------------|
-| Dato                        |             |
-| Beskrivelse av endring      |             |
-| Begrunnelse                 |             |
-| Konsekvens for omfang       |             |
-| Konsekvens for fremdrift    |             |
-| Beslutning / Godkjenning    |             |
