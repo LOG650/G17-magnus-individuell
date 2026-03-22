@@ -1,0 +1,1001 @@
+Faktura-ID,Leverandør-ID,Fakturabeløp (NOK),Fakturadato,Forfallsdato,Faktisk betalingsdato,Betalingsstatus,Dager forsinket,Betalingsbetingelser,INCOTERMS,Kontrakttype,Leverandørkategori,Gj.snitt dager forsinket (leverandør),Antall fakturaer (leverandør),Risikokategori leverandør
+FAK-0001,LEV-004,195700,2023-01-01,2023-04-01,2023-03-26,Betalt,0,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0002,LEV-019,526100,2023-01-02,2023-01-16,2023-01-06,Betalt,0,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0003,LEV-005,682800,2023-01-03,2023-02-02,2023-01-23,Betalt,0,Netto 30,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0004,LEV-027,253000,2023-01-04,2023-01-14,2023-01-06,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0005,LEV-012,184700,2023-01-06,2023-03-07,2023-04-11,Forsinket,35,Netto 60,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0006,LEV-005,573100,2023-01-09,2023-01-19,2023-02-19,Forsinket,31,Netto 10,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0007,LEV-037,193600,2023-01-09,2023-04-09,2023-05-10,Forsinket,31,Netto 90,EXW,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0008,LEV-017,473600,2023-01-10,2023-03-11,2023-03-02,Betalt,0,Netto 60,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0009,LEV-036,77700,2023-01-11,2023-03-12,2023-03-08,Betalt,0,Netto 60,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0010,LEV-017,332400,2023-01-12,2023-03-13,2023-04-11,Forsinket,29,Netto 60,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0011,LEV-036,398100,2023-01-13,2023-02-12,2023-02-08,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0012,LEV-023,109400,2023-01-15,2023-03-16,2023-03-14,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0013,LEV-012,508900,2023-01-17,2023-03-18,2023-03-12,Betalt,0,Netto 60,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0014,LEV-012,41100,2023-01-18,2023-04-18,2023-04-16,Betalt,0,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0015,LEV-037,69300,2023-01-19,2023-04-19,2023-06-18,Forsinket,60,Netto 90,EXW,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0016,LEV-018,47700,2023-01-19,2023-01-29,2023-03-09,Forsinket,39,Netto 10,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0017,LEV-010,9400,2023-01-20,2023-01-30,2023-02-10,Forsinket,11,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0018,LEV-017,717700,2023-01-20,2023-02-03,2023-03-03,Forsinket,28,Netto 14,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0019,LEV-009,50400,2023-01-20,2023-03-06,2023-03-02,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0020,LEV-034,575500,2023-01-24,2023-02-07,2023-01-28,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0021,LEV-032,545300,2023-01-24,2023-02-07,2023-01-29,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0022,LEV-019,505900,2023-01-25,2023-02-08,2023-02-03,Betalt,0,Netto 14,FOB,Minikonkurranse,IT,13.9,32,Høy
+FAK-0023,LEV-014,440900,2023-01-25,2023-03-11,2023-03-08,Betalt,0,Netto 45,FOB,Rammeavtale,IT,4.4,29,Medium
+FAK-0024,LEV-012,86400,2023-01-27,2023-03-28,2023-05-17,Forsinket,50,Netto 60,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0025,LEV-023,14300,2023-01-27,2023-03-28,2023-05-21,Forsinket,54,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0026,LEV-010,7100,2023-01-29,2023-02-08,2023-03-29,Forsinket,49,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0027,LEV-006,170800,2023-01-29,2023-03-30,2023-03-27,Betalt,0,Netto 60,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0028,LEV-006,81500,2023-01-29,2023-03-30,2023-05-01,Forsinket,32,Netto 60,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0029,LEV-022,72900,2023-02-01,2023-02-15,2023-04-03,Forsinket,47,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0030,LEV-007,379800,2023-02-02,2023-03-04,2023-04-19,Forsinket,46,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0031,LEV-034,406000,2023-02-03,2023-02-17,2023-02-10,Betalt,0,Netto 14,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0032,LEV-038,58300,2023-02-04,2023-05-05,2023-04-25,Betalt,0,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0033,LEV-033,229800,2023-02-06,2023-02-16,2023-02-12,Betalt,0,Netto 10,CFR,Rammeavtale,Konsulenttjenester,12.4,12,Høy
+FAK-0034,LEV-028,47100,2023-02-07,2023-02-21,2023-02-11,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0035,LEV-010,27300,2023-02-09,2023-02-19,2023-02-17,Betalt,0,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0036,LEV-009,33700,2023-02-10,2023-03-27,2023-03-26,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0037,LEV-036,420500,2023-02-11,2023-04-12,2023-04-09,Betalt,0,Netto 60,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0038,LEV-002,38100,2023-02-15,2023-04-16,2023-04-08,Betalt,0,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0039,LEV-006,236200,2023-02-20,2023-03-02,2023-03-29,Forsinket,27,Netto 10,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0040,LEV-019,177400,2023-02-21,2023-03-07,2023-04-06,Forsinket,30,Netto 14,FOB,Minikonkurranse,IT,13.9,32,Høy
+FAK-0041,LEV-009,61200,2023-02-23,2023-04-09,2023-04-03,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0042,LEV-005,568000,2023-02-23,2023-03-25,2023-03-23,Betalt,0,Netto 30,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0043,LEV-026,394600,2023-02-23,2023-03-25,2023-03-24,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0044,LEV-032,833100,2023-02-24,2023-03-26,2023-03-21,Betalt,0,Netto 30,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0045,LEV-028,84700,2023-02-24,2023-03-10,2023-03-08,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0046,LEV-003,761000,2023-02-24,2023-05-25,2023-05-20,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0047,LEV-019,463200,2023-02-25,2023-03-11,2023-03-08,Betalt,0,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0048,LEV-007,626800,2023-02-25,2023-03-27,2023-03-21,Betalt,0,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0049,LEV-028,128800,2023-02-26,2023-03-12,2023-03-12,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0050,LEV-012,406200,2023-02-27,2023-04-28,2023-05-11,Forsinket,13,Netto 60,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0051,LEV-036,286600,2023-02-28,2023-03-30,2023-03-21,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0052,LEV-031,599800,2023-03-01,2023-04-30,2023-05-13,Forsinket,13,Netto 60,EXW,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0053,LEV-015,1293100,2023-03-01,2023-03-11,2023-03-07,Betalt,0,Netto 10,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0054,LEV-010,4900,2023-03-02,2023-03-12,2023-03-04,Betalt,0,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0055,LEV-012,541200,2023-03-03,2023-06-01,2023-05-29,Betalt,0,Netto 90,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0056,LEV-003,713900,2023-03-04,2023-06-02,2023-05-29,Betalt,0,Netto 90,CIP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0057,LEV-013,197800,2023-03-05,2023-03-15,2023-03-07,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0058,LEV-014,742800,2023-03-05,2023-04-19,2023-04-11,Betalt,0,Netto 45,DAP,Rammeavtale,IT,4.4,29,Medium
+FAK-0059,LEV-025,117500,2023-03-06,2023-03-16,2023-03-15,Betalt,0,Netto 10,FCA,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0060,LEV-012,359800,2023-03-06,2023-05-05,2023-04-28,Betalt,0,Netto 60,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0061,LEV-024,83300,2023-03-09,2023-03-19,2023-03-13,Betalt,0,Netto 10,DDP,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0062,LEV-033,291600,2023-03-09,2023-03-19,2023-05-04,Forsinket,46,Netto 10,CFR,Rammeavtale,Konsulenttjenester,12.4,12,Høy
+FAK-0063,LEV-002,31900,2023-03-10,2023-05-09,2023-05-03,Betalt,0,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0064,LEV-011,28900,2023-03-13,2023-03-27,2023-04-25,Forsinket,29,Netto 14,CIF,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0065,LEV-001,84400,2023-03-13,2023-06-11,2023-06-07,Betalt,0,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0066,LEV-028,137900,2023-03-15,2023-03-29,2023-03-23,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0067,LEV-028,46700,2023-03-15,2023-03-29,2023-03-28,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0068,LEV-003,242000,2023-03-15,2023-06-13,2023-06-10,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0069,LEV-010,14100,2023-03-17,2023-03-27,2023-03-23,Betalt,0,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0070,LEV-027,529900,2023-03-17,2023-03-27,2023-03-21,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0071,LEV-038,28600,2023-03-17,2023-06-15,2023-06-05,Betalt,0,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0072,LEV-001,47700,2023-03-18,2023-06-16,2023-06-12,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0073,LEV-009,15500,2023-03-19,2023-05-03,2023-05-01,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0074,LEV-024,147700,2023-03-20,2023-03-30,2023-03-21,Betalt,0,Netto 10,DPU,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0075,LEV-002,27700,2023-03-22,2023-05-21,2023-06-28,Forsinket,38,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0076,LEV-004,233200,2023-03-22,2023-06-20,2023-07-11,Forsinket,21,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0077,LEV-028,75700,2023-03-22,2023-04-05,2023-04-03,Betalt,0,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0078,LEV-016,1137900,2023-03-25,2023-05-24,2023-06-29,Forsinket,36,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0079,LEV-006,197000,2023-03-26,2023-04-05,2023-04-05,Betalt,0,Netto 10,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0080,LEV-026,188700,2023-03-26,2023-04-25,2023-04-22,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0081,LEV-032,869400,2023-03-27,2023-04-26,2023-05-03,Forsinket,7,Netto 30,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0082,LEV-032,357000,2023-03-29,2023-04-28,2023-04-27,Betalt,0,Netto 30,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0083,LEV-016,564600,2023-03-30,2023-05-29,2023-05-19,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0084,LEV-032,1050300,2023-03-30,2023-04-13,2023-04-25,Forsinket,12,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0085,LEV-004,376100,2023-04-01,2023-06-30,2023-06-20,Betalt,0,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0086,LEV-012,344800,2023-04-02,2023-07-01,2023-08-12,Forsinket,42,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0087,LEV-028,26600,2023-04-04,2023-04-18,2023-04-25,Forsinket,7,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0088,LEV-026,776600,2023-04-07,2023-05-07,2023-05-07,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0089,LEV-011,39800,2023-04-08,2023-05-23,2023-05-27,Forsinket,4,Netto 45,CIF,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0090,LEV-010,18500,2023-04-10,2023-04-20,2023-04-22,Forsinket,2,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0091,LEV-024,64400,2023-04-11,2023-04-21,2023-04-17,Betalt,0,Netto 10,DDP,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0092,LEV-009,17700,2023-04-14,2023-05-29,2023-06-25,Forsinket,27,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0093,LEV-005,543600,2023-04-14,2023-04-24,2023-04-21,Betalt,0,Netto 10,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0094,LEV-001,75700,2023-04-17,2023-07-16,2023-07-16,Betalt,0,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0095,LEV-014,404800,2023-04-18,2023-06-02,2023-05-31,Betalt,0,Netto 45,DAP,Rammeavtale,IT,4.4,29,Medium
+FAK-0096,LEV-025,41200,2023-04-19,2023-04-29,2023-06-12,Forsinket,44,Netto 10,DPU,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0097,LEV-022,95000,2023-04-20,2023-05-04,2023-05-24,Forsinket,20,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0098,LEV-018,25700,2023-04-20,2023-05-04,2023-04-25,Betalt,0,Netto 14,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0099,LEV-003,546200,2023-04-21,2023-07-20,2023-07-11,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0100,LEV-014,635500,2023-04-22,2023-06-21,2023-07-24,Forsinket,33,Netto 60,EXW,Rammeavtale,IT,4.4,29,Medium
+FAK-0101,LEV-002,28900,2023-04-23,2023-06-22,2023-06-15,Betalt,0,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0102,LEV-017,688400,2023-04-23,2023-06-22,2023-08-09,Forsinket,48,Netto 60,DPU,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0103,LEV-003,203200,2023-04-25,2023-07-24,2023-07-21,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0104,LEV-017,89400,2023-04-27,2023-06-26,2023-06-17,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0105,LEV-001,17000,2023-04-27,2023-07-26,2023-07-17,Betalt,0,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0106,LEV-010,20600,2023-04-28,2023-05-08,2023-05-02,Betalt,0,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0107,LEV-028,72600,2023-04-29,2023-05-13,2023-05-21,Forsinket,8,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0108,LEV-015,874000,2023-04-30,2023-05-30,2023-05-24,Betalt,0,Netto 30,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0109,LEV-017,618500,2023-05-01,2023-05-15,2023-06-27,Forsinket,43,Netto 14,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0110,LEV-003,634100,2023-05-01,2023-07-30,2023-08-30,Forsinket,31,Netto 90,DDP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0111,LEV-032,1009600,2023-05-03,2023-05-17,2023-05-10,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0112,LEV-040,90100,2023-05-04,2023-06-03,2023-05-28,Betalt,0,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0113,LEV-003,720000,2023-05-05,2023-08-03,2023-09-29,Forsinket,57,Netto 90,CIP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0114,LEV-028,78300,2023-05-06,2023-05-20,2023-05-20,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0115,LEV-008,49100,2023-05-09,2023-06-08,2023-06-01,Betalt,0,Netto 30,CIP,Rammeavtale,Renhold,13.8,12,Høy
+FAK-0116,LEV-001,29800,2023-05-09,2023-08-07,2023-09-10,Forsinket,34,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0117,LEV-024,103900,2023-05-10,2023-05-20,2023-07-12,Forsinket,53,Netto 10,DDP,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0118,LEV-009,56000,2023-05-10,2023-06-24,2023-06-21,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0119,LEV-003,498100,2023-05-13,2023-08-11,2023-08-05,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0120,LEV-005,140400,2023-05-15,2023-06-14,2023-07-31,Forsinket,47,Netto 30,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0121,LEV-031,420800,2023-05-16,2023-07-15,2023-08-06,Forsinket,22,Netto 60,CFR,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0122,LEV-039,55300,2023-05-16,2023-07-15,2023-08-22,Forsinket,38,Netto 60,DPU,Enkeltkontrakt,Transport,9.4,8,Medium
+FAK-0123,LEV-013,213800,2023-05-18,2023-05-28,2023-06-13,Forsinket,16,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0124,LEV-003,428100,2023-05-19,2023-08-17,2023-08-20,Forsinket,3,Netto 90,DDP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0125,LEV-008,48400,2023-05-19,2023-06-18,2023-08-04,Forsinket,47,Netto 30,DAP,Rammeavtale,Renhold,13.8,12,Høy
+FAK-0126,LEV-012,505500,2023-05-21,2023-08-19,2023-08-10,Betalt,0,Netto 90,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0127,LEV-019,113200,2023-05-22,2023-06-05,2023-05-28,Betalt,0,Netto 14,FAS,Minikonkurranse,IT,13.9,32,Høy
+FAK-0128,LEV-040,115100,2023-05-22,2023-06-21,2023-07-11,Forsinket,20,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0129,LEV-028,45800,2023-05-23,2023-06-06,2023-06-04,Betalt,0,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0130,LEV-009,42400,2023-05-23,2023-07-07,2023-07-02,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0131,LEV-006,232800,2023-05-23,2023-06-02,2023-05-24,Betalt,0,Netto 10,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0132,LEV-026,526100,2023-05-26,2023-06-25,2023-06-25,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0133,LEV-009,88600,2023-05-26,2023-07-10,2023-07-19,Forsinket,9,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0134,LEV-017,715200,2023-05-26,2023-07-25,2023-09-19,Forsinket,56,Netto 60,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0135,LEV-022,27400,2023-05-26,2023-06-09,2023-06-13,Forsinket,4,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0136,LEV-032,557000,2023-05-30,2023-06-13,2023-06-04,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0137,LEV-007,192300,2023-06-01,2023-07-01,2023-07-30,Forsinket,29,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0138,LEV-017,98800,2023-06-02,2023-08-01,2023-08-04,Forsinket,3,Netto 60,DPU,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0139,LEV-011,14600,2023-06-02,2023-06-16,2023-06-24,Forsinket,8,Netto 14,CIF,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0140,LEV-005,463500,2023-06-03,2023-06-13,2023-06-06,Betalt,0,Netto 10,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0141,LEV-023,104600,2023-06-04,2023-08-03,2023-08-02,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0142,LEV-008,44600,2023-06-04,2023-07-04,2023-06-28,Betalt,0,Netto 30,DAP,Rammeavtale,Renhold,13.8,12,Høy
+FAK-0143,LEV-028,99700,2023-06-05,2023-06-19,2023-06-12,Betalt,0,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0144,LEV-006,70500,2023-06-06,2023-08-05,2023-08-05,Betalt,0,Netto 60,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0145,LEV-010,19900,2023-06-07,2023-06-17,2023-06-08,Betalt,0,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0146,LEV-016,1064200,2023-06-09,2023-08-08,2023-08-08,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0147,LEV-003,545400,2023-06-09,2023-09-07,2023-09-02,Betalt,0,Netto 90,CIP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0148,LEV-017,518600,2023-06-10,2023-08-09,2023-08-09,Betalt,0,Netto 60,DPU,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0149,LEV-005,186500,2023-06-10,2023-07-10,2023-07-07,Betalt,0,Netto 30,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0150,LEV-008,45400,2023-06-11,2023-07-11,2023-07-04,Betalt,0,Netto 30,DAP,Rammeavtale,Renhold,13.8,12,Høy
+FAK-0151,LEV-015,592800,2023-06-11,2023-07-11,2023-07-08,Betalt,0,Netto 30,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0152,LEV-017,513300,2023-06-12,2023-06-26,2023-07-14,Forsinket,18,Netto 14,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0153,LEV-025,102500,2023-06-13,2023-06-23,2023-06-15,Betalt,0,Netto 10,DPU,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0154,LEV-012,446800,2023-06-14,2023-08-13,2023-09-23,Forsinket,41,Netto 60,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0155,LEV-022,32200,2023-06-15,2023-06-29,2023-08-27,Forsinket,59,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0156,LEV-006,196200,2023-06-19,2023-08-18,2023-08-12,Betalt,0,Netto 60,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0157,LEV-024,82700,2023-06-21,2023-07-01,2023-06-25,Betalt,0,Netto 10,DDP,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0158,LEV-016,820200,2023-06-22,2023-08-21,2023-08-18,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0159,LEV-026,726000,2023-06-22,2023-07-22,2023-07-13,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0160,LEV-018,14100,2023-06-23,2023-07-03,2023-06-27,Betalt,0,Netto 10,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0161,LEV-031,694300,2023-06-23,2023-08-22,2023-08-16,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0162,LEV-009,45900,2023-06-23,2023-08-07,2023-07-30,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0163,LEV-002,26600,2023-06-24,2023-08-23,2023-09-15,Forsinket,23,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0164,LEV-003,451700,2023-07-02,2023-09-30,2023-09-24,Betalt,0,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0165,LEV-001,28500,2023-07-02,2023-09-30,2023-09-27,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0166,LEV-024,70000,2023-07-02,2023-07-12,2023-07-05,Betalt,0,Netto 10,DDP,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0167,LEV-038,284600,2023-07-04,2023-10-02,2023-09-28,Betalt,0,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0168,LEV-010,4900,2023-07-05,2023-07-15,2023-08-29,Forsinket,45,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0169,LEV-012,301200,2023-07-05,2023-09-03,2023-08-26,Betalt,0,Netto 60,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0170,LEV-038,258400,2023-07-07,2023-10-05,2023-09-30,Betalt,0,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0171,LEV-016,136200,2023-07-10,2023-09-08,2023-09-01,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0172,LEV-014,129200,2023-07-10,2023-08-24,2023-08-19,Betalt,0,Netto 45,EXW,Rammeavtale,IT,4.4,29,Medium
+FAK-0173,LEV-006,59300,2023-07-10,2023-09-08,2023-09-04,Betalt,0,Netto 60,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0174,LEV-015,343100,2023-07-14,2023-07-24,2023-07-17,Betalt,0,Netto 10,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0175,LEV-025,48400,2023-07-15,2023-07-25,2023-07-25,Betalt,0,Netto 10,DPU,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0176,LEV-038,289700,2023-07-15,2023-10-13,2023-10-31,Forsinket,18,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0177,LEV-017,773100,2023-07-15,2023-09-13,2023-10-20,Forsinket,37,Netto 60,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0178,LEV-004,606000,2023-07-15,2023-10-13,2023-10-13,Betalt,0,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0179,LEV-012,116300,2023-07-16,2023-10-14,2023-10-28,Forsinket,14,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0180,LEV-020,174000,2023-07-19,2023-10-17,2023-10-15,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,Energi,4.0,13,Medium
+FAK-0181,LEV-027,169600,2023-07-19,2023-07-29,2023-07-24,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0182,LEV-032,1082000,2023-07-19,2023-08-18,2023-10-03,Forsinket,46,Netto 30,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0183,LEV-038,41500,2023-07-19,2023-10-17,2023-11-28,Forsinket,42,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0184,LEV-001,100100,2023-07-22,2023-10-20,2023-10-19,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0185,LEV-040,51800,2023-07-25,2023-08-24,2023-08-14,Betalt,0,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0186,LEV-015,410800,2023-07-25,2023-08-04,2023-08-03,Betalt,0,Netto 10,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0187,LEV-009,13800,2023-07-26,2023-09-09,2023-08-30,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0188,LEV-015,1338500,2023-07-28,2023-08-07,2023-08-01,Betalt,0,Netto 10,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0189,LEV-012,200900,2023-07-29,2023-10-27,2023-10-20,Betalt,0,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0190,LEV-024,107300,2023-07-30,2023-08-09,2023-08-02,Betalt,0,Netto 10,DPU,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0191,LEV-039,47500,2023-07-31,2023-09-29,2023-09-28,Betalt,0,Netto 60,DPU,Enkeltkontrakt,Transport,9.4,8,Medium
+FAK-0192,LEV-009,91100,2023-08-01,2023-09-15,2023-09-13,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0193,LEV-034,744900,2023-08-01,2023-08-11,2023-08-02,Betalt,0,Netto 10,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0194,LEV-040,51800,2023-08-01,2023-08-31,2023-10-14,Forsinket,44,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0195,LEV-009,79100,2023-08-02,2023-09-16,2023-09-07,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0196,LEV-034,1128000,2023-08-05,2023-08-19,2023-08-16,Betalt,0,Netto 14,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0197,LEV-004,169600,2023-08-06,2023-11-04,2023-12-24,Forsinket,50,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0198,LEV-020,216000,2023-08-06,2023-11-04,2023-10-31,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,Energi,4.0,13,Medium
+FAK-0199,LEV-009,89300,2023-08-06,2023-09-20,2023-09-11,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0200,LEV-032,1196200,2023-08-07,2023-08-21,2023-08-21,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0201,LEV-016,475900,2023-08-08,2023-10-07,2023-10-06,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0202,LEV-004,799000,2023-08-08,2023-11-06,2023-12-11,Forsinket,35,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0203,LEV-007,756200,2023-08-08,2023-09-07,2023-10-05,Forsinket,28,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0204,LEV-014,756500,2023-08-13,2023-09-27,2023-09-27,Betalt,0,Netto 45,EXW,Rammeavtale,IT,4.4,29,Medium
+FAK-0205,LEV-010,6700,2023-08-14,2023-08-24,2023-08-18,Betalt,0,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0206,LEV-004,500800,2023-08-16,2023-11-14,2023-12-04,Forsinket,20,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0207,LEV-022,23600,2023-08-16,2023-08-30,2023-08-30,Betalt,0,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0208,LEV-021,487500,2023-08-16,2023-09-15,2023-09-15,Betalt,0,Netto 30,CFR,Enkeltkontrakt,Bygg,2.4,5,Medium
+FAK-0209,LEV-026,104100,2023-08-16,2023-09-15,2023-09-05,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0210,LEV-010,27500,2023-08-19,2023-08-29,2023-10-10,Forsinket,42,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0211,LEV-012,123900,2023-08-19,2023-10-18,2023-10-11,Betalt,0,Netto 60,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0212,LEV-006,65000,2023-08-19,2023-08-29,2023-10-28,Forsinket,60,Netto 10,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0213,LEV-017,566900,2023-08-19,2023-09-02,2023-08-26,Betalt,0,Netto 14,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0214,LEV-006,118800,2023-08-20,2023-08-30,2023-08-21,Betalt,0,Netto 10,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0215,LEV-017,561800,2023-08-20,2023-10-19,2023-10-13,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0216,LEV-015,571200,2023-08-21,2023-09-20,2023-09-12,Betalt,0,Netto 30,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0217,LEV-005,752000,2023-08-23,2023-09-02,2023-08-29,Betalt,0,Netto 10,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0218,LEV-004,785900,2023-08-23,2023-11-21,2023-11-14,Betalt,0,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0219,LEV-028,137600,2023-08-23,2023-09-06,2023-09-03,Betalt,0,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0220,LEV-012,546600,2023-08-26,2023-11-24,2023-12-03,Forsinket,9,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0221,LEV-015,280000,2023-08-26,2023-09-05,2023-09-03,Betalt,0,Netto 10,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0222,LEV-003,327200,2023-08-26,2023-11-24,2023-11-21,Betalt,0,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0223,LEV-017,130100,2023-08-27,2023-09-10,2023-09-30,Forsinket,20,Netto 14,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0224,LEV-005,627700,2023-08-28,2023-09-27,2023-09-20,Betalt,0,Netto 30,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0225,LEV-008,15500,2023-08-29,2023-09-28,2023-09-21,Betalt,0,Netto 30,CIP,Rammeavtale,Renhold,13.8,12,Høy
+FAK-0226,LEV-003,310200,2023-08-31,2023-11-29,2023-11-28,Betalt,0,Netto 90,CIP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0227,LEV-030,323300,2023-09-01,2023-09-11,2023-09-07,Betalt,0,Netto 10,FCA,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0228,LEV-027,194800,2023-09-01,2023-09-11,2023-09-22,Forsinket,11,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0229,LEV-023,66500,2023-09-01,2023-10-31,2023-10-31,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0230,LEV-039,112300,2023-09-02,2023-11-01,2023-11-12,Forsinket,11,Netto 60,DPU,Enkeltkontrakt,Transport,9.4,8,Medium
+FAK-0231,LEV-013,141900,2023-09-03,2023-09-13,2023-09-12,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0232,LEV-017,476300,2023-09-05,2023-11-04,2023-12-04,Forsinket,30,Netto 60,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0233,LEV-006,53100,2023-09-05,2023-11-04,2023-11-15,Forsinket,11,Netto 60,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0234,LEV-012,410500,2023-09-07,2023-12-06,2023-12-02,Betalt,0,Netto 90,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0235,LEV-035,279600,2023-09-08,2023-12-07,2024-01-24,Forsinket,48,Netto 90,FCA,Minikonkurranse,Konsulenttjenester,22.9,11,Høy
+FAK-0236,LEV-012,453900,2023-09-09,2023-12-08,2023-12-26,Forsinket,18,Netto 90,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0237,LEV-036,176800,2023-09-10,2023-11-09,2023-11-30,Forsinket,21,Netto 60,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0238,LEV-023,27100,2023-09-10,2023-11-09,2023-11-09,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0239,LEV-020,94100,2023-09-10,2023-12-09,2023-12-05,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,Energi,4.0,13,Medium
+FAK-0240,LEV-001,75300,2023-09-11,2023-12-10,2023-12-10,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0241,LEV-036,202000,2023-09-11,2023-10-11,2023-10-11,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0242,LEV-001,17600,2023-09-11,2023-12-10,2023-12-05,Betalt,0,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0243,LEV-026,162600,2023-09-15,2023-10-15,2023-10-13,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0244,LEV-028,126200,2023-09-16,2023-09-30,2023-09-30,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0245,LEV-035,220800,2023-09-22,2023-12-21,2023-12-25,Forsinket,4,Netto 90,CPT,Minikonkurranse,Konsulenttjenester,22.9,11,Høy
+FAK-0246,LEV-003,684100,2023-09-24,2023-12-23,2024-02-03,Forsinket,42,Netto 90,CIP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0247,LEV-006,290700,2023-09-24,2023-11-23,2023-11-15,Betalt,0,Netto 60,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0248,LEV-002,49000,2023-09-25,2023-11-24,2024-01-21,Forsinket,58,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0249,LEV-008,39000,2023-09-26,2023-10-26,2023-11-27,Forsinket,32,Netto 30,DAP,Rammeavtale,Renhold,13.8,12,Høy
+FAK-0250,LEV-008,48100,2023-09-28,2023-10-28,2023-12-24,Forsinket,57,Netto 30,CIP,Rammeavtale,Renhold,13.8,12,Høy
+FAK-0251,LEV-015,1235500,2023-09-28,2023-10-28,2023-10-28,Betalt,0,Netto 30,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0252,LEV-037,520800,2023-09-28,2023-10-08,2023-11-05,Forsinket,28,Netto 10,DAP,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0253,LEV-034,366100,2023-09-29,2023-10-09,2023-10-03,Betalt,0,Netto 10,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0254,LEV-032,1182400,2023-09-29,2023-10-13,2023-10-11,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0255,LEV-014,134100,2023-09-30,2023-11-14,2023-11-12,Betalt,0,Netto 45,DAP,Rammeavtale,IT,4.4,29,Medium
+FAK-0256,LEV-024,67400,2023-10-01,2023-10-11,2023-10-11,Betalt,0,Netto 10,DDP,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0257,LEV-028,86300,2023-10-02,2023-10-16,2023-10-14,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0258,LEV-003,549800,2023-10-02,2023-12-31,2023-12-23,Betalt,0,Netto 90,CIP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0259,LEV-022,26100,2023-10-03,2023-10-17,2023-10-11,Betalt,0,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0260,LEV-017,292000,2023-10-03,2023-10-17,2023-12-10,Forsinket,54,Netto 14,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0261,LEV-004,663900,2023-10-05,2024-01-03,2023-12-24,Betalt,0,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0262,LEV-009,31600,2023-10-06,2023-11-20,2023-11-17,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0263,LEV-025,40400,2023-10-08,2023-10-18,2023-11-27,Forsinket,40,Netto 10,DPU,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0264,LEV-032,127000,2023-10-08,2023-11-07,2023-12-04,Forsinket,27,Netto 30,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0265,LEV-006,26600,2023-10-09,2023-10-19,2023-10-15,Betalt,0,Netto 10,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0266,LEV-015,353300,2023-10-09,2023-11-08,2023-11-07,Betalt,0,Netto 30,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0267,LEV-019,262100,2023-10-10,2023-10-24,2023-11-27,Forsinket,34,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0268,LEV-024,53500,2023-10-13,2023-10-23,2023-11-29,Forsinket,37,Netto 10,DDP,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0269,LEV-004,441400,2023-10-17,2024-01-15,2024-02-21,Forsinket,37,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0270,LEV-037,68700,2023-10-17,2024-01-15,2024-01-14,Betalt,0,Netto 90,EXW,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0271,LEV-006,159300,2023-10-19,2023-10-29,2023-10-24,Betalt,0,Netto 10,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0272,LEV-005,189600,2023-10-20,2023-10-30,2023-10-23,Betalt,0,Netto 10,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0273,LEV-009,58800,2023-10-20,2023-12-04,2023-12-04,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0274,LEV-026,266200,2023-10-21,2023-11-20,2023-11-12,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0275,LEV-020,211700,2023-10-23,2024-01-21,2024-01-11,Betalt,0,Netto 90,DPU,Åpen anbudskonkurranse,Energi,4.0,13,Medium
+FAK-0276,LEV-028,87300,2023-10-23,2023-11-06,2023-11-07,Forsinket,1,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0277,LEV-009,77300,2023-10-24,2023-12-08,2024-01-10,Forsinket,33,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0278,LEV-001,16900,2023-10-25,2024-01-23,2024-01-17,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0279,LEV-036,481000,2023-10-25,2023-11-24,2023-11-22,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0280,LEV-002,8500,2023-10-25,2023-12-24,2024-01-20,Forsinket,27,Netto 60,CIF,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0281,LEV-011,35300,2023-10-26,2023-11-09,2023-11-05,Betalt,0,Netto 14,CIF,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0282,LEV-015,956700,2023-10-26,2023-11-05,2023-11-21,Forsinket,16,Netto 10,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0283,LEV-033,381600,2023-10-27,2023-11-06,2023-11-04,Betalt,0,Netto 10,CFR,Rammeavtale,Konsulenttjenester,12.4,12,Høy
+FAK-0284,LEV-010,17800,2023-10-29,2023-11-08,2023-11-23,Forsinket,15,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0285,LEV-018,19000,2023-10-30,2023-11-13,2023-11-28,Forsinket,15,Netto 14,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0286,LEV-025,50100,2023-10-30,2023-11-09,2023-11-20,Forsinket,11,Netto 10,FCA,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0287,LEV-010,28400,2023-11-03,2023-11-13,2023-11-29,Forsinket,16,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0288,LEV-030,381500,2023-11-04,2023-11-14,2023-11-05,Betalt,0,Netto 10,FCA,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0289,LEV-030,554800,2023-11-05,2023-11-15,2023-11-10,Betalt,0,Netto 10,FCA,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0290,LEV-016,546800,2023-11-07,2024-01-06,2023-12-28,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0291,LEV-036,317100,2023-11-08,2023-12-08,2023-11-28,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0292,LEV-025,54100,2023-11-09,2023-11-19,2023-11-11,Betalt,0,Netto 10,DPU,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0293,LEV-024,90100,2023-11-09,2023-11-19,2023-11-30,Forsinket,11,Netto 10,DPU,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0294,LEV-033,573300,2023-11-10,2023-11-20,2023-11-14,Betalt,0,Netto 10,CFR,Rammeavtale,Konsulenttjenester,12.4,12,Høy
+FAK-0295,LEV-025,14500,2023-11-11,2023-11-21,2023-11-24,Forsinket,3,Netto 10,FCA,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0296,LEV-005,445000,2023-11-12,2023-11-22,2024-01-11,Forsinket,50,Netto 10,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0297,LEV-020,233100,2023-11-13,2024-02-11,2024-04-03,Forsinket,52,Netto 90,DDP,Åpen anbudskonkurranse,Energi,4.0,13,Medium
+FAK-0298,LEV-015,323500,2023-11-13,2023-12-13,2023-12-11,Betalt,0,Netto 30,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0299,LEV-036,566100,2023-11-13,2023-12-13,2023-12-05,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0300,LEV-001,66100,2023-11-14,2024-02-12,2024-03-22,Forsinket,39,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0301,LEV-017,675200,2023-11-14,2024-01-13,2024-01-10,Betalt,0,Netto 60,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0302,LEV-023,11900,2023-11-15,2024-01-14,2024-02-01,Forsinket,18,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0303,LEV-004,698100,2023-11-15,2024-02-13,2024-02-06,Betalt,0,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0304,LEV-022,67400,2023-11-17,2023-12-01,2023-11-30,Betalt,0,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0305,LEV-015,814900,2023-11-19,2023-12-19,2023-12-18,Betalt,0,Netto 30,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0306,LEV-004,206600,2023-11-19,2024-02-17,2024-02-16,Betalt,0,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0307,LEV-001,77100,2023-11-20,2024-02-18,2024-02-11,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0308,LEV-001,117400,2023-11-20,2024-02-18,2024-02-14,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0309,LEV-009,118400,2023-11-24,2024-01-08,2023-12-31,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0310,LEV-034,1355500,2023-11-25,2023-12-05,2023-11-30,Betalt,0,Netto 10,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0311,LEV-003,329900,2023-11-26,2024-02-24,2024-02-14,Betalt,0,Netto 90,CIP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0312,LEV-017,669500,2023-11-27,2024-01-26,2024-01-18,Betalt,0,Netto 60,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0313,LEV-036,190900,2023-11-27,2023-12-27,2023-12-22,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0314,LEV-018,30400,2023-11-28,2023-12-12,2023-12-16,Forsinket,4,Netto 14,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0315,LEV-016,624100,2023-12-01,2024-01-30,2024-01-21,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0316,LEV-006,80000,2023-12-02,2024-01-31,2024-01-25,Betalt,0,Netto 60,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0317,LEV-026,630300,2023-12-04,2024-01-03,2024-01-06,Forsinket,3,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0318,LEV-034,1139800,2023-12-05,2023-12-15,2023-12-11,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0319,LEV-001,36300,2023-12-06,2024-03-05,2024-03-04,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0320,LEV-012,476800,2023-12-08,2024-02-06,2024-02-01,Betalt,0,Netto 60,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0321,LEV-019,321800,2023-12-08,2023-12-22,2024-02-16,Forsinket,56,Netto 14,FAS,Minikonkurranse,IT,13.9,32,Høy
+FAK-0322,LEV-018,40200,2023-12-08,2023-12-18,2023-12-10,Betalt,0,Netto 10,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0323,LEV-031,730400,2023-12-08,2024-02-06,2024-01-27,Betalt,0,Netto 60,EXW,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0324,LEV-015,318300,2023-12-08,2023-12-18,2023-12-11,Betalt,0,Netto 10,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0325,LEV-038,237000,2023-12-09,2024-03-08,2024-03-01,Betalt,0,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0326,LEV-009,46900,2023-12-10,2024-01-24,2024-01-18,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0327,LEV-013,324700,2023-12-11,2023-12-21,2023-12-16,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0328,LEV-034,478900,2023-12-11,2023-12-25,2023-12-15,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0329,LEV-016,539100,2023-12-12,2024-02-10,2024-02-01,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0330,LEV-019,292900,2023-12-14,2023-12-28,2023-12-18,Betalt,0,Netto 14,FOB,Minikonkurranse,IT,13.9,32,Høy
+FAK-0331,LEV-037,215800,2023-12-22,2024-01-01,2024-01-01,Betalt,0,Netto 10,DDP,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0332,LEV-023,7100,2023-12-23,2024-02-21,2024-02-17,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0333,LEV-007,653900,2023-12-24,2024-01-23,2024-01-21,Betalt,0,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0334,LEV-001,19600,2023-12-24,2024-03-23,2024-03-15,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0335,LEV-012,465700,2023-12-26,2024-03-25,2024-05-21,Forsinket,57,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0336,LEV-017,164100,2023-12-26,2024-01-09,2024-01-18,Forsinket,9,Netto 14,CFR,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0337,LEV-027,506600,2023-12-27,2024-01-06,2024-01-06,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0338,LEV-031,341300,2023-12-27,2024-02-25,2024-02-15,Betalt,0,Netto 60,FCA,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0339,LEV-029,238700,2023-12-29,2024-03-28,2024-03-25,Betalt,0,Netto 90,EXW,Rammeavtale,Bygg,3.5,8,Medium
+FAK-0340,LEV-017,84500,2023-12-29,2024-02-27,2024-02-23,Betalt,0,Netto 60,DPU,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0341,LEV-003,106900,2023-12-31,2024-03-30,2024-03-23,Betalt,0,Netto 90,CIP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0342,LEV-038,158800,2023-12-31,2024-03-30,2024-05-29,Forsinket,60,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0343,LEV-035,303900,2024-01-01,2024-03-31,2024-03-27,Betalt,0,Netto 90,DAP,Minikonkurranse,Konsulenttjenester,22.9,11,Høy
+FAK-0344,LEV-033,166100,2024-01-01,2024-01-11,2024-01-05,Betalt,0,Netto 10,CFR,Rammeavtale,Konsulenttjenester,12.4,12,Høy
+FAK-0345,LEV-008,28700,2024-01-01,2024-01-31,2024-01-27,Betalt,0,Netto 30,CIP,Rammeavtale,Renhold,13.8,12,Høy
+FAK-0346,LEV-003,459700,2024-01-02,2024-04-01,2024-03-26,Betalt,0,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0347,LEV-024,19900,2024-01-04,2024-01-14,2024-02-24,Forsinket,41,Netto 10,CIF,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0348,LEV-019,648500,2024-01-05,2024-01-19,2024-01-16,Betalt,0,Netto 14,FAS,Minikonkurranse,IT,13.9,32,Høy
+FAK-0349,LEV-016,683300,2024-01-07,2024-03-07,2024-04-07,Forsinket,31,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0350,LEV-036,312100,2024-01-10,2024-02-09,2024-02-02,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0351,LEV-018,44200,2024-01-11,2024-01-25,2024-03-21,Forsinket,56,Netto 14,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0352,LEV-038,82100,2024-01-13,2024-04-12,2024-05-31,Forsinket,49,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0353,LEV-012,591900,2024-01-15,2024-04-14,2024-05-02,Forsinket,18,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0354,LEV-038,33600,2024-01-17,2024-04-16,2024-04-24,Forsinket,8,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0355,LEV-038,197800,2024-01-18,2024-04-17,2024-04-15,Betalt,0,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0356,LEV-010,5900,2024-01-18,2024-01-28,2024-03-21,Forsinket,53,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0357,LEV-026,249000,2024-01-18,2024-02-17,2024-02-11,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0358,LEV-016,1298800,2024-01-21,2024-03-21,2024-03-11,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0359,LEV-032,965900,2024-01-21,2024-02-04,2024-01-26,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0360,LEV-022,80000,2024-01-24,2024-02-07,2024-03-19,Forsinket,41,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0361,LEV-038,77600,2024-01-26,2024-04-25,2024-04-17,Betalt,0,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0362,LEV-009,113100,2024-01-26,2024-03-11,2024-03-01,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0363,LEV-001,33400,2024-01-28,2024-04-27,2024-06-01,Forsinket,35,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0364,LEV-038,274900,2024-01-29,2024-04-28,2024-04-22,Betalt,0,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0365,LEV-009,91500,2024-01-31,2024-03-16,2024-03-07,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0366,LEV-004,584700,2024-02-02,2024-05-02,2024-06-24,Forsinket,53,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0367,LEV-031,341400,2024-02-05,2024-04-05,2024-04-02,Betalt,0,Netto 60,EXW,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0368,LEV-004,690500,2024-02-06,2024-05-06,2024-06-01,Forsinket,26,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0369,LEV-017,733900,2024-02-06,2024-02-20,2024-02-16,Betalt,0,Netto 14,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0370,LEV-029,189200,2024-02-07,2024-02-21,2024-02-19,Betalt,0,Netto 14,CIP,Rammeavtale,Bygg,3.5,8,Medium
+FAK-0371,LEV-015,1387900,2024-02-09,2024-03-10,2024-03-03,Betalt,0,Netto 30,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0372,LEV-023,110400,2024-02-10,2024-04-10,2024-05-22,Forsinket,42,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0373,LEV-017,363300,2024-02-11,2024-04-11,2024-04-25,Forsinket,14,Netto 60,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0374,LEV-026,285600,2024-02-12,2024-03-13,2024-03-10,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0375,LEV-019,245500,2024-02-12,2024-02-26,2024-02-28,Forsinket,2,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0376,LEV-034,566500,2024-02-13,2024-02-27,2024-02-20,Betalt,0,Netto 14,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0377,LEV-001,75000,2024-02-13,2024-05-13,2024-07-01,Forsinket,49,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0378,LEV-029,387200,2024-02-13,2024-02-27,2024-02-24,Betalt,0,Netto 14,EXW,Rammeavtale,Bygg,3.5,8,Medium
+FAK-0379,LEV-005,470100,2024-02-14,2024-03-15,2024-03-06,Betalt,0,Netto 30,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0380,LEV-040,124100,2024-02-18,2024-03-19,2024-03-10,Betalt,0,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0381,LEV-010,18100,2024-02-18,2024-02-28,2024-02-19,Betalt,0,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0382,LEV-007,669000,2024-02-18,2024-03-19,2024-03-19,Betalt,0,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0383,LEV-015,177600,2024-02-18,2024-02-28,2024-02-23,Betalt,0,Netto 10,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0384,LEV-030,365800,2024-02-21,2024-03-02,2024-03-02,Betalt,0,Netto 10,CPT,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0385,LEV-004,798200,2024-02-21,2024-05-21,2024-05-18,Betalt,0,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0386,LEV-026,359500,2024-02-22,2024-03-23,2024-03-14,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0387,LEV-009,21500,2024-02-25,2024-04-10,2024-04-03,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0388,LEV-017,210600,2024-02-25,2024-03-10,2024-03-17,Forsinket,7,Netto 14,CFR,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0389,LEV-028,79600,2024-02-28,2024-03-13,2024-03-12,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0390,LEV-020,73700,2024-02-28,2024-05-28,2024-05-22,Betalt,0,Netto 90,DPU,Åpen anbudskonkurranse,Energi,4.0,13,Medium
+FAK-0391,LEV-014,502300,2024-02-28,2024-04-28,2024-04-21,Betalt,0,Netto 60,FOB,Rammeavtale,IT,4.4,29,Medium
+FAK-0392,LEV-006,107600,2024-03-09,2024-03-19,2024-03-11,Betalt,0,Netto 10,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0393,LEV-001,32400,2024-03-09,2024-06-07,2024-06-06,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0394,LEV-034,933700,2024-03-10,2024-03-24,2024-03-18,Betalt,0,Netto 14,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0395,LEV-001,34100,2024-03-15,2024-06-13,2024-06-07,Betalt,0,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0396,LEV-034,283700,2024-03-17,2024-03-31,2024-03-25,Betalt,0,Netto 14,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0397,LEV-014,367300,2024-03-18,2024-05-02,2024-04-22,Betalt,0,Netto 45,DAP,Rammeavtale,IT,4.4,29,Medium
+FAK-0398,LEV-036,182000,2024-03-18,2024-05-17,2024-05-09,Betalt,0,Netto 60,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0399,LEV-010,3800,2024-03-19,2024-03-29,2024-04-09,Forsinket,11,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0400,LEV-021,1293400,2024-03-21,2024-04-20,2024-05-02,Forsinket,12,Netto 30,CFR,Enkeltkontrakt,Bygg,2.4,5,Medium
+FAK-0401,LEV-026,476400,2024-03-22,2024-04-21,2024-04-21,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0402,LEV-015,820500,2024-03-26,2024-04-25,2024-04-25,Betalt,0,Netto 30,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0403,LEV-029,978800,2024-03-27,2024-06-25,2024-06-22,Betalt,0,Netto 90,CIP,Rammeavtale,Bygg,3.5,8,Medium
+FAK-0404,LEV-004,673900,2024-03-27,2024-06-25,2024-06-25,Betalt,0,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0405,LEV-034,887500,2024-03-27,2024-04-06,2024-03-28,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0406,LEV-040,146600,2024-03-28,2024-04-27,2024-04-25,Betalt,0,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0407,LEV-035,373900,2024-03-29,2024-06-27,2024-08-25,Forsinket,59,Netto 90,CPT,Minikonkurranse,Konsulenttjenester,22.9,11,Høy
+FAK-0408,LEV-034,812000,2024-03-29,2024-04-12,2024-04-12,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0409,LEV-034,549500,2024-03-29,2024-04-08,2024-04-05,Betalt,0,Netto 10,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0410,LEV-001,37300,2024-03-29,2024-06-27,2024-07-06,Forsinket,9,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0411,LEV-004,114700,2024-03-31,2024-06-29,2024-07-23,Forsinket,24,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0412,LEV-028,41100,2024-03-31,2024-04-14,2024-04-08,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0413,LEV-015,367100,2024-04-01,2024-04-11,2024-05-11,Forsinket,30,Netto 10,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0414,LEV-020,239900,2024-04-04,2024-07-03,2024-06-28,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,Energi,4.0,13,Medium
+FAK-0415,LEV-007,445600,2024-04-04,2024-05-04,2024-06-15,Forsinket,42,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0416,LEV-010,10800,2024-04-05,2024-04-15,2024-05-30,Forsinket,45,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0417,LEV-011,21000,2024-04-05,2024-05-20,2024-06-26,Forsinket,37,Netto 45,CIF,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0418,LEV-025,95100,2024-04-06,2024-04-16,2024-04-07,Betalt,0,Netto 10,FCA,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0419,LEV-034,1029200,2024-04-06,2024-04-20,2024-04-13,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0420,LEV-038,93800,2024-04-07,2024-07-06,2024-07-02,Betalt,0,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0421,LEV-017,305000,2024-04-07,2024-06-06,2024-06-12,Forsinket,6,Netto 60,DPU,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0422,LEV-026,515500,2024-04-07,2024-05-07,2024-06-04,Forsinket,28,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0423,LEV-040,115400,2024-04-07,2024-05-07,2024-05-01,Betalt,0,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0424,LEV-006,156300,2024-04-09,2024-06-08,2024-07-28,Forsinket,50,Netto 60,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0425,LEV-034,306000,2024-04-11,2024-04-21,2024-05-20,Forsinket,29,Netto 10,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0426,LEV-036,150900,2024-04-12,2024-05-12,2024-05-13,Forsinket,1,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0427,LEV-032,140100,2024-04-12,2024-04-26,2024-04-16,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0428,LEV-003,410300,2024-04-12,2024-07-11,2024-07-05,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0429,LEV-026,499800,2024-04-14,2024-05-14,2024-05-13,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0430,LEV-014,281100,2024-04-15,2024-05-30,2024-07-03,Forsinket,34,Netto 45,FOB,Rammeavtale,IT,4.4,29,Medium
+FAK-0431,LEV-038,109100,2024-04-15,2024-07-14,2024-08-15,Forsinket,32,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0432,LEV-030,309800,2024-04-17,2024-04-27,2024-04-23,Betalt,0,Netto 10,FCA,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0433,LEV-028,77100,2024-04-18,2024-05-02,2024-04-22,Betalt,0,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0434,LEV-030,523400,2024-04-19,2024-04-29,2024-06-08,Forsinket,40,Netto 10,FCA,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0435,LEV-027,58600,2024-04-21,2024-05-01,2024-04-25,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0436,LEV-011,37900,2024-04-23,2024-06-07,2024-05-30,Betalt,0,Netto 45,FAS,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0437,LEV-005,353300,2024-04-24,2024-05-24,2024-05-16,Betalt,0,Netto 30,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0438,LEV-025,24400,2024-04-28,2024-05-08,2024-05-01,Betalt,0,Netto 10,DPU,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0439,LEV-010,24000,2024-04-28,2024-05-08,2024-07-03,Forsinket,56,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0440,LEV-022,116000,2024-04-29,2024-05-13,2024-06-19,Forsinket,37,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0441,LEV-016,346200,2024-04-30,2024-06-29,2024-06-28,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0442,LEV-007,325600,2024-04-30,2024-05-30,2024-06-21,Forsinket,22,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0443,LEV-011,6100,2024-05-03,2024-06-17,2024-06-14,Betalt,0,Netto 45,FAS,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0444,LEV-007,781400,2024-05-04,2024-06-03,2024-06-30,Forsinket,27,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0445,LEV-024,105400,2024-05-04,2024-05-14,2024-05-13,Betalt,0,Netto 10,CIF,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0446,LEV-004,710600,2024-05-05,2024-08-03,2024-09-08,Forsinket,36,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0447,LEV-025,25600,2024-05-06,2024-05-16,2024-05-13,Betalt,0,Netto 10,DPU,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0448,LEV-034,1399600,2024-05-08,2024-05-22,2024-05-22,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0449,LEV-014,758100,2024-05-10,2024-07-09,2024-07-01,Betalt,0,Netto 60,EXW,Rammeavtale,IT,4.4,29,Medium
+FAK-0450,LEV-031,692700,2024-05-10,2024-07-09,2024-08-27,Forsinket,49,Netto 60,EXW,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0451,LEV-022,56900,2024-05-12,2024-05-26,2024-07-10,Forsinket,45,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0452,LEV-004,222300,2024-05-14,2024-08-12,2024-08-08,Betalt,0,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0453,LEV-016,1446900,2024-05-14,2024-07-13,2024-07-04,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0454,LEV-010,28900,2024-05-17,2024-05-27,2024-06-12,Forsinket,16,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0455,LEV-007,623100,2024-05-17,2024-06-16,2024-06-18,Forsinket,2,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0456,LEV-012,428300,2024-05-18,2024-07-17,2024-07-14,Betalt,0,Netto 60,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0457,LEV-002,5000,2024-05-21,2024-07-20,2024-08-05,Forsinket,16,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0458,LEV-028,74700,2024-05-22,2024-06-05,2024-06-04,Betalt,0,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0459,LEV-004,743900,2024-05-24,2024-08-22,2024-10-03,Forsinket,42,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0460,LEV-034,1265900,2024-05-26,2024-06-05,2024-05-29,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0461,LEV-005,434900,2024-05-26,2024-06-05,2024-06-11,Forsinket,6,Netto 10,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0462,LEV-036,368000,2024-05-27,2024-06-26,2024-06-26,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0463,LEV-009,29900,2024-05-28,2024-07-12,2024-08-23,Forsinket,42,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0464,LEV-007,471800,2024-05-29,2024-06-28,2024-08-08,Forsinket,41,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0465,LEV-026,347900,2024-05-31,2024-06-30,2024-06-30,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0466,LEV-031,284600,2024-05-31,2024-07-30,2024-09-10,Forsinket,42,Netto 60,FCA,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0467,LEV-034,682700,2024-05-31,2024-06-10,2024-06-05,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0468,LEV-007,696800,2024-06-01,2024-07-01,2024-06-30,Betalt,0,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0469,LEV-038,21900,2024-06-02,2024-08-31,2024-10-02,Forsinket,32,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0470,LEV-024,107900,2024-06-03,2024-06-13,2024-07-06,Forsinket,23,Netto 10,DPU,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0471,LEV-014,627000,2024-06-04,2024-07-19,2024-07-15,Betalt,0,Netto 45,FOB,Rammeavtale,IT,4.4,29,Medium
+FAK-0472,LEV-004,190400,2024-06-05,2024-09-03,2024-09-09,Forsinket,6,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0473,LEV-010,3000,2024-06-11,2024-06-21,2024-07-09,Forsinket,18,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0474,LEV-017,422100,2024-06-13,2024-08-12,2024-09-26,Forsinket,45,Netto 60,CFR,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0475,LEV-025,43700,2024-06-15,2024-06-25,2024-06-16,Betalt,0,Netto 10,FCA,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0476,LEV-015,763700,2024-06-15,2024-07-15,2024-07-12,Betalt,0,Netto 30,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0477,LEV-022,62800,2024-06-17,2024-07-01,2024-06-21,Betalt,0,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0478,LEV-011,23900,2024-06-18,2024-07-02,2024-06-28,Betalt,0,Netto 14,CIF,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0479,LEV-018,36100,2024-06-19,2024-06-29,2024-07-02,Forsinket,3,Netto 10,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0480,LEV-036,236000,2024-06-23,2024-07-23,2024-09-16,Forsinket,55,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0481,LEV-019,784900,2024-06-23,2024-07-07,2024-07-07,Betalt,0,Netto 14,FOB,Minikonkurranse,IT,13.9,32,Høy
+FAK-0482,LEV-035,460800,2024-06-24,2024-09-22,2024-10-31,Forsinket,39,Netto 90,CPT,Minikonkurranse,Konsulenttjenester,22.9,11,Høy
+FAK-0483,LEV-017,743200,2024-06-26,2024-07-10,2024-07-22,Forsinket,12,Netto 14,DPU,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0484,LEV-001,67200,2024-06-27,2024-09-25,2024-09-17,Betalt,0,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0485,LEV-039,58600,2024-06-27,2024-08-26,2024-08-16,Betalt,0,Netto 60,DPU,Enkeltkontrakt,Transport,9.4,8,Medium
+FAK-0486,LEV-032,620400,2024-06-30,2024-07-14,2024-07-04,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0487,LEV-009,103800,2024-06-30,2024-08-14,2024-08-13,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0488,LEV-019,421700,2024-07-01,2024-07-15,2024-07-11,Betalt,0,Netto 14,FAS,Minikonkurranse,IT,13.9,32,Høy
+FAK-0489,LEV-012,489000,2024-07-03,2024-10-01,2024-10-13,Forsinket,12,Netto 90,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0490,LEV-017,287200,2024-07-04,2024-07-18,2024-08-30,Forsinket,43,Netto 14,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0491,LEV-033,51800,2024-07-05,2024-07-15,2024-08-26,Forsinket,42,Netto 10,CFR,Rammeavtale,Konsulenttjenester,12.4,12,Høy
+FAK-0492,LEV-030,366500,2024-07-05,2024-07-15,2024-07-09,Betalt,0,Netto 10,CIF,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0493,LEV-026,154700,2024-07-06,2024-08-05,2024-08-18,Forsinket,13,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0494,LEV-015,131500,2024-07-06,2024-08-05,2024-07-29,Betalt,0,Netto 30,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0495,LEV-034,802500,2024-07-07,2024-07-21,2024-07-20,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0496,LEV-012,505800,2024-07-08,2024-09-06,2024-08-30,Betalt,0,Netto 60,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0497,LEV-008,38300,2024-07-09,2024-08-08,2024-08-07,Betalt,0,Netto 30,CIP,Rammeavtale,Renhold,13.8,12,Høy
+FAK-0498,LEV-023,56800,2024-07-09,2024-09-07,2024-10-11,Forsinket,34,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0499,LEV-010,26900,2024-07-09,2024-07-19,2024-07-20,Forsinket,1,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0500,LEV-003,742500,2024-07-09,2024-10-07,2024-10-07,Betalt,0,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0501,LEV-012,345700,2024-07-09,2024-09-07,2024-09-30,Forsinket,23,Netto 60,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0502,LEV-027,295900,2024-07-10,2024-07-20,2024-07-26,Forsinket,6,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0503,LEV-024,128700,2024-07-11,2024-07-21,2024-07-14,Betalt,0,Netto 10,DDP,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0504,LEV-001,88700,2024-07-13,2024-10-11,2024-10-10,Betalt,0,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0505,LEV-016,735100,2024-07-16,2024-09-14,2024-09-08,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0506,LEV-024,124000,2024-07-16,2024-07-26,2024-08-21,Forsinket,26,Netto 10,DDP,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0507,LEV-013,226200,2024-07-17,2024-07-27,2024-07-30,Forsinket,3,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0508,LEV-017,230600,2024-07-18,2024-09-16,2024-10-30,Forsinket,44,Netto 60,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0509,LEV-015,866800,2024-07-18,2024-08-17,2024-08-15,Betalt,0,Netto 30,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0510,LEV-039,16400,2024-07-19,2024-09-17,2024-10-13,Forsinket,26,Netto 60,DPU,Enkeltkontrakt,Transport,9.4,8,Medium
+FAK-0511,LEV-038,257700,2024-07-20,2024-10-18,2024-10-09,Betalt,0,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0512,LEV-016,618500,2024-07-21,2024-09-19,2024-09-10,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0513,LEV-031,309800,2024-07-21,2024-09-19,2024-09-18,Betalt,0,Netto 60,EXW,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0514,LEV-040,95200,2024-07-21,2024-08-20,2024-08-18,Betalt,0,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0515,LEV-001,24100,2024-07-22,2024-10-20,2024-10-18,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0516,LEV-030,427500,2024-07-23,2024-08-02,2024-09-02,Forsinket,31,Netto 10,CPT,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0517,LEV-014,499300,2024-07-25,2024-09-08,2024-09-02,Betalt,0,Netto 45,DAP,Rammeavtale,IT,4.4,29,Medium
+FAK-0518,LEV-040,144100,2024-07-25,2024-08-24,2024-08-18,Betalt,0,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0519,LEV-013,450100,2024-07-26,2024-08-05,2024-08-05,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0520,LEV-005,602000,2024-07-26,2024-08-25,2024-08-24,Betalt,0,Netto 30,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0521,LEV-038,94600,2024-07-27,2024-10-25,2024-12-22,Forsinket,58,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0522,LEV-026,112500,2024-07-28,2024-08-27,2024-09-26,Forsinket,30,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0523,LEV-023,8800,2024-07-29,2024-09-27,2024-09-26,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0524,LEV-038,216200,2024-08-01,2024-10-30,2024-11-21,Forsinket,22,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0525,LEV-017,229100,2024-08-01,2024-09-30,2024-11-02,Forsinket,33,Netto 60,DPU,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0526,LEV-028,147500,2024-08-02,2024-08-16,2024-08-11,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0527,LEV-010,1100,2024-08-02,2024-08-12,2024-09-10,Forsinket,29,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0528,LEV-014,616500,2024-08-02,2024-10-01,2024-10-25,Forsinket,24,Netto 60,EXW,Rammeavtale,IT,4.4,29,Medium
+FAK-0529,LEV-028,122700,2024-08-02,2024-08-16,2024-08-12,Betalt,0,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0530,LEV-013,574100,2024-08-04,2024-08-14,2024-08-13,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0531,LEV-001,9500,2024-08-05,2024-11-03,2024-11-23,Forsinket,20,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0532,LEV-040,52300,2024-08-05,2024-09-04,2024-08-30,Betalt,0,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0533,LEV-038,204900,2024-08-05,2024-11-03,2024-10-24,Betalt,0,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0534,LEV-002,26900,2024-08-06,2024-10-05,2024-10-04,Betalt,0,Netto 60,CIF,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0535,LEV-037,591300,2024-08-07,2024-08-17,2024-10-01,Forsinket,45,Netto 10,DDP,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0536,LEV-029,500800,2024-08-08,2024-11-06,2024-11-28,Forsinket,22,Netto 90,CIP,Rammeavtale,Bygg,3.5,8,Medium
+FAK-0537,LEV-034,1186600,2024-08-08,2024-08-18,2024-08-17,Betalt,0,Netto 10,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0538,LEV-012,231900,2024-08-09,2024-10-08,2024-11-20,Forsinket,43,Netto 60,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0539,LEV-019,338100,2024-08-10,2024-08-24,2024-10-07,Forsinket,44,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0540,LEV-040,17200,2024-08-10,2024-09-09,2024-08-31,Betalt,0,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0541,LEV-033,191800,2024-08-13,2024-08-23,2024-08-14,Betalt,0,Netto 10,CFR,Rammeavtale,Konsulenttjenester,12.4,12,Høy
+FAK-0542,LEV-023,113000,2024-08-14,2024-10-13,2024-10-07,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0543,LEV-030,297900,2024-08-15,2024-08-25,2024-08-22,Betalt,0,Netto 10,FCA,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0544,LEV-003,532000,2024-08-16,2024-11-14,2024-11-10,Betalt,0,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0545,LEV-038,187300,2024-08-19,2024-11-17,2024-11-11,Betalt,0,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0546,LEV-018,50000,2024-08-20,2024-08-30,2024-09-30,Forsinket,31,Netto 10,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0547,LEV-002,6600,2024-08-21,2024-10-20,2024-10-10,Betalt,0,Netto 60,CIF,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0548,LEV-010,12200,2024-08-25,2024-09-04,2024-09-04,Betalt,0,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0549,LEV-020,283800,2024-08-25,2024-11-23,2024-11-17,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,Energi,4.0,13,Medium
+FAK-0550,LEV-022,96700,2024-08-27,2024-09-10,2024-09-09,Betalt,0,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0551,LEV-014,698700,2024-08-27,2024-10-26,2024-10-20,Betalt,0,Netto 60,EXW,Rammeavtale,IT,4.4,29,Medium
+FAK-0552,LEV-024,74400,2024-08-27,2024-09-06,2024-10-07,Forsinket,31,Netto 10,DPU,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0553,LEV-015,943900,2024-08-28,2024-09-07,2024-09-04,Betalt,0,Netto 10,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0554,LEV-007,460800,2024-08-28,2024-09-27,2024-09-18,Betalt,0,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0555,LEV-028,74900,2024-09-01,2024-09-15,2024-09-06,Betalt,0,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0556,LEV-026,605600,2024-09-03,2024-10-03,2024-10-13,Forsinket,10,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0557,LEV-002,5100,2024-09-03,2024-11-02,2024-10-29,Betalt,0,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0558,LEV-003,412400,2024-09-04,2024-12-03,2024-11-27,Betalt,0,Netto 90,CIP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0559,LEV-032,261300,2024-09-04,2024-09-18,2024-11-12,Forsinket,55,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0560,LEV-015,202700,2024-09-04,2024-10-04,2024-09-30,Betalt,0,Netto 30,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0561,LEV-026,587200,2024-09-04,2024-10-04,2024-10-03,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0562,LEV-037,127600,2024-09-04,2024-12-03,2025-01-25,Forsinket,53,Netto 90,DAP,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0563,LEV-039,22800,2024-09-07,2024-11-06,2024-10-29,Betalt,0,Netto 60,DPU,Enkeltkontrakt,Transport,9.4,8,Medium
+FAK-0564,LEV-026,232500,2024-09-08,2024-10-08,2024-10-01,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0565,LEV-002,44000,2024-09-08,2024-11-07,2024-11-02,Betalt,0,Netto 60,CIF,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0566,LEV-037,297900,2024-09-08,2024-09-18,2024-09-11,Betalt,0,Netto 10,DDP,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0567,LEV-024,36700,2024-09-09,2024-09-19,2024-10-12,Forsinket,23,Netto 10,CIF,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0568,LEV-011,47900,2024-09-09,2024-09-23,2024-10-22,Forsinket,29,Netto 14,FAS,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0569,LEV-010,21500,2024-09-12,2024-09-22,2024-10-30,Forsinket,38,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0570,LEV-002,22800,2024-09-14,2024-11-13,2024-11-03,Betalt,0,Netto 60,CIF,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0571,LEV-032,1367100,2024-09-15,2024-09-29,2024-10-23,Forsinket,24,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0572,LEV-011,29100,2024-09-15,2024-10-30,2024-10-24,Betalt,0,Netto 45,FAS,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0573,LEV-011,47500,2024-09-15,2024-10-30,2024-12-07,Forsinket,38,Netto 45,FAS,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0574,LEV-019,139300,2024-09-16,2024-09-30,2024-11-16,Forsinket,47,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0575,LEV-012,55400,2024-09-16,2024-12-15,2025-02-05,Forsinket,52,Netto 90,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0576,LEV-002,37700,2024-09-16,2024-11-15,2024-11-07,Betalt,0,Netto 60,CIF,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0577,LEV-002,44000,2024-09-17,2024-11-16,2025-01-01,Forsinket,46,Netto 60,CIF,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0578,LEV-033,546100,2024-09-24,2024-10-04,2024-09-25,Betalt,0,Netto 10,CIF,Rammeavtale,Konsulenttjenester,12.4,12,Høy
+FAK-0579,LEV-005,416800,2024-09-27,2024-10-27,2024-10-18,Betalt,0,Netto 30,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0580,LEV-035,360900,2024-09-27,2024-12-26,2024-12-29,Forsinket,3,Netto 90,CPT,Minikonkurranse,Konsulenttjenester,22.9,11,Høy
+FAK-0581,LEV-009,113400,2024-09-27,2024-11-11,2024-11-07,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0582,LEV-004,741000,2024-10-01,2024-12-30,2025-01-13,Forsinket,14,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0583,LEV-005,172500,2024-10-03,2024-10-13,2024-10-08,Betalt,0,Netto 10,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0584,LEV-038,193100,2024-10-04,2025-01-02,2025-02-14,Forsinket,43,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0585,LEV-003,138000,2024-10-04,2025-01-02,2025-01-29,Forsinket,27,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0586,LEV-009,39200,2024-10-07,2024-11-21,2024-11-15,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0587,LEV-011,47400,2024-10-08,2024-10-22,2024-11-13,Forsinket,22,Netto 14,CIF,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0588,LEV-026,168400,2024-10-10,2024-11-09,2024-11-03,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0589,LEV-005,692800,2024-10-14,2024-10-24,2024-12-11,Forsinket,48,Netto 10,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0590,LEV-026,599900,2024-10-14,2024-11-13,2024-11-09,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0591,LEV-023,46000,2024-10-15,2024-12-14,2024-12-09,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0592,LEV-019,161300,2024-10-15,2024-10-29,2024-10-26,Betalt,0,Netto 14,FOB,Minikonkurranse,IT,13.9,32,Høy
+FAK-0593,LEV-022,24200,2024-10-16,2024-10-30,2024-10-20,Betalt,0,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0594,LEV-013,379500,2024-10-19,2024-10-29,2024-10-27,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0595,LEV-007,358000,2024-10-19,2024-11-18,2024-11-12,Betalt,0,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0596,LEV-029,702400,2024-10-19,2025-01-17,2025-01-23,Forsinket,6,Netto 90,CIP,Rammeavtale,Bygg,3.5,8,Medium
+FAK-0597,LEV-015,601900,2024-10-20,2024-11-19,2024-11-19,Betalt,0,Netto 30,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0598,LEV-012,556800,2024-10-20,2024-12-19,2024-12-14,Betalt,0,Netto 60,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0599,LEV-016,1316300,2024-10-21,2024-12-20,2024-12-13,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0600,LEV-003,134700,2024-10-21,2025-01-19,2025-01-18,Betalt,0,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0601,LEV-029,1041400,2024-10-23,2025-01-21,2025-01-18,Betalt,0,Netto 90,CIP,Rammeavtale,Bygg,3.5,8,Medium
+FAK-0602,LEV-008,20600,2024-10-23,2024-11-22,2024-11-14,Betalt,0,Netto 30,DAP,Rammeavtale,Renhold,13.8,12,Høy
+FAK-0603,LEV-037,141200,2024-10-24,2024-11-03,2024-11-01,Betalt,0,Netto 10,DDP,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0604,LEV-012,561300,2024-10-25,2025-01-23,2025-02-14,Forsinket,22,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0605,LEV-036,78200,2024-10-26,2024-11-25,2024-11-21,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0606,LEV-016,1315800,2024-10-29,2024-12-28,2024-12-23,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0607,LEV-009,19400,2024-10-29,2024-12-13,2024-12-09,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0608,LEV-012,446000,2024-10-30,2025-01-28,2025-02-26,Forsinket,29,Netto 90,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0609,LEV-016,293900,2024-10-30,2024-12-29,2024-12-22,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0610,LEV-039,25400,2024-10-31,2024-12-30,2024-12-26,Betalt,0,Netto 60,DPU,Enkeltkontrakt,Transport,9.4,8,Medium
+FAK-0611,LEV-012,186800,2024-10-31,2025-01-29,2025-01-25,Betalt,0,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0612,LEV-017,561800,2024-11-01,2024-11-15,2024-11-12,Betalt,0,Netto 14,DPU,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0613,LEV-010,23500,2024-11-01,2024-11-11,2024-11-07,Betalt,0,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0614,LEV-023,33200,2024-11-02,2025-01-01,2025-01-24,Forsinket,23,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0615,LEV-012,425000,2024-11-03,2025-02-01,2025-03-01,Forsinket,28,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0616,LEV-012,428300,2024-11-05,2025-01-04,2025-01-04,Betalt,0,Netto 60,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0617,LEV-002,30100,2024-11-07,2025-01-06,2025-01-15,Forsinket,9,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0618,LEV-005,668800,2024-11-10,2024-11-20,2024-11-18,Betalt,0,Netto 10,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0619,LEV-014,616800,2024-11-10,2024-12-25,2024-12-16,Betalt,0,Netto 45,EXW,Rammeavtale,IT,4.4,29,Medium
+FAK-0620,LEV-019,411900,2024-11-11,2024-11-25,2025-01-20,Forsinket,56,Netto 14,FOB,Minikonkurranse,IT,13.9,32,Høy
+FAK-0621,LEV-031,561300,2024-11-12,2025-01-11,2025-01-01,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0622,LEV-002,49800,2024-11-13,2025-01-12,2025-01-10,Betalt,0,Netto 60,CIF,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0623,LEV-014,108600,2024-11-15,2024-12-30,2024-12-21,Betalt,0,Netto 45,FOB,Rammeavtale,IT,4.4,29,Medium
+FAK-0624,LEV-017,600800,2024-11-17,2024-12-01,2024-12-07,Forsinket,6,Netto 14,DPU,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0625,LEV-030,222000,2024-11-18,2024-11-28,2024-11-23,Betalt,0,Netto 10,FCA,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0626,LEV-028,109300,2024-11-19,2024-12-03,2024-11-25,Betalt,0,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0627,LEV-015,311900,2024-11-20,2024-12-20,2024-12-12,Betalt,0,Netto 30,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0628,LEV-038,107900,2024-11-21,2025-02-19,2025-02-24,Forsinket,5,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0629,LEV-004,698700,2024-11-24,2025-02-22,2025-02-14,Betalt,0,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0630,LEV-032,1499600,2024-11-26,2024-12-10,2024-12-06,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0631,LEV-008,11600,2024-11-28,2024-12-28,2024-12-20,Betalt,0,Netto 30,DAP,Rammeavtale,Renhold,13.8,12,Høy
+FAK-0632,LEV-016,1013000,2024-12-01,2025-01-30,2025-01-21,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0633,LEV-005,260000,2024-12-02,2025-01-01,2024-12-24,Betalt,0,Netto 30,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0634,LEV-025,59000,2024-12-03,2024-12-13,2025-01-27,Forsinket,45,Netto 10,FCA,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0635,LEV-021,1117800,2024-12-04,2025-01-03,2024-12-31,Betalt,0,Netto 30,CFR,Enkeltkontrakt,Bygg,2.4,5,Medium
+FAK-0636,LEV-001,96200,2024-12-04,2025-03-04,2025-03-01,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0637,LEV-004,750600,2024-12-05,2025-03-05,2025-04-28,Forsinket,54,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0638,LEV-013,300200,2024-12-05,2024-12-15,2024-12-15,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0639,LEV-019,420000,2024-12-07,2024-12-21,2024-12-22,Forsinket,1,Netto 14,FOB,Minikonkurranse,IT,13.9,32,Høy
+FAK-0640,LEV-027,770000,2024-12-08,2024-12-18,2024-12-14,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0641,LEV-038,61400,2024-12-10,2025-03-10,2025-03-24,Forsinket,14,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0642,LEV-040,93800,2024-12-12,2025-01-11,2025-03-07,Forsinket,55,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0643,LEV-032,1322500,2024-12-13,2025-01-12,2025-01-05,Betalt,0,Netto 30,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0644,LEV-032,731700,2024-12-13,2025-01-12,2025-01-25,Forsinket,13,Netto 30,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0645,LEV-010,13300,2024-12-15,2024-12-25,2024-12-20,Betalt,0,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0646,LEV-005,434200,2024-12-15,2024-12-25,2024-12-22,Betalt,0,Netto 10,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0647,LEV-019,146400,2024-12-16,2024-12-30,2024-12-25,Betalt,0,Netto 14,FAS,Minikonkurranse,IT,13.9,32,Høy
+FAK-0648,LEV-009,19200,2024-12-18,2025-02-01,2025-01-31,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0649,LEV-038,166300,2024-12-20,2025-03-20,2025-03-28,Forsinket,8,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0650,LEV-004,517600,2024-12-20,2025-03-20,2025-03-10,Betalt,0,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0651,LEV-038,183800,2024-12-21,2025-03-21,2025-03-18,Betalt,0,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0652,LEV-023,50600,2024-12-21,2025-02-19,2025-04-06,Forsinket,46,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0653,LEV-001,94700,2024-12-21,2025-03-21,2025-03-19,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0654,LEV-011,3100,2024-12-23,2025-01-06,2025-01-06,Betalt,0,Netto 14,FAS,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0655,LEV-028,120400,2024-12-23,2025-01-06,2025-01-05,Betalt,0,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0656,LEV-034,411100,2024-12-24,2025-01-07,2025-02-16,Forsinket,40,Netto 14,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0657,LEV-036,389000,2024-12-26,2025-02-24,2025-02-17,Betalt,0,Netto 60,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0658,LEV-032,906800,2024-12-28,2025-01-11,2025-01-01,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0659,LEV-010,14700,2024-12-30,2025-01-09,2025-01-01,Betalt,0,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0660,LEV-026,693500,2024-12-31,2025-01-30,2025-01-24,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0661,LEV-031,754500,2025-01-04,2025-03-05,2025-05-01,Forsinket,57,Netto 60,EXW,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0662,LEV-017,253600,2025-01-04,2025-03-05,2025-02-23,Betalt,0,Netto 60,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0663,LEV-012,544000,2025-01-05,2025-04-05,2025-06-03,Forsinket,59,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0664,LEV-038,20400,2025-01-05,2025-04-05,2025-04-21,Forsinket,16,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0665,LEV-001,90700,2025-01-06,2025-04-06,2025-04-03,Betalt,0,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0666,LEV-013,304300,2025-01-06,2025-01-16,2025-01-14,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0667,LEV-038,253200,2025-01-07,2025-04-07,2025-03-30,Betalt,0,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0668,LEV-010,22400,2025-01-08,2025-01-18,2025-01-11,Betalt,0,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0669,LEV-011,8000,2025-01-09,2025-02-23,2025-03-27,Forsinket,32,Netto 45,CIF,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0670,LEV-023,12300,2025-01-09,2025-03-10,2025-04-07,Forsinket,28,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0671,LEV-019,569900,2025-01-09,2025-01-23,2025-01-29,Forsinket,6,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0672,LEV-006,111300,2025-01-10,2025-01-20,2025-03-12,Forsinket,51,Netto 10,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0673,LEV-017,773100,2025-01-11,2025-01-25,2025-02-10,Forsinket,16,Netto 14,CFR,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0674,LEV-018,4200,2025-01-12,2025-01-22,2025-02-13,Forsinket,22,Netto 10,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0675,LEV-021,508200,2025-01-12,2025-02-11,2025-02-08,Betalt,0,Netto 30,CFR,Enkeltkontrakt,Bygg,2.4,5,Medium
+FAK-0676,LEV-035,182000,2025-01-13,2025-04-13,2025-04-07,Betalt,0,Netto 90,CPT,Minikonkurranse,Konsulenttjenester,22.9,11,Høy
+FAK-0677,LEV-009,66800,2025-01-15,2025-03-01,2025-02-19,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0678,LEV-032,924000,2025-01-17,2025-01-31,2025-03-07,Forsinket,35,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0679,LEV-006,218500,2025-01-18,2025-01-28,2025-01-22,Betalt,0,Netto 10,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0680,LEV-005,327300,2025-01-19,2025-02-18,2025-02-08,Betalt,0,Netto 30,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0681,LEV-009,89600,2025-01-20,2025-03-06,2025-03-09,Forsinket,3,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0682,LEV-022,74400,2025-01-21,2025-02-04,2025-02-20,Forsinket,16,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0683,LEV-034,308400,2025-01-22,2025-02-05,2025-01-29,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0684,LEV-036,233400,2025-01-23,2025-03-24,2025-03-20,Betalt,0,Netto 60,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0685,LEV-010,27200,2025-01-23,2025-02-02,2025-04-01,Forsinket,58,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0686,LEV-036,503900,2025-01-23,2025-02-22,2025-03-24,Forsinket,30,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0687,LEV-014,450000,2025-01-26,2025-03-27,2025-03-24,Betalt,0,Netto 60,FOB,Rammeavtale,IT,4.4,29,Medium
+FAK-0688,LEV-009,39600,2025-01-26,2025-03-12,2025-03-10,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0689,LEV-024,75100,2025-01-27,2025-02-06,2025-01-30,Betalt,0,Netto 10,DDP,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0690,LEV-019,743700,2025-01-28,2025-02-11,2025-02-01,Betalt,0,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0691,LEV-010,13500,2025-01-30,2025-02-09,2025-02-09,Betalt,0,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0692,LEV-038,272900,2025-01-30,2025-04-30,2025-06-26,Forsinket,57,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0693,LEV-015,794800,2025-01-31,2025-03-02,2025-02-21,Betalt,0,Netto 30,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0694,LEV-034,966200,2025-02-01,2025-02-15,2025-02-13,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0695,LEV-004,151300,2025-02-02,2025-05-03,2025-06-08,Forsinket,36,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0696,LEV-010,3600,2025-02-02,2025-02-12,2025-02-11,Betalt,0,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0697,LEV-030,470800,2025-02-05,2025-02-15,2025-04-15,Forsinket,59,Netto 10,CPT,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0698,LEV-009,15700,2025-02-06,2025-03-23,2025-03-14,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0699,LEV-017,423100,2025-02-07,2025-04-08,2025-05-21,Forsinket,43,Netto 60,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0700,LEV-035,398300,2025-02-07,2025-05-08,2025-06-14,Forsinket,37,Netto 90,FCA,Minikonkurranse,Konsulenttjenester,22.9,11,Høy
+FAK-0701,LEV-005,712900,2025-02-09,2025-02-19,2025-02-25,Forsinket,6,Netto 10,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0702,LEV-007,322800,2025-02-15,2025-03-17,2025-03-12,Betalt,0,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0703,LEV-016,1382000,2025-02-16,2025-04-17,2025-04-09,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0704,LEV-001,32600,2025-02-16,2025-05-17,2025-05-11,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0705,LEV-019,699800,2025-02-17,2025-03-03,2025-03-02,Betalt,0,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0706,LEV-036,50500,2025-02-18,2025-04-19,2025-05-09,Forsinket,20,Netto 60,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0707,LEV-009,73500,2025-02-18,2025-04-04,2025-04-03,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0708,LEV-002,34000,2025-02-19,2025-04-20,2025-04-10,Betalt,0,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0709,LEV-024,95200,2025-02-19,2025-03-01,2025-02-26,Betalt,0,Netto 10,DPU,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0710,LEV-007,312200,2025-02-20,2025-03-22,2025-05-07,Forsinket,46,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0711,LEV-010,3000,2025-02-22,2025-03-04,2025-03-21,Forsinket,17,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0712,LEV-005,292500,2025-02-23,2025-03-05,2025-03-02,Betalt,0,Netto 10,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0713,LEV-003,343400,2025-02-23,2025-05-24,2025-05-22,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0714,LEV-012,137700,2025-02-24,2025-04-25,2025-04-15,Betalt,0,Netto 60,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0715,LEV-040,41200,2025-02-24,2025-03-26,2025-04-24,Forsinket,29,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0716,LEV-013,579300,2025-02-25,2025-03-07,2025-02-26,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0717,LEV-024,142900,2025-02-26,2025-03-08,2025-02-27,Betalt,0,Netto 10,CIF,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0718,LEV-019,53500,2025-02-26,2025-03-12,2025-03-07,Betalt,0,Netto 14,FAS,Minikonkurranse,IT,13.9,32,Høy
+FAK-0719,LEV-020,190100,2025-02-27,2025-05-28,2025-05-19,Betalt,0,Netto 90,DPU,Åpen anbudskonkurranse,Energi,4.0,13,Medium
+FAK-0720,LEV-012,151300,2025-02-27,2025-04-28,2025-05-18,Forsinket,20,Netto 60,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0721,LEV-028,149400,2025-02-28,2025-03-14,2025-03-07,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0722,LEV-036,457400,2025-03-05,2025-05-04,2025-04-24,Betalt,0,Netto 60,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0723,LEV-036,408800,2025-03-05,2025-05-04,2025-05-07,Forsinket,3,Netto 60,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0724,LEV-030,260100,2025-03-06,2025-03-16,2025-03-16,Betalt,0,Netto 10,FCA,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0725,LEV-004,648700,2025-03-06,2025-06-04,2025-05-28,Betalt,0,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0726,LEV-024,68800,2025-03-07,2025-03-17,2025-05-08,Forsinket,52,Netto 10,CIF,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0727,LEV-006,100900,2025-03-08,2025-05-07,2025-04-27,Betalt,0,Netto 60,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0728,LEV-040,53500,2025-03-08,2025-04-07,2025-05-26,Forsinket,49,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0729,LEV-025,44200,2025-03-09,2025-03-19,2025-03-17,Betalt,0,Netto 10,FCA,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0730,LEV-001,10000,2025-03-10,2025-06-08,2025-06-04,Betalt,0,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0731,LEV-005,51900,2025-03-12,2025-03-22,2025-03-22,Betalt,0,Netto 10,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0732,LEV-010,12900,2025-03-13,2025-03-23,2025-05-19,Forsinket,57,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0733,LEV-009,49800,2025-03-15,2025-04-29,2025-04-27,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0734,LEV-016,1337700,2025-03-18,2025-05-17,2025-05-13,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0735,LEV-026,448100,2025-03-19,2025-04-18,2025-04-12,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0736,LEV-026,90700,2025-03-21,2025-04-20,2025-04-17,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0737,LEV-018,9900,2025-03-22,2025-04-01,2025-03-29,Betalt,0,Netto 10,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0738,LEV-022,54200,2025-03-23,2025-04-06,2025-05-30,Forsinket,54,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0739,LEV-036,124700,2025-03-23,2025-04-22,2025-04-20,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0740,LEV-038,39100,2025-03-24,2025-06-22,2025-08-17,Forsinket,56,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0741,LEV-003,633400,2025-03-24,2025-06-22,2025-06-12,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0742,LEV-026,703900,2025-03-24,2025-04-23,2025-04-23,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0743,LEV-015,1051100,2025-03-27,2025-04-26,2025-04-21,Betalt,0,Netto 30,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0744,LEV-006,43200,2025-03-29,2025-05-28,2025-05-19,Betalt,0,Netto 60,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0745,LEV-030,316200,2025-03-30,2025-04-09,2025-04-06,Betalt,0,Netto 10,CPT,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0746,LEV-004,583000,2025-03-31,2025-06-29,2025-06-29,Betalt,0,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0747,LEV-012,347500,2025-03-31,2025-06-29,2025-06-24,Betalt,0,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0748,LEV-003,552200,2025-04-02,2025-07-01,2025-06-28,Betalt,0,Netto 90,CIP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0749,LEV-009,10800,2025-04-03,2025-05-18,2025-05-08,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0750,LEV-025,18500,2025-04-06,2025-04-16,2025-04-17,Forsinket,1,Netto 10,DPU,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0751,LEV-030,89500,2025-04-07,2025-04-17,2025-04-08,Betalt,0,Netto 10,CIF,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0752,LEV-001,71900,2025-04-07,2025-07-06,2025-07-04,Betalt,0,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0753,LEV-001,49100,2025-04-08,2025-07-07,2025-08-16,Forsinket,40,Netto 90,CIF,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0754,LEV-015,341500,2025-04-09,2025-04-19,2025-04-19,Betalt,0,Netto 10,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0755,LEV-038,141600,2025-04-09,2025-07-08,2025-08-05,Forsinket,28,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0756,LEV-018,5000,2025-04-09,2025-04-23,2025-05-28,Forsinket,35,Netto 14,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0757,LEV-036,478300,2025-04-09,2025-05-09,2025-05-05,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0758,LEV-007,690600,2025-04-10,2025-05-10,2025-05-10,Betalt,0,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0759,LEV-037,571700,2025-04-10,2025-04-20,2025-06-12,Forsinket,53,Netto 10,EXW,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0760,LEV-026,297600,2025-04-11,2025-05-11,2025-05-01,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0761,LEV-036,362600,2025-04-12,2025-05-12,2025-07-04,Forsinket,53,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0762,LEV-009,34800,2025-04-14,2025-05-29,2025-05-20,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0763,LEV-026,730800,2025-04-16,2025-05-16,2025-05-06,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0764,LEV-010,29700,2025-04-16,2025-04-26,2025-04-17,Betalt,0,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0765,LEV-038,250400,2025-04-16,2025-07-15,2025-08-08,Forsinket,24,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0766,LEV-033,102500,2025-04-17,2025-04-27,2025-05-13,Forsinket,16,Netto 10,CFR,Rammeavtale,Konsulenttjenester,12.4,12,Høy
+FAK-0767,LEV-017,480700,2025-04-18,2025-05-02,2025-06-13,Forsinket,42,Netto 14,EXW,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0768,LEV-001,23900,2025-04-19,2025-07-18,2025-07-12,Betalt,0,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0769,LEV-015,527600,2025-04-20,2025-05-20,2025-05-18,Betalt,0,Netto 30,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0770,LEV-020,84100,2025-04-21,2025-07-20,2025-07-10,Betalt,0,Netto 90,DPU,Åpen anbudskonkurranse,Energi,4.0,13,Medium
+FAK-0771,LEV-012,464200,2025-04-22,2025-06-21,2025-08-13,Forsinket,53,Netto 60,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0772,LEV-005,607000,2025-04-23,2025-05-03,2025-05-03,Betalt,0,Netto 10,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0773,LEV-013,404700,2025-04-23,2025-05-03,2025-04-27,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0774,LEV-002,3400,2025-04-24,2025-06-23,2025-06-15,Betalt,0,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0775,LEV-003,263400,2025-04-24,2025-07-23,2025-07-17,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0776,LEV-032,220800,2025-04-25,2025-05-25,2025-05-19,Betalt,0,Netto 30,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0777,LEV-017,669200,2025-04-26,2025-05-10,2025-05-02,Betalt,0,Netto 14,DPU,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0778,LEV-006,242200,2025-04-28,2025-05-08,2025-05-03,Betalt,0,Netto 10,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0779,LEV-004,291500,2025-04-29,2025-07-28,2025-07-25,Betalt,0,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0780,LEV-028,64400,2025-04-29,2025-05-13,2025-05-11,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0781,LEV-021,475200,2025-04-30,2025-05-30,2025-05-30,Betalt,0,Netto 30,CFR,Enkeltkontrakt,Bygg,2.4,5,Medium
+FAK-0782,LEV-012,518600,2025-05-01,2025-07-30,2025-08-24,Forsinket,25,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0783,LEV-010,7900,2025-05-03,2025-05-13,2025-06-17,Forsinket,35,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0784,LEV-002,10600,2025-05-03,2025-07-02,2025-06-26,Betalt,0,Netto 60,CIF,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0785,LEV-038,139200,2025-05-04,2025-08-02,2025-07-27,Betalt,0,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0786,LEV-038,22700,2025-05-05,2025-08-03,2025-09-19,Forsinket,47,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0787,LEV-014,598000,2025-05-07,2025-06-21,2025-07-22,Forsinket,31,Netto 45,EXW,Rammeavtale,IT,4.4,29,Medium
+FAK-0788,LEV-014,439000,2025-05-08,2025-07-07,2025-07-04,Betalt,0,Netto 60,FOB,Rammeavtale,IT,4.4,29,Medium
+FAK-0789,LEV-014,646000,2025-05-11,2025-06-25,2025-06-22,Betalt,0,Netto 45,EXW,Rammeavtale,IT,4.4,29,Medium
+FAK-0790,LEV-010,6000,2025-05-16,2025-05-26,2025-05-26,Betalt,0,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0791,LEV-005,601300,2025-05-16,2025-06-15,2025-06-11,Betalt,0,Netto 30,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0792,LEV-014,297400,2025-05-16,2025-07-15,2025-07-08,Betalt,0,Netto 60,DAP,Rammeavtale,IT,4.4,29,Medium
+FAK-0793,LEV-027,485600,2025-05-17,2025-05-27,2025-05-26,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0794,LEV-026,620900,2025-05-18,2025-06-17,2025-06-12,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0795,LEV-026,273500,2025-05-18,2025-06-17,2025-06-13,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0796,LEV-013,553000,2025-05-18,2025-05-28,2025-05-24,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0797,LEV-010,3700,2025-05-19,2025-05-29,2025-07-21,Forsinket,53,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0798,LEV-034,1367600,2025-05-21,2025-05-31,2025-05-30,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0799,LEV-030,65300,2025-05-21,2025-05-31,2025-07-15,Forsinket,45,Netto 10,CPT,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0800,LEV-019,361000,2025-05-22,2025-06-05,2025-07-10,Forsinket,35,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0801,LEV-024,142300,2025-05-23,2025-06-02,2025-07-03,Forsinket,31,Netto 10,DDP,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0802,LEV-038,111800,2025-05-24,2025-08-22,2025-10-03,Forsinket,42,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0803,LEV-002,43500,2025-05-28,2025-07-27,2025-07-22,Betalt,0,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0804,LEV-005,504800,2025-05-29,2025-06-28,2025-07-23,Forsinket,25,Netto 30,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0805,LEV-034,964700,2025-05-31,2025-06-14,2025-06-07,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0806,LEV-040,33700,2025-06-07,2025-07-07,2025-07-01,Betalt,0,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0807,LEV-038,106500,2025-06-08,2025-09-06,2025-08-30,Betalt,0,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0808,LEV-039,35900,2025-06-08,2025-08-07,2025-08-01,Betalt,0,Netto 60,DPU,Enkeltkontrakt,Transport,9.4,8,Medium
+FAK-0809,LEV-003,576200,2025-06-08,2025-09-06,2025-08-30,Betalt,0,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0810,LEV-006,177400,2025-06-10,2025-08-09,2025-10-07,Forsinket,59,Netto 60,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0811,LEV-013,358900,2025-06-12,2025-06-22,2025-07-05,Forsinket,13,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0812,LEV-010,24200,2025-06-12,2025-06-22,2025-06-14,Betalt,0,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0813,LEV-005,560300,2025-06-13,2025-06-23,2025-06-20,Betalt,0,Netto 10,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0814,LEV-024,53400,2025-06-15,2025-06-25,2025-06-19,Betalt,0,Netto 10,DPU,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0815,LEV-001,55600,2025-06-16,2025-09-14,2025-10-16,Forsinket,32,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0816,LEV-031,414200,2025-06-17,2025-08-16,2025-08-11,Betalt,0,Netto 60,EXW,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0817,LEV-026,215800,2025-06-19,2025-07-19,2025-07-14,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0818,LEV-018,12100,2025-06-19,2025-07-03,2025-07-03,Betalt,0,Netto 14,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0819,LEV-030,279500,2025-06-20,2025-06-30,2025-06-26,Betalt,0,Netto 10,FCA,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0820,LEV-016,405800,2025-06-21,2025-08-20,2025-08-15,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0821,LEV-006,292800,2025-06-23,2025-07-03,2025-07-01,Betalt,0,Netto 10,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0822,LEV-019,143900,2025-06-23,2025-07-07,2025-06-29,Betalt,0,Netto 14,FOB,Minikonkurranse,IT,13.9,32,Høy
+FAK-0823,LEV-036,184200,2025-06-24,2025-08-23,2025-08-13,Betalt,0,Netto 60,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0824,LEV-026,195800,2025-06-24,2025-07-24,2025-07-14,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0825,LEV-035,292300,2025-06-25,2025-09-23,2025-10-09,Forsinket,16,Netto 90,CPT,Minikonkurranse,Konsulenttjenester,22.9,11,Høy
+FAK-0826,LEV-009,106100,2025-06-26,2025-08-10,2025-08-01,Betalt,0,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0827,LEV-019,679100,2025-06-26,2025-07-10,2025-07-05,Betalt,0,Netto 14,FOB,Minikonkurranse,IT,13.9,32,Høy
+FAK-0828,LEV-007,727400,2025-06-27,2025-07-27,2025-09-19,Forsinket,54,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0829,LEV-031,147100,2025-06-27,2025-08-26,2025-09-05,Forsinket,10,Netto 60,CFR,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0830,LEV-019,625100,2025-06-30,2025-07-14,2025-07-08,Betalt,0,Netto 14,FOB,Minikonkurranse,IT,13.9,32,Høy
+FAK-0831,LEV-004,585200,2025-07-01,2025-09-29,2025-09-25,Betalt,0,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0832,LEV-018,36300,2025-07-01,2025-07-11,2025-07-05,Betalt,0,Netto 10,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0833,LEV-010,9500,2025-07-02,2025-07-12,2025-08-13,Forsinket,32,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0834,LEV-014,672900,2025-07-02,2025-08-31,2025-08-26,Betalt,0,Netto 60,FOB,Rammeavtale,IT,4.4,29,Medium
+FAK-0835,LEV-015,749100,2025-07-02,2025-08-01,2025-07-24,Betalt,0,Netto 30,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0836,LEV-015,1350200,2025-07-02,2025-08-01,2025-07-25,Betalt,0,Netto 30,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0837,LEV-003,312800,2025-07-02,2025-09-30,2025-09-30,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0838,LEV-003,572700,2025-07-04,2025-10-02,2025-11-19,Forsinket,48,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0839,LEV-014,656000,2025-07-04,2025-09-02,2025-08-28,Betalt,0,Netto 60,DAP,Rammeavtale,IT,4.4,29,Medium
+FAK-0840,LEV-038,169400,2025-07-08,2025-10-06,2025-10-03,Betalt,0,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0841,LEV-036,375300,2025-07-08,2025-08-07,2025-08-06,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0842,LEV-023,94000,2025-07-10,2025-09-08,2025-08-30,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0843,LEV-037,159200,2025-07-11,2025-10-09,2025-11-11,Forsinket,33,Netto 90,EXW,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0844,LEV-005,379900,2025-07-12,2025-07-22,2025-08-23,Forsinket,32,Netto 10,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0845,LEV-040,84600,2025-07-19,2025-08-18,2025-09-17,Forsinket,30,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0846,LEV-032,567500,2025-07-19,2025-08-18,2025-09-11,Forsinket,24,Netto 30,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0847,LEV-028,16400,2025-07-20,2025-08-03,2025-07-30,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0848,LEV-024,29100,2025-07-21,2025-07-31,2025-07-28,Betalt,0,Netto 10,CIF,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0849,LEV-001,71300,2025-07-22,2025-10-20,2025-10-20,Betalt,0,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0850,LEV-011,22100,2025-07-22,2025-09-05,2025-09-14,Forsinket,9,Netto 45,FAS,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0851,LEV-004,469700,2025-07-23,2025-10-21,2025-11-21,Forsinket,31,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0852,LEV-012,132000,2025-07-23,2025-10-21,2025-10-28,Forsinket,7,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0853,LEV-038,112800,2025-07-24,2025-10-22,2025-11-22,Forsinket,31,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0854,LEV-038,285000,2025-07-25,2025-10-23,2025-10-27,Forsinket,4,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0855,LEV-034,466600,2025-07-25,2025-08-04,2025-07-26,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0856,LEV-023,30600,2025-07-26,2025-09-24,2025-09-20,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0857,LEV-038,277200,2025-08-01,2025-10-30,2025-10-28,Betalt,0,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0858,LEV-029,1062300,2025-08-01,2025-08-15,2025-08-06,Betalt,0,Netto 14,EXW,Rammeavtale,Bygg,3.5,8,Medium
+FAK-0859,LEV-034,1251000,2025-08-02,2025-08-12,2025-08-07,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0860,LEV-017,110500,2025-08-04,2025-10-03,2025-09-27,Betalt,0,Netto 60,DPU,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0861,LEV-024,97800,2025-08-05,2025-08-15,2025-08-14,Betalt,0,Netto 10,CIF,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0862,LEV-028,73600,2025-08-08,2025-08-22,2025-10-11,Forsinket,50,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0863,LEV-007,436200,2025-08-08,2025-09-07,2025-09-23,Forsinket,16,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0864,LEV-007,438400,2025-08-08,2025-09-07,2025-09-02,Betalt,0,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0865,LEV-006,291600,2025-08-09,2025-08-19,2025-08-27,Forsinket,8,Netto 10,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0866,LEV-012,213600,2025-08-09,2025-10-08,2025-10-13,Forsinket,5,Netto 60,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0867,LEV-018,36700,2025-08-14,2025-08-24,2025-08-30,Forsinket,6,Netto 10,CFR,Rammeavtale,Renhold,14.1,15,Høy
+FAK-0868,LEV-026,195500,2025-08-18,2025-09-17,2025-09-19,Forsinket,2,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0869,LEV-019,61300,2025-08-18,2025-09-01,2025-10-08,Forsinket,37,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0870,LEV-010,23800,2025-08-19,2025-08-29,2025-08-26,Betalt,0,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0871,LEV-016,1345300,2025-08-20,2025-10-19,2025-10-13,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0872,LEV-002,35400,2025-08-21,2025-10-20,2025-11-17,Forsinket,28,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0873,LEV-014,786000,2025-08-22,2025-10-21,2025-10-20,Betalt,0,Netto 60,DAP,Rammeavtale,IT,4.4,29,Medium
+FAK-0874,LEV-031,565600,2025-08-22,2025-10-21,2025-10-12,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0875,LEV-036,595900,2025-08-24,2025-09-23,2025-09-22,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0876,LEV-006,177400,2025-08-25,2025-09-04,2025-09-02,Betalt,0,Netto 10,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0877,LEV-005,206800,2025-08-26,2025-09-05,2025-08-29,Betalt,0,Netto 10,CFR,Rammeavtale,IT,7.4,33,Medium
+FAK-0878,LEV-019,268600,2025-08-26,2025-09-09,2025-11-08,Forsinket,60,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0879,LEV-012,416900,2025-08-27,2025-10-26,2025-12-01,Forsinket,36,Netto 60,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0880,LEV-007,614100,2025-08-27,2025-09-26,2025-09-18,Betalt,0,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0881,LEV-024,31500,2025-08-27,2025-09-06,2025-10-07,Forsinket,31,Netto 10,DPU,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0882,LEV-034,553900,2025-08-27,2025-09-10,2025-09-06,Betalt,0,Netto 14,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0883,LEV-034,1130600,2025-08-28,2025-09-07,2025-08-29,Betalt,0,Netto 10,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0884,LEV-037,532400,2025-08-29,2025-09-08,2025-09-01,Betalt,0,Netto 10,EXW,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0885,LEV-020,110900,2025-08-30,2025-11-28,2025-11-23,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,Energi,4.0,13,Medium
+FAK-0886,LEV-003,606900,2025-08-31,2025-11-29,2025-11-20,Betalt,0,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0887,LEV-023,28300,2025-09-01,2025-10-31,2025-10-31,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0888,LEV-007,123000,2025-09-01,2025-10-01,2025-10-01,Betalt,0,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0889,LEV-019,116600,2025-09-02,2025-09-16,2025-09-07,Betalt,0,Netto 14,FOB,Minikonkurranse,IT,13.9,32,Høy
+FAK-0890,LEV-009,38300,2025-09-02,2025-10-17,2025-10-11,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0891,LEV-013,371000,2025-09-02,2025-09-12,2025-09-05,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0892,LEV-004,273800,2025-09-03,2025-12-02,2025-12-31,Forsinket,29,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0893,LEV-004,197400,2025-09-04,2025-12-03,2025-11-29,Betalt,0,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0894,LEV-001,69500,2025-09-04,2025-12-03,2025-11-27,Betalt,0,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0895,LEV-010,29200,2025-09-05,2025-09-15,2025-09-07,Betalt,0,Netto 10,DDP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0896,LEV-008,24300,2025-09-06,2025-10-06,2025-11-05,Forsinket,30,Netto 30,DAP,Rammeavtale,Renhold,13.8,12,Høy
+FAK-0897,LEV-019,730600,2025-09-06,2025-09-20,2025-10-11,Forsinket,21,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0898,LEV-022,66500,2025-09-07,2025-09-21,2025-09-11,Betalt,0,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0899,LEV-028,66900,2025-09-08,2025-09-22,2025-09-12,Betalt,0,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0900,LEV-027,382400,2025-09-09,2025-09-19,2025-09-19,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0901,LEV-026,397700,2025-09-09,2025-10-09,2025-10-03,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0902,LEV-040,14200,2025-09-09,2025-10-09,2025-10-08,Betalt,0,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0903,LEV-003,744200,2025-09-10,2025-12-09,2025-12-01,Betalt,0,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0904,LEV-027,419300,2025-09-10,2025-09-20,2025-10-18,Forsinket,28,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0905,LEV-020,128900,2025-09-11,2025-12-10,2025-12-10,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,Energi,4.0,13,Medium
+FAK-0906,LEV-023,52400,2025-09-11,2025-11-10,2025-12-11,Forsinket,31,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0907,LEV-010,28000,2025-09-13,2025-09-23,2025-10-23,Forsinket,30,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0908,LEV-007,453400,2025-09-16,2025-10-16,2025-10-11,Betalt,0,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0909,LEV-011,22800,2025-09-16,2025-09-30,2025-09-21,Betalt,0,Netto 14,FAS,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0910,LEV-031,596400,2025-09-16,2025-11-15,2025-11-12,Betalt,0,Netto 60,CFR,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0911,LEV-014,89700,2025-09-16,2025-10-31,2025-10-22,Betalt,0,Netto 45,DAP,Rammeavtale,IT,4.4,29,Medium
+FAK-0912,LEV-038,96600,2025-09-17,2025-12-16,2025-12-13,Betalt,0,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0913,LEV-017,438200,2025-09-17,2025-11-16,2026-01-05,Forsinket,50,Netto 60,CFR,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0914,LEV-016,953900,2025-09-19,2025-11-18,2025-11-10,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0915,LEV-006,35200,2025-09-20,2025-09-30,2025-11-16,Forsinket,47,Netto 10,CIF,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0916,LEV-016,989200,2025-09-21,2025-11-20,2025-11-18,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0917,LEV-014,244800,2025-09-23,2025-11-22,2025-11-16,Betalt,0,Netto 60,EXW,Rammeavtale,IT,4.4,29,Medium
+FAK-0918,LEV-028,124500,2025-09-24,2025-10-08,2025-10-06,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0919,LEV-004,658800,2025-09-24,2025-12-23,2025-12-23,Betalt,0,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0920,LEV-005,458000,2025-09-25,2025-10-05,2025-10-04,Betalt,0,Netto 10,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0921,LEV-038,273300,2025-09-26,2025-12-25,2025-12-26,Forsinket,1,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0922,LEV-009,58300,2025-09-27,2025-11-11,2025-11-08,Betalt,0,Netto 45,FOB,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0923,LEV-027,515400,2025-09-27,2025-10-07,2025-10-01,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0924,LEV-012,132500,2025-09-27,2025-12-26,2025-12-24,Betalt,0,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0925,LEV-017,325100,2025-09-29,2025-11-28,2025-11-24,Betalt,0,Netto 60,DPU,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0926,LEV-030,441800,2025-09-29,2025-10-09,2025-10-06,Betalt,0,Netto 10,CIF,Rammeavtale,Konsulenttjenester,10.3,17,Høy
+FAK-0927,LEV-022,72600,2025-10-01,2025-10-15,2025-10-06,Betalt,0,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0928,LEV-015,1252700,2025-10-02,2025-10-12,2025-10-09,Betalt,0,Netto 10,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0929,LEV-036,318100,2025-10-02,2025-11-01,2025-10-31,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0930,LEV-036,360900,2025-10-03,2025-11-02,2025-10-25,Betalt,0,Netto 30,DPU,Enkeltkontrakt,Konsulenttjenester,6.1,30,Medium
+FAK-0931,LEV-020,23000,2025-10-07,2026-01-05,2026-01-02,Betalt,0,Netto 90,DDP,Åpen anbudskonkurranse,Energi,4.0,13,Medium
+FAK-0932,LEV-004,165800,2025-10-08,2026-01-06,,Ubetalt,,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0933,LEV-032,1048800,2025-10-11,2025-10-25,2025-10-26,Forsinket,1,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0934,LEV-016,928400,2025-10-13,2025-12-12,2025-12-04,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0935,LEV-004,205100,2025-10-13,2026-01-11,2026-01-14,Forsinket,3,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0936,LEV-034,202900,2025-10-14,2025-10-28,2025-10-23,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0937,LEV-033,527500,2025-10-15,2025-10-25,2025-10-28,Forsinket,3,Netto 10,CFR,Rammeavtale,Konsulenttjenester,12.4,12,Høy
+FAK-0938,LEV-019,712600,2025-10-16,2025-10-30,2025-11-14,Forsinket,15,Netto 14,FAS,Minikonkurranse,IT,13.9,32,Høy
+FAK-0939,LEV-012,356700,2025-10-17,2025-12-16,,Ubetalt,,Netto 60,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0940,LEV-027,245600,2025-10-19,2025-10-29,2025-10-28,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0941,LEV-026,335500,2025-10-21,2025-11-20,2025-11-10,Betalt,0,Netto 30,FCA,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0942,LEV-013,539800,2025-10-23,2025-11-02,2025-11-01,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0943,LEV-038,298300,2025-10-24,2026-01-22,,Ubetalt,,Netto 90,FOB,Rammeavtale,Energi,16.6,44,Høy
+FAK-0944,LEV-012,455100,2025-10-26,2025-12-25,2026-01-06,Forsinket,12,Netto 60,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0945,LEV-013,310300,2025-10-28,2025-11-07,2025-11-03,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0946,LEV-023,47200,2025-10-29,2025-12-28,2026-01-05,Forsinket,8,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0947,LEV-001,73500,2025-10-29,2026-01-27,,Ubetalt,,Netto 90,CIP,Enkeltkontrakt,Transport,7.4,36,Medium
+FAK-0948,LEV-025,44600,2025-10-30,2025-11-09,2025-11-30,Forsinket,21,Netto 10,FCA,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0949,LEV-004,624300,2025-11-01,2026-01-30,,Ubetalt,,Netto 90,DPU,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0950,LEV-005,452600,2025-11-01,2025-12-01,2025-11-27,Betalt,0,Netto 30,DAP,Rammeavtale,IT,7.4,33,Medium
+FAK-0951,LEV-032,647300,2025-11-02,2025-11-16,2025-11-14,Betalt,0,Netto 14,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0952,LEV-037,447300,2025-11-03,2026-02-01,,Ubetalt,,Netto 90,EXW,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0953,LEV-003,794000,2025-11-03,2026-02-01,,Ubetalt,,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0954,LEV-033,382700,2025-11-04,2025-11-14,2025-11-16,Forsinket,2,Netto 10,CIF,Rammeavtale,Konsulenttjenester,12.4,12,Høy
+FAK-0955,LEV-038,46400,2025-11-04,2026-02-02,,Ubetalt,,Netto 90,DDP,Rammeavtale,Energi,16.6,44,Høy
+FAK-0956,LEV-033,136100,2025-11-05,2025-11-15,2025-12-25,Forsinket,40,Netto 10,CIF,Rammeavtale,Konsulenttjenester,12.4,12,Høy
+FAK-0957,LEV-014,449200,2025-11-07,2026-01-06,2026-01-05,Betalt,0,Netto 60,FOB,Rammeavtale,IT,4.4,29,Medium
+FAK-0958,LEV-028,139800,2025-11-12,2025-11-26,2025-11-24,Betalt,0,Netto 14,EXW,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0959,LEV-026,141600,2025-11-14,2025-12-14,2025-12-13,Betalt,0,Netto 30,CIP,Åpen anbudskonkurranse,IT,2.3,37,Medium
+FAK-0960,LEV-016,1268100,2025-11-15,2026-01-14,2026-01-09,Betalt,0,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0961,LEV-012,462700,2025-11-15,2026-02-13,,Ubetalt,,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0962,LEV-004,473800,2025-11-19,2026-02-17,,Ubetalt,,Netto 90,DAP,Enkeltkontrakt,IT,14.8,38,Høy
+FAK-0963,LEV-023,7200,2025-11-21,2026-01-20,,Ubetalt,,Netto 60,CFR,Åpen anbudskonkurranse,Transport,14.2,21,Høy
+FAK-0964,LEV-002,28400,2025-11-23,2026-01-22,,Ubetalt,,Netto 60,EXW,Rammeavtale,Renhold,11.1,23,Høy
+FAK-0965,LEV-035,40600,2025-11-24,2026-02-22,,Ubetalt,,Netto 90,DAP,Minikonkurranse,Konsulenttjenester,22.9,11,Høy
+FAK-0966,LEV-015,602400,2025-11-24,2025-12-24,2025-12-22,Betalt,0,Netto 30,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0967,LEV-024,24300,2025-11-24,2025-12-04,2026-01-06,Forsinket,33,Netto 10,DPU,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0968,LEV-003,538500,2025-11-25,2026-02-23,,Ubetalt,,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0969,LEV-015,493400,2025-11-27,2025-12-27,2025-12-17,Betalt,0,Netto 30,FAS,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0970,LEV-010,17700,2025-11-28,2025-12-08,2025-12-06,Betalt,0,Netto 10,DAP,Rammeavtale,Forbruksmateriell,17.0,43,Høy
+FAK-0971,LEV-035,287700,2025-11-28,2026-02-26,,Ubetalt,,Netto 90,CPT,Minikonkurranse,Konsulenttjenester,22.9,11,Høy
+FAK-0972,LEV-003,276400,2025-11-29,2026-02-27,,Ubetalt,,Netto 90,FOB,Åpen anbudskonkurranse,IT,6.3,36,Medium
+FAK-0973,LEV-022,20400,2025-11-30,2025-12-14,2026-01-04,Forsinket,21,Netto 14,EXW,Minikonkurranse,Transport,19.1,18,Høy
+FAK-0974,LEV-019,242800,2025-12-02,2025-12-16,2025-12-14,Betalt,0,Netto 14,CPT,Minikonkurranse,IT,13.9,32,Høy
+FAK-0975,LEV-012,74200,2025-12-02,2026-03-02,,Ubetalt,,Netto 90,DDP,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0976,LEV-028,73600,2025-12-03,2025-12-17,2025-12-11,Betalt,0,Netto 14,DDP,Minikonkurranse,Vedlikehold,2.1,32,Medium
+FAK-0977,LEV-040,147400,2025-12-06,2026-01-05,2025-12-30,Betalt,0,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0978,LEV-031,703300,2025-12-06,2026-02-04,,Ubetalt,,Netto 60,EXW,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0979,LEV-011,3000,2025-12-07,2025-12-21,2025-12-19,Betalt,0,Netto 14,FAS,Enkeltkontrakt,Renhold,12.2,17,Høy
+FAK-0980,LEV-012,130900,2025-12-07,2026-03-07,,Ubetalt,,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0981,LEV-015,543900,2025-12-07,2026-01-06,2025-12-30,Betalt,0,Netto 30,CPT,Rammeavtale,Bygg,1.3,35,Lav
+FAK-0982,LEV-007,557000,2025-12-08,2026-01-07,2025-12-29,Betalt,0,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0983,LEV-016,939800,2025-12-09,2026-02-07,,Ubetalt,,Netto 60,CIF,Minikonkurranse,Bygg,2.5,28,Medium
+FAK-0984,LEV-032,498200,2025-12-09,2026-01-08,2026-01-14,Forsinket,6,Netto 30,DAP,Åpen anbudskonkurranse,Bygg,9.6,26,Medium
+FAK-0985,LEV-025,6600,2025-12-10,2025-12-20,2026-01-09,Forsinket,20,Netto 10,FCA,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-0986,LEV-012,463900,2025-12-10,2026-03-10,,Ubetalt,,Netto 90,CFR,Minikonkurranse,Konsulenttjenester,16.8,48,Høy
+FAK-0987,LEV-037,577300,2025-12-11,2026-03-11,,Ubetalt,,Netto 90,DAP,Rammeavtale,Konsulenttjenester,25.2,14,Kritisk
+FAK-0988,LEV-034,271700,2025-12-12,2025-12-26,2025-12-25,Betalt,0,Netto 14,CPT,Åpen anbudskonkurranse,Bygg,2.2,32,Medium
+FAK-0989,LEV-031,635800,2025-12-12,2026-02-10,,Ubetalt,,Netto 60,CFR,Åpen anbudskonkurranse,IT,12.9,17,Høy
+FAK-0990,LEV-024,38700,2025-12-19,2025-12-29,2026-01-08,Forsinket,10,Netto 10,DPU,Åpen anbudskonkurranse,Vedlikehold,14.4,28,Høy
+FAK-0991,LEV-013,259100,2025-12-22,2026-01-01,2025-12-28,Betalt,0,Netto 10,CPT,Enkeltkontrakt,Konsulenttjenester,1.8,18,Lav
+FAK-0992,LEV-017,537200,2025-12-23,2026-02-21,,Ubetalt,,Netto 60,CFR,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0993,LEV-009,11700,2025-12-23,2026-02-06,,Ubetalt,,Netto 45,DAP,Enkeltkontrakt,Transport,3.0,39,Medium
+FAK-0994,LEV-006,219300,2025-12-26,2026-01-05,2025-12-27,Betalt,0,Netto 10,CFR,Minikonkurranse,Energi,12.3,28,Høy
+FAK-0995,LEV-027,753500,2025-12-28,2026-01-07,2025-12-30,Betalt,0,Netto 10,CPT,Åpen anbudskonkurranse,IT,3.2,14,Medium
+FAK-0996,LEV-007,64800,2025-12-29,2026-01-28,,Ubetalt,,Netto 30,CIP,Rammeavtale,IT,14.7,25,Høy
+FAK-0997,LEV-040,145500,2025-12-29,2026-01-28,,Ubetalt,,Netto 30,CIF,Enkeltkontrakt,Vedlikehold,12.6,19,Høy
+FAK-0998,LEV-017,470300,2025-12-30,2026-02-28,,Ubetalt,,Netto 60,DPU,Åpen anbudskonkurranse,IT,18.9,41,Høy
+FAK-0999,LEV-025,35400,2025-12-31,2026-01-10,2026-01-03,Betalt,0,Netto 10,DPU,Enkeltkontrakt,Transport,10.3,18,Høy
+FAK-1000,LEV-014,174100,2025-12-31,2026-03-01,,Ubetalt,,Netto 60,EXW,Rammeavtale,IT,4.4,29,Medium
