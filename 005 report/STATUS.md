@@ -1,5 +1,5 @@
 # Prosjektstatus – Finansiell logistikk og beslutningstøtte ved hjelp av KI
-**Sist oppdatert:** 2026-04-16
+**Sist oppdatert:** 2026-04-16 (arbeidsøkt 3)
 **Prosjektleder:** Magnus Ødegård | **Kurs:** LOG650
 
 ---
@@ -7,7 +7,7 @@
 ## Nåværende fase
 **FASE 3 – Gjennomføring** (9. mar – 27. apr 2026)
 
-> Neste milepæl: **Ferdig EDA og feature engineering — 2026-04-18** (om 2 dager!)
+> Neste milepæl: **Ferdig EDA og feature engineering — 2026-04-18** (EDA og feature engineering fullført 2026-04-16)
 
 ---
 
@@ -17,8 +17,8 @@
 |----|---------------------------------------|------------|---------------|
 | M1 | Godkjent proposal (Fase 1)            | 2026-02-09 | ✅ Fullført   |
 | M2 | Godkjent prosjektstyringsplan (Fase 2)| 2026-03-17 | ✅ Fullført   |
-| M3 | Ferdig datagrunnlag (Fase 3)          | 2026-04-11 | ⚠️ Oppdater  |
-| M4 | Ferdig EDA og feature engineering     | 2026-04-18 | 🔴 Kritisk   |
+| M3 | Ferdig datagrunnlag (Fase 3)          | 2026-04-11 | ✅ Fullført   |
+| M4 | Ferdig EDA og feature engineering     | 2026-04-18 | ✅ Fullført   |
 | M5 | Ferdig og evaluert modell             | 2026-05-09 | ⏳ Kommende  |
 | M6 | Innlevert endelig rapport (Fase 4)    | 2026-05-31 | ⏳ Kommende  |
 
@@ -41,13 +41,13 @@
 | 3.2   | Teori og litteratursøk                                          | ⬜ Ikke startet |       |
 | 3.2.1 | Søk og gjennomgang av relevante artikler                        | ⬜ Ikke startet |       |
 | 3.2.2 | Oppsummering av teorigrunnlag for rapporten                     | ⬜ Ikke startet |       |
-| 3.3   | Casebeskrivelse og datainnsamling                               | ⚠️ Pågår       | Avhenger av data fra veileder |
-| 3.3.1 | Anonymisering og klargjøring av fakturadatasett                 | ⚠️ Pågår       |       |
-| 3.3.2 | Eksplorativ dataanalyse (EDA)                                   | ⬜ Ikke startet |       |
-| 3.4   | Data, metode og modellering (KI-implementasjon)                 | ⬜ Ikke startet |       |
-| 3.4.1 | Feature engineering – fakturaspesifikke variabler               | ⬜ Ikke startet |       |
-| 3.4.2 | Feature engineering – historiske betalingsvariabler             | ⬜ Ikke startet |       |
-| 3.4.3 | Trening av kandidatmodeller                                     | ⬜ Ikke startet |       |
+| 3.3   | Casebeskrivelse og datainnsamling                               | ✅ Fullført    | Datasett mottatt fra veileder – 1 000 fakturaer, 15 kolonner |
+| 3.3.1 | Anonymisering og klargjøring av fakturadatasett                 | ✅ Fullført    | 29 fakturaer med status «Ubetalt» identifisert og dokumentert |
+| 3.3.2 | Eksplorativ dataanalyse (EDA)                                   | ✅ Fullført    | eda.py – 9 figurer, leverandørprofil og features.csv produsert |
+| 3.4   | Data, metode og modellering (KI-implementasjon)                 | ⚠️ Pågår       |       |
+| 3.4.1 | Feature engineering – fakturaspesifikke variabler               | ✅ Fullført    | betalingsfrist_dager, netto_dager, faktura_maned, faktura_kvartal |
+| 3.4.2 | Feature engineering – historiske betalingsvariabler             | ✅ Fullført    | Leverandørrisikoscore, one-hot-enkoding av kategoriske variabler |
+| 3.4.3 | Trening av kandidatmodeller                                     | ✅ Fullført    | model.py – Log.reg (AUC 0.695), RF (0.691), XGBoost (0.720) – ingen når benchmark ennå |
 | 3.4.4 | Hyperparameterjustering og modellvalg                           | ⬜ Ikke startet |       |
 | 3.5   | Analyse og resultater – kjøre modeller og dokumentere funn      | ⬜ Ikke startet |       |
 | 3.5.1 | Evaluering av modellytelse (AUC-ROC, F1-score, presisjon/recall)| ⬜ Ikke startet |       |
@@ -66,10 +66,9 @@
 
 ## Neste steg (prioritert)
 
-1. **[KRITISK]** Bekrefte status på datagrunnlag fra veileder (M3 – forfalt 2026-04-11)
-2. **[KRITISK]** Fullføre EDA (3.3.2) innen 2026-04-18
-3. **[KRITISK]** Fullføre feature engineering (3.4.1, 3.4.2) innen 2026-04-18
-4. Starte trening av baseline-modell (logistisk regresjon) (3.4.3)
+1. **[NESTE]** Hyperparameterjustering – GridSearchCV/RandomizedSearchCV for Random Forest og XGBoost (3.4.4)
+2. Modellvalg og endelig evaluering (3.4.4)
+3. Kjøre beste modell – klassifisere fakturaer i risikokategorier (3.5.2)
 5. Skrive første utkast av introduksjon og problemstilling (3.1)
 6. Gjennomføre litteratursøk og oppsummere teorigrunnlag (3.2.1, 3.2.2)
 
@@ -77,9 +76,10 @@
 
 ## Åpne saker
 
-| ID  | Sak                                         | Status   | Ansvarlig      | Frist      |
-|-----|---------------------------------------------|----------|----------------|------------|
-| S1  | Avklare datatilgang fra veileder            | 🔴 Åpen  | Magnus Ødegård | Snarest    |
+| ID  | Sak                                                              | Status      | Ansvarlig      | Frist      |
+|-----|------------------------------------------------------------------|-------------|----------------|------------|
+| S1  | Avklare datatilgang fra veileder                                 | ✅ Løst     | Magnus Ødegård | 2026-04-16 |
+| S2  | Avklare håndtering av 29 «Ubetalt»-fakturaer (ekskludere/label) | ✅ Løst     | Magnus Ødegård | 2026-04-16 |
 
 ---
 
@@ -87,9 +87,10 @@
 
 | ID | Risiko                               | Nivå    | Tiltak/Kommentar                              |
 |----|--------------------------------------|---------|-----------------------------------------------|
-| R1 | Utilstrekkelig datakvalitet          | Middels | Grundig datarensing – sjekk etter EDA         |
-| R2 | Manglende tilgang til data           | Høy     | **Uavklart** – avventer datasett fra veileder |
-| R4 | Tidspress mot innleveringsfrist      | Høy     | EDA-frist om 2 dager – krever prioritering    |
+| R1 | Utilstrekkelig datakvalitet          | Lav     | EDA gjennomført – datasett komplett bortsett fra 29 ubetalte fakturaer |
+| R2 | Manglende tilgang til data           | Lukket  | Datasett mottatt og bekreftet 2026-04-16                               |
+| R3 | Håndtering av «Ubetalt»-klasse       | Lukket  | Ekskludert fra trening (971 fakturaer brukes) – S2 løst 2026-04-16    |
+| R4 | Tidspress mot innleveringsfrist      | Middels | EDA fullført – neste kritiske frist: modell ferdig 2026-05-09          |
 
 ---
 
@@ -106,9 +107,17 @@
 
 ## Endringslogg
 
-| Dato       | Endring                                     | Grunn |
-|------------|---------------------------------------------|-------|
-| 2026-04-16 | Statusfil opprettet og populert fra prosjektstyringsplanen | Initiell oppstart |
+| Dato       | Endring                                                                          | Grunn |
+|------------|----------------------------------------------------------------------------------|-------|
+| 2026-04-16 | Statusfil opprettet og populert fra prosjektstyringsplanen                       | Initiell oppstart |
+| 2026-04-16 | Datasett bekreftet mottatt (1 000 fakturaer, 15 kolonner) – S1 lukket            | Arbeidsøkt 2 |
+| 2026-04-16 | EDA fullført: klasseubalanse, forsinkelsesdist., kategori- og leverandøranalyse  | Arbeidsøkt 2 |
+| 2026-04-16 | Feature engineering fullført: 34 features, features.csv produsert               | Arbeidsøkt 2 |
+| 2026-04-16 | Leverandørrisikoprofil laget: risikoscore per leverandør, 9 figurer generert     | Arbeidsøkt 2 |
+| 2026-04-16 | M3 og M4 markert fullført – ny åpen sak S2 (Ubetalt-klassen)                    | Arbeidsøkt 2 |
+| 2026-04-16 | S2 løst: 29 Ubetalt-fakturaer ekskludert fra trening (971 brukes)               | Arbeidsøkt 3 |
+| 2026-04-16 | model.py opprettet: Log.reg (AUC 0.695), RF (0.691), XGBoost (0.720) – 3.4.3 ✅ | Arbeidsøkt 3 |
+| 2026-04-16 | 5 figurer generert (10–14), modell_resultater.csv produsert                     | Arbeidsøkt 3 |
 
 ---
 
