@@ -1,5 +1,5 @@
 # Prosjektstatus – Finansiell logistikk og beslutningstøtte ved hjelp av KI
-**Sist oppdatert:** 2026-04-16 (arbeidsøkt 3)
+**Sist oppdatert:** 2026-04-16 (arbeidsøkt 4)
 **Prosjektleder:** Magnus Ødegård | **Kurs:** LOG650
 
 ---
@@ -37,10 +37,10 @@
 ### Fase 3 – Gjennomføring (aktiv)
 | ID    | Oppgave                                                         | Status         | Notat |
 |-------|-----------------------------------------------------------------|----------------|-------|
-| 3.1   | Introduksjon og problemstilling – første utkast                 | ⬜ Ikke startet |       |
-| 3.2   | Teori og litteratursøk                                          | ⬜ Ikke startet |       |
-| 3.2.1 | Søk og gjennomgang av relevante artikler                        | ⬜ Ikke startet |       |
-| 3.2.2 | Oppsummering av teorigrunnlag for rapporten                     | ⬜ Ikke startet |       |
+| 3.1   | Introduksjon og problemstilling – første utkast                 | ✅ Fullført    | Innledning (1.0), problemstilling (1.1), delproblemer (1.2), avgrensinger (1.3) og antagelser (1.4) skrevet inn i rapport_mal.md |
+| 3.2   | Teori og litteratursøk                                          | ✅ Fullført    | Seksjon 2.0 og 3.0 skrevet inn i rapport_mal.md |
+| 3.2.1 | Søk og gjennomgang av relevante artikler                        | ✅ Fullført    | Appel et al. (2020) og Schoonbee et al. (2022) gjennomgått og oppsummert |
+| 3.2.2 | Oppsummering av teorigrunnlag for rapporten                     | ✅ Fullført    | 2.0 Litteratur og 3.0 Teori (6 delkapitler) skrevet inn i rapporten |
 | 3.3   | Casebeskrivelse og datainnsamling                               | ✅ Fullført    | Datasett mottatt fra veileder – 1 000 fakturaer, 15 kolonner |
 | 3.3.1 | Anonymisering og klargjøring av fakturadatasett                 | ✅ Fullført    | 29 fakturaer med status «Ubetalt» identifisert og dokumentert |
 | 3.3.2 | Eksplorativ dataanalyse (EDA)                                   | ✅ Fullført    | eda.py – 9 figurer, leverandørprofil og features.csv produsert |
@@ -66,11 +66,11 @@
 
 ## Neste steg (prioritert)
 
-1. **[NESTE]** Hyperparameterjustering – GridSearchCV/RandomizedSearchCV for Random Forest og XGBoost (3.4.4)
+1. **[NESTE]** Hyperparameterjustering – GridSearchCV/RandomizedSearchCV for RF og XGBoost (3.4.4)
 2. Modellvalg og endelig evaluering (3.4.4)
 3. Kjøre beste modell – klassifisere fakturaer i risikokategorier (3.5.2)
-5. Skrive første utkast av introduksjon og problemstilling (3.1)
-6. Gjennomføre litteratursøk og oppsummere teorigrunnlag (3.2.1, 3.2.2)
+2. Modellvalg og endelig evaluering (3.4.4)
+3. Kjøre beste modell – klassifisere fakturaer i risikokategorier (3.5.2)
 
 ---
 
@@ -118,6 +118,9 @@
 | 2026-04-16 | S2 løst: 29 Ubetalt-fakturaer ekskludert fra trening (971 brukes)               | Arbeidsøkt 3 |
 | 2026-04-16 | model.py opprettet: Log.reg (AUC 0.695), RF (0.691), XGBoost (0.720) – 3.4.3 ✅ | Arbeidsøkt 3 |
 | 2026-04-16 | 5 figurer generert (10–14), modell_resultater.csv produsert                     | Arbeidsøkt 3 |
+| 2026-04-16 | 3.1 påbegynt: første utkast av innledning, avgrensinger og antagelser (rapport.md) | Arbeidsøkt 4 |
+| 2026-04-16 | 3.1 fullført: seksjon 1.0–1.4 skrevet inn i rapport_mal.md (014 fase 4 - report)   | Arbeidsøkt 4 |
+| 2026-04-16 | 3.2 fullført: seksjon 2.0 Litteratur og 3.0 Teori skrevet inn i rapport_mal.md     | Arbeidsøkt 4 |
 
 ---
 
