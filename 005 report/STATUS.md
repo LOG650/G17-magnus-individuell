@@ -1,5 +1,5 @@
 # Prosjektstatus – Finansiell logistikk og beslutningstøtte ved hjelp av KI
-**Sist oppdatert:** 2026-04-16 (arbeidsøkt 4)
+**Sist oppdatert:** 2026-04-17 (arbeidsøkt 5)
 **Prosjektleder:** Magnus Ødegård | **Kurs:** LOG650
 
 ---
@@ -44,14 +44,14 @@
 | 3.3   | Casebeskrivelse og datainnsamling                               | ✅ Fullført    | Datasett mottatt fra veileder – 1 000 fakturaer, 15 kolonner |
 | 3.3.1 | Anonymisering og klargjøring av fakturadatasett                 | ✅ Fullført    | 29 fakturaer med status «Ubetalt» identifisert og dokumentert |
 | 3.3.2 | Eksplorativ dataanalyse (EDA)                                   | ✅ Fullført    | eda.py – 9 figurer, leverandørprofil og features.csv produsert |
-| 3.4   | Data, metode og modellering (KI-implementasjon)                 | ⚠️ Pågår       |       |
+| 3.4   | Data, metode og modellering (KI-implementasjon)                 | ✅ Fullført    |       |
 | 3.4.1 | Feature engineering – fakturaspesifikke variabler               | ✅ Fullført    | betalingsfrist_dager, netto_dager, faktura_maned, faktura_kvartal |
 | 3.4.2 | Feature engineering – historiske betalingsvariabler             | ✅ Fullført    | Leverandørrisikoscore, one-hot-enkoding av kategoriske variabler |
-| 3.4.3 | Trening av kandidatmodeller                                     | ✅ Fullført    | model.py – Log.reg (AUC 0.695), RF (0.691), XGBoost (0.720) – ingen når benchmark ennå |
-| 3.4.4 | Hyperparameterjustering og modellvalg                           | ⬜ Ikke startet |       |
-| 3.5   | Analyse og resultater – kjøre modeller og dokumentere funn      | ⬜ Ikke startet |       |
-| 3.5.1 | Evaluering av modellytelse (AUC-ROC, F1-score, presisjon/recall)| ⬜ Ikke startet |       |
-| 3.5.2 | Klassifisering av fakturaer i risikokategorier                  | ⬜ Ikke startet |       |
+| 3.4.3 | Trening av kandidatmodeller                                     | ✅ Fullført    | model.py – Log.reg (AUC 0.706), RF (0.695), XGBoost (0.661) baseline |
+| 3.4.4 | Hyperparameterjustering og modellvalg                           | ✅ Fullført    | RF tunet (AUC 0.698), XGBoost tunet (AUC 0.720) – beste modell. Ingen når benchmark ≥ 0.75 |
+| 3.5   | Analyse og resultater – kjøre modeller og dokumentere funn      | ✅ Fullført    |       |
+| 3.5.1 | Evaluering av modellytelse (AUC-ROC, F1-score, presisjon/recall)| ✅ Fullført    | Alle 5 modeller evaluert – beste: XGBoost tunet AUC 0.720, F1 0.621, Recall 0.833 |
+| 3.5.2 | Klassifisering av fakturaer i risikokategorier                  | ✅ Fullført    | Lav 273 (7 % forsinket) / Middels 279 (28 %) / Høy 419 (55 %) – risiko_klassifisering.csv |
 | 3.6   | Diskusjon – tolke funn mot teori og problemstilling             | ⬜ Ikke startet |       |
 | 3.7   | Peer-to-peer review av annen gruppes utkast                     | ⬜ Ikke startet |       |
 
@@ -66,11 +66,9 @@
 
 ## Neste steg (prioritert)
 
-1. **[NESTE]** Hyperparameterjustering – GridSearchCV/RandomizedSearchCV for RF og XGBoost (3.4.4)
-2. Modellvalg og endelig evaluering (3.4.4)
-3. Kjøre beste modell – klassifisere fakturaer i risikokategorier (3.5.2)
-2. Modellvalg og endelig evaluering (3.4.4)
-3. Kjøre beste modell – klassifisere fakturaer i risikokategorier (3.5.2)
+1. **[NESTE]** Diskusjon – tolke funn mot teori og problemstilling (3.6)
+2. Peer-to-peer review av annen gruppes utkast (3.7)
+3. Konklusjon – besvar problemstillingen eksplisitt (4.1)
 
 ---
 
@@ -121,6 +119,10 @@
 | 2026-04-16 | 3.1 påbegynt: første utkast av innledning, avgrensinger og antagelser (rapport.md) | Arbeidsøkt 4 |
 | 2026-04-16 | 3.1 fullført: seksjon 1.0–1.4 skrevet inn i rapport_mal.md (014 fase 4 - report)   | Arbeidsøkt 4 |
 | 2026-04-16 | 3.2 fullført: seksjon 2.0 Litteratur og 3.0 Teori skrevet inn i rapport_mal.md     | Arbeidsøkt 4 |
+| 2026-04-17 | model.py opprettet på nytt (forrige økt ikke lagret). 29 Ubetalt-fakturaer ekskludert korrekt. | Arbeidsøkt 5 |
+| 2026-04-17 | 3.4.4 fullført: RF tunet AUC 0.698, XGBoost tunet AUC 0.720 – beste modell. Benchmark ≥ 0.75 ikke nådd. 5 figurer (10–14) + modell_resultater.csv produsert. | Arbeidsøkt 5 |
+| 2026-04-17 | 3.5.1 fullført: alle 5 modeller evaluert med AUC, F1, presisjon, recall, nøyaktighet | Arbeidsøkt 5 |
+| 2026-04-17 | 3.5.2 fullført: 971 fakturaer klassifisert – Lav 273 / Middels 279 / Høy 419. 3 nye figurer (15–17) + risiko_klassifisering.csv | Arbeidsøkt 5 |
 
 ---
 
