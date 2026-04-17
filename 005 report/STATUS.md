@@ -52,7 +52,7 @@
 | 3.5   | Analyse og resultater – kjøre modeller og dokumentere funn      | ✅ Fullført    |       |
 | 3.5.1 | Evaluering av modellytelse (AUC-ROC, F1-score, presisjon/recall)| ✅ Fullført    | Alle 5 modeller evaluert – beste: XGBoost tunet AUC 0.720, F1 0.621, Recall 0.833 |
 | 3.5.2 | Klassifisering av fakturaer i risikokategorier                  | ✅ Fullført    | Lav 273 (7 % forsinket) / Middels 279 (28 %) / Høy 419 (55 %) – risiko_klassifisering.csv |
-| 3.6   | Diskusjon – tolke funn mot teori og problemstilling             | ⬜ Ikke startet |       |
+| 3.6   | Diskusjon – tolke funn mot teori og problemstilling             | ✅ Fullført    | Seksjon 9.0 skrevet inn i rapport_mal.md – tre delkapitler: modellytelse, beslutningsstøtteverdi, begrensninger |
 | 3.7   | Peer-to-peer review av annen gruppes utkast                     | ⬜ Ikke startet |       |
 
 ### Fase 4 – Avslutning (27. apr – 31. mai)
@@ -66,9 +66,9 @@
 
 ## Neste steg (prioritert)
 
-1. **[NESTE]** Diskusjon – tolke funn mot teori og problemstilling (3.6)
-2. Peer-to-peer review av annen gruppes utkast (3.7)
-3. Konklusjon – besvar problemstillingen eksplisitt (4.1)
+1. **[NESTE]** Peer-to-peer review av annen gruppes utkast (3.7)
+2. Konklusjon – besvar problemstillingen eksplisitt (4.1)
+3. Ferdigstille introduksjon (4.2)
 
 ---
 
@@ -123,6 +123,7 @@
 | 2026-04-17 | 3.4.4 fullført: RF tunet AUC 0.698, XGBoost tunet AUC 0.720 – beste modell. Benchmark ≥ 0.75 ikke nådd. 5 figurer (10–14) + modell_resultater.csv produsert. | Arbeidsøkt 5 |
 | 2026-04-17 | 3.5.1 fullført: alle 5 modeller evaluert med AUC, F1, presisjon, recall, nøyaktighet | Arbeidsøkt 5 |
 | 2026-04-17 | 3.5.2 fullført: 971 fakturaer klassifisert – Lav 273 / Middels 279 / Høy 419. 3 nye figurer (15–17) + risiko_klassifisering.csv | Arbeidsøkt 5 |
+| 2026-04-17 | 3.6 fullført: diskusjon skrevet inn i rapport_mal.md – modellytelse mot benchmark, beslutningsstøtteverdi og begrensninger | Arbeidsøkt 6 |
 
 ---
 

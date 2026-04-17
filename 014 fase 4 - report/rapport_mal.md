@@ -203,7 +203,33 @@ Appel et al. (2020) foreslår en risikoscore som kombinerer predikert forsinkels
 
 ## 9.0 Diskusjon
 
-*Skriv her.*
+### 9.1 Modellytelse mot benchmark
+
+Beste modell i dette prosjektet er XGBoost med hyperparameterjustering, med en AUC-ROC på 0.720, F1-score på 0.621 og recall på 0.833. Benchmarkene satt fra primærlitteraturen – AUC ≥ 0.75 og F1 ≥ 0.70 (Appel et al., 2020) – ble ikke nådd. Dette er et funn som krever tolkning, ikke et fiasko.
+
+Den mest sannsynlige forklaringen på gapet er datasettets størrelse og opphav. Appel et al. (2020) trente på 175 552 fakturaer og Schoonbee et al. (2022) på over én million fakturaoppføringer. Dette prosjektets treningsgrunnlag består av 971 fakturaer – en størrelsesorden som ikke gir modellen tilstrekkelig eksponering mot de subtile mønstrene som skiller betalingsatferd. Med et lite datasett øker variansen i estimatene, og modellen har begrenset kapasitet til å lære generaliserbare sammenhenger.
+
+I tillegg er datasettet syntetisk generert. Variabelskjemaet ble utformet med utgangspunkt i hva primærlitteraturen identifiserer som prediktive variabler, og dataen ble generert innenfor disse rammene. Dette innebærer at de statistiske sammenhengene i datasettet er renere og mer konsistente enn hva ekte fakturadata typisk er. Reell betalingsadferd inneholder støy, unntak og irregulariteter som paradoksalt nok er det modellen trenger for å lære robuste mønstre. Syntetisk data med lav varians setter således et tak på oppnåelig AUC som ikke er sammenlignbart med benchmarks fra studier basert på ekte transaksjonsdata.
+
+At XGBoost er beste modell er konsistent med Appel et al. (2020), som fant at Gradient Boosting oppnådde høyest nøyaktighet blant de testede algoritmene. Random Forest var best i Schoonbee et al. (2022), men oppnådde også sterke resultater i dette prosjektet (AUC 0.698 etter tuning). Ensemblemetodenes overlegenhet over logistisk regresjon (AUC 0.706 baseline) er i tråd med litteraturens generelle funn om at ikke-lineære modeller fanger mer komplekse betalingsmønstre.
+
+### 9.2 Beslutningsstøtteverdi utover dagens praksis
+
+Prosjektets formål er ikke å bygge en produksjonsklar modell, men å demonstrere at en KI-basert tilnærming kan gi bedre grunnlag for fakturaprioritering enn eksisterende praksis. Tradisjonell prioritering baseres typisk på en kombinasjon av forfallsdato og fakturabeløp – den fakturaen som forfaller snart og har høyest beløp følges opp først. Denne logikken er intuitiv, men ignorerer en avgjørende variabel: sannsynligheten for at fakturaen faktisk betales sent.
+
+Appel et al. (2020) viser at risikoscore definert som R = Verdi × P(Forsinket) gir en radikalt annerledes prioriteringsliste sammenlignet med beløpsbasert sortering (Kendalls τ = 0.003). En faktura på 50 000 kr fra en leverandør som historisk betaler i tide er reelt sett lavere prioritet enn en faktura på 20 000 kr fra en leverandør med høy forsinkelsesrate. Modellen i dette prosjektet tilbyr nettopp denne tredje dimensjonen – leverandørrisiko basert på historisk atferd.
+
+Risikoklassifiseringen av 971 fakturaer resulterte i 273 fakturaer i lav risikogruppe (7 % forsinket), 279 i middels (28 % forsinket) og 419 i høy risikogruppe (55 % forsinket). Separasjonen mellom gruppene er tydelig og viser at modellen skiller mellom leverandørprofiler på en meningsfull måte. For en innkrever betyr dette at ressursinnsatsen kan konsentreres mot de 419 høyrisikofakturaene fremfor å behandle alle 971 likt. Recall på 0.833 innebærer at modellen fanger 83 % av faktisk forsinkede fakturaer – et tall som er direkte relevant for formålet om å redusere andel forsinkede betalinger.
+
+Som beslutningsstøtte, slik Schoonbee et al. (2022) formaliserer det i sitt DSS-rammeverk, er modellens verdi ikke primært i den absolutte AUC-verdien, men i dens evne til å rangere fakturaer etter risiko og gi innkrevere et datadrevet grunnlag for prioritering.
+
+### 9.3 Begrensninger og veien videre
+
+Tre begrensninger er sentrale å adressere. For det første begrenser datasettets syntetiske natur modellens generaliserbarhet. Resultatene er et proof-of-concept for metodikken, ikke en validering av modellens ytelse i produksjon. For at tilnærmingen skal gi fullverdig beslutningsstøtte i en reell kontekst, må modellen trenes på faktiske historiske fakturadata fra virksomheten.
+
+For det andre er konseptdrift ikke håndtert. Appel et al. (2020) løser dette med en window size-parameter som begrenser historiske features til de siste 2–3 månedene, slik at modellen ikke lærer av foreldet betalingsadferd. I dette prosjektet er dette erkjent som en begrensning; ved eventuell drift av modellen i produksjon bør periodisk retrening eller tilsvarende mekanisme implementeres.
+
+For det tredje er andelen fakturaer i høy risikogruppe (43 %) høyere enn hva som er intuitivt forventet. Dette kan delvis forklares av at syntetisk data har komprimert leverandørvariasjonen, slik at flere profiler ligner risikable mønstre enn hva ekte data ville vist. Klassifiseringsterskler bør kalibreres på nytt mot ekte data før modellen tas i operativ bruk.
 
 ---
 
