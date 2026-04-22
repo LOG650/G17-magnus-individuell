@@ -384,21 +384,36 @@ Ingen av de fem modellene når benchmarkene satt med referanse til Appel et al. 
 
 Logistisk regresjon utmerker seg som en overraskende sterk baseline med AUC 0,706, noe som indikerer at lineære sammenhenger mellom prediktorvariabler og forsinkelse er fremtredende i datasettet. RF baseline skiller seg negativt ut med lav recall (0,424), noe som betyr at modellen uten tuning i stor grad predikerer majoritetsklassen og overser forsinkede fakturaer.
 
-> *[FIGUR HER: **10_roc_kurver.png** – ROC-kurver for alle fem modeller med AUC-verdier i legende, samt diagonallinje for tilfeldig gjetting (AUC = 0,50). Viser at XGBoost tunet har den største arealen under kurven.]*
+<figure style="text-align:center;">
+<img src="../004 data/modell_figurer/10_roc_kurver.png" alt="ROC-kurver" width="65%">
+<figcaption><small>Figur 10: ROC-kurver for alle fem modeller med AUC-verdier i legenden. Diagonallinjen representerer tilfeldig gjetting (AUC = 0,50). XGBoost tunet har den største arealen under kurven og er beste modell.</small></figcaption>
+</figure>
 
-> *[FIGUR HER: **11_auc_sammenligning.png** – Søylediagram: AUC-ROC per modell, med horisontal benchmark-linje ved 0,75. Tydeliggjør gapet mellom oppnådd ytelse og benchmark.]*
+<figure style="text-align:center;">
+<img src="../004 data/modell_figurer/11_auc_sammenligning.png" alt="AUC sammenligning" width="60%">
+<figcaption><small>Figur 11: AUC-ROC per modell med horisontal benchmark-linje ved 0,75. Ingen modeller når benchmarken; XGBoost tunet er nærmest med AUC 0,720.</small></figcaption>
+</figure>
 
-> *[FIGUR HER: **14_presisjon_recall_f1.png** – Gruppert søylediagram: presisjon, recall og F1-score for alle fem modeller, med benchmark-linje for F1 ved 0,70. Viser avveiningen mellom presisjon og recall på tvers av modeller.]*
+<figure style="text-align:center;">
+<img src="../004 data/modell_figurer/14_presisjon_recall_f1.png" alt="Presisjon recall F1" width="65%">
+<figcaption><small>Figur 12: Gruppert søylediagram over presisjon, recall og F1-score for alle fem modeller, med benchmark-linje for F1 ved 0,70. Høy recall er prioritert ettersom det er mer kostbart å overse en forsinket faktura enn å flagge en feilaktig.</small></figcaption>
+</figure>
 
 ### 8.2 Konfusjonsmatrise og feature importance
 
 Konfusjonsmatrisen for beste modell (XGBoost tunet) bryter ned klassifiseringsresultatene i de fire utfallstypene: sanne positive (forsinkede fakturaer korrekt flagget), sanne negative (i tide korrekt klassifisert), falske positive (i tide feilaktig flagget) og falske negative (forsinkede fakturaer som ikke ble fanget opp).
 
-> *[FIGUR HER: **12_konfusjonsmatrise.png** – Konfusjonsmatrise for XGBoost tunet på testsettet (195 fakturaer). Merk antall falske negative – disse representerer forsinkede fakturaer som «glapp igjennom» modellen.]*
+<figure style="text-align:center;">
+<img src="../004 data/modell_figurer/12_konfusjonsmatrise.png" alt="Konfusjonsmatrise" width="50%">
+<figcaption><small>Figur 13: Konfusjonsmatrise for XGBoost tunet på testsettet (195 fakturaer). Falske negative representerer forsinkede fakturaer som ikke ble fanget opp av modellen – den mest kostbare feiltypen i beslutningsstøttekontekst.</small></figcaption>
+</figure>
 
 Feature importance fra XGBoost tunet identifiserer de variablene som bidrar mest til modellens prediksjoner. Gjennomsnittlig antall dager forsinket per leverandør (historisk) er den klart viktigste prediktoren, konsistent med Schoonbee et al. (2022) som identifiserer *AveDaysLate* som den mest prediktive variabelen i sitt datasett. Leverandørens risikokategori og volumbaserte variabler er blant de øvrige sentrale prediktorene.
 
-> *[FIGUR HER: **13_feature_importance.png** – Horisontalt søylediagram: topp 15 viktigste features i XGBoost tunet, rangert etter feature importance (Gini-basert). Bekrefter at historiske leverandørvariabler dominerer.]*
+<figure style="text-align:center;">
+<img src="../004 data/modell_figurer/13_feature_importance.png" alt="Feature importance" width="65%">
+<figcaption><small>Figur 14: Topp 15 viktigste features i XGBoost tunet, rangert etter Gini-basert feature importance. Gjennomsnittlig antall dager forsinket per leverandør er klart viktigste prediktor, konsistent med Schoonbee et al. (2022).</small></figcaption>
+</figure>
 
 ### 8.3 Risikoklassifisering av fakturaer
 
@@ -412,11 +427,20 @@ Sluttmodellen – XGBoost tunet, retrent på hele datasettet (971 fakturaer) for
 
 Separasjonen mellom risikogruppene er tydelig: forsinkelsesraten i høy-gruppen (55 %) er nær åtte ganger høyere enn i lav-gruppen (7 %). Dette viser at modellen skiller mellom leverandørprofiler på en meningsfull og praktisk anvendbar måte. For en innkrever innebærer dette at ressursinnsatsen kan konsentreres mot de 419 høyrisikofakturaene fremfor å behandle alle 971 likt.
 
-> *[FIGUR HER: **15_risikokategorier.png** – To panel: venstre: søylediagram over antall fakturaer per risikoklasse (Lav 273 / Middels 279 / Høy 419); høyre: søylediagram over faktisk forsinkelsesrate per risikoklasse (7 % / 28 % / 55 %). Tydelig separasjon bekrefter modellens sorteringsevne.]*
+<figure style="text-align:center;">
+<img src="../004 data/modell_figurer/15_risikokategorier.png" alt="Risikokategorier" width="70%">
+<figcaption><small>Figur 15: Antall fakturaer per risikoklasse (venstre) og faktisk forsinkelsesrate per risikoklasse (høyre). Forsinkelsesraten i høy-gruppen (55 %) er nær åtte ganger høyere enn i lav-gruppen (7 %), noe som bekrefter modellens sorteringsevne.</small></figcaption>
+</figure>
 
-> *[FIGUR HER: **16_sannsynlighet_fordeling.png** – Histogram over predikert forsinkelsessannsynlighet for alle 971 fakturaer, fargekodert etter faktisk utfall (blå = i tide / rød = forsinket), med vertikale terskellinjer ved p = 0,30 og p = 0,55. Viser overlapp mellom klassene og modellens usikkerhetssone.]*
+<figure style="text-align:center;">
+<img src="../004 data/modell_figurer/16_sannsynlighet_fordeling.png" alt="Sannsynlighetsfordeling" width="65%">
+<figcaption><small>Figur 16: Histogram over predikert forsinkelsessannsynlighet for alle 971 fakturaer, fargekodert etter faktisk utfall (blå = i tide, rød = forsinket), med terskellinjer ved p = 0,30 og p = 0,55. Overlappet mellom klassene illustrerer modellens usikkerhetssone.</small></figcaption>
+</figure>
 
-> *[FIGUR HER: **17_risiko_vs_belop.png** – Scatter-plot: fakturabeløp (TNOK) på x-aksen, predikert forsinkelsessannsynlighet på y-aksen, fargekodert etter risikoklasse. Illustrerer at høy risiko ikke korrelerer med høyt beløp – den risikobaserte sorteringen gir en vesentlig annerledes prioriteringsliste enn beløpsbasert sortering.]*
+<figure style="text-align:center;">
+<img src="../004 data/modell_figurer/17_risiko_vs_belop.png" alt="Risiko vs beløp" width="65%">
+<figcaption><small>Figur 17: Scatter-plot over fakturabeløp (x-akse) mot predikert forsinkelsessannsynlighet (y-akse), fargekodert etter risikoklasse. Høy risiko korrelerer ikke med høyt beløp – risikobasert sortering gir en vesentlig annerledes prioriteringsliste enn tradisjonell beløpsbasert prioritering.</small></figcaption>
+</figure>
 
 ---
 
