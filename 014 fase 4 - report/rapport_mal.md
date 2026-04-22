@@ -167,7 +167,13 @@ Appel et al. (2020) foreslår en risikoscore som kombinerer predikert forsinkels
 
 ## 4.0 Casebeskrivelse
 
-*Skriv her.*
+Bedriften er en norsk offentlig virksomhet som håndterer innkjøp av varer og tjenester fra et bredt spekter av leverandører. Av konfidensialitetshensyn er virksomhetens identitet og identifiserende detaljer anonymisert i sin helhet. Datasettet er tilpasset og omstrukturert for å ivareta konfidensialitetskravene i overensstemmelse med antagelse A2 (avsnitt 1.4), uten å forringe de statistiske egenskapene som er relevante for modelltrening.
+
+Virksomheten benytter standardiserte kontraktsformer for offentlig anskaffelse: rammeavtaler, enkeltkontrakter, minikonkurranser og åpne anbudskonkurranser. Leverandørmassen spenner over åtte kategorier: IT, konsulenttjenester, bygg, energi, forbruksmateriell, renhold, transport og vedlikehold. Fakturaene er regulert av internasjonale leveringsbetingelser (INCOTERMS 2020) og norske betalingsbetingelser med kredittider på 10, 14, 30, 60 og 90 dager netto.
+
+Utfordringen Bedriften ønsker å adressere er mangelen på systematisk, datadrevet identifisering av fakturaer med høy risiko for sen betaling. Tradisjonell prioritering av betalingsoppfølging baseres på forfallsdato og fakturabeløp, uten systematisk hensyn til leverandørspesifikk betalingshistorikk. Konsekvensen er at fakturaer fra leverandører med konsekvent forsinkede betalingsmønstre behandles på lik linje med fakturaer fra pålitelige leverandører – en ressursbruk som er ineffektiv og reaktiv.
+
+Prosjektet tar utgangspunkt i et historisk fakturadatasett fra Bedriften og utvikler en maskinlæringsmodell som klassifiserer fakturaer etter risiko for sen betaling. Modellen er ment som beslutningsstøtte for prioritering av fakturakontroll og innkrevingsoppfølging, og er ikke designet for automatisert beslutning uten menneskelig vurdering.
 
 ---
 
@@ -175,29 +181,242 @@ Appel et al. (2020) foreslår en risikoscore som kombinerer predikert forsinkels
 
 ### 5.1 Metode
 
-*Skriv her.*
+Prosjektet følger en prosessstruktur inspirert av CRISP-DM (Cross-Industry Standard Process for Data Mining), det rammeverket Schoonbee et al. (2022) benytter som grunnlag for sitt veikart for Invoice Payment Prediction Problem (IPPP). CRISP-DM strukturerer datadrevne prosjekter i seks faser: forretningsforståelse, dataforståelse, dataforberedelse, modellering, evaluering og implementasjon.
+
+**Dataforståelse og forberedelse** gjennomføres gjennom eksplorativ dataanalyse (EDA) som kartlegger klasseubalanse, forsinkelsesdistribusjon og bivariate relasjoner mellom prediktorvariabler og målvariabelen. Feature engineering transformerer rådata til et modelleringsklart datasett.
+
+**Modellering** tester tre algoritmetyper med ulik kompleksitet: logistisk regresjon som lineær baseline, Random Forest og Gradient Boosting (XGBoost) som ensemblemetoder. For ensemblemetodene gjennomføres hyperparameterjustering med RandomizedSearchCV og 5-fold stratifisert kryssvalidering (StratifiedKFold, k=5), med AUC-ROC som optimaliseringskriterium. Stratifisert kryssvalidering sikrer at klassefordelingen er representativ i hvert valideringsfold.
+
+**Datadeling** følger en 80/20 stratifisert splitt: 776 fakturaer til trening og 195 til testing. Testsettet holdes tilbake gjennom hele hyperparameterjusteringsprosessen og benyttes kun for endelig evaluering. Denne tilnærmingen gir ærlige ytelsestall og motvirker datalekkasje.
+
+**Klasseubalanse** håndteres gjennom klassevekting: `class_weight='balanced'` for logistisk regresjon og Random Forest, og `scale_pos_weight` (satt til forholdet mellom majoritets- og minoritetsklassen, ca. 1,96) for XGBoost.
+
+**Evalueringsmetrikker** er primært AUC-ROC og F1-score, med benchmarks satt til AUC ≥ 0,75 og F1 ≥ 0,70 basert på Appel et al. (2020). I tillegg rapporteres presisjon, recall og nøyaktighet for alle modeller. Recall prioriteres fremfor presisjon fordi det for beslutningsstøtteformål er mer kostbart å overse en forsinket faktura (falsk negativ) enn å flagge en faktura feilaktig (falsk positiv).
 
 ### 5.2 Data
 
-*Skriv her.*
+Datasettet ble mottatt fra veileder som en anonymisert representasjon av Bedriftens fakturadatasett, og inneholder 1 000 fakturaer med 15 variabler. Tabell 5.1 gir en oversikt over variabelskjemaet.
+
+**Tabell 5.1 – Variabelskjema for rådata**
+
+| Variabel | Datatype | Beskrivelse |
+|---|---|---|
+| Faktura-ID | Identifikator | Unik fakturanøkkel |
+| Leverandør-ID | Identifikator | Anonymisert leverandøridentifikator |
+| Fakturabeløp (NOK) | Numerisk | Fakturabeløp i norske kroner |
+| Fakturadato | Dato | Utstedelsesdato for fakturaen |
+| Forfallsdato | Dato | Opprinnelig forfallsdato |
+| Faktisk betalingsdato | Dato | Dato for registrert betaling |
+| Betalingsstatus | Kategorisk | Betalt / Forsinket / Ubetalt |
+| Dager forsinket | Numerisk | Antall dager betalt etter forfall (0 = i tide) |
+| Betalingsbetingelser | Kategorisk | Netto 10 / 14 / 30 / 60 / 90 |
+| INCOTERMS | Kategorisk | Leveringsbetingelse (11 koder: CFR, CIF, CIP, CPT, DAP, DDP, DPU, EXW, FAS, FCA, FOB) |
+| Kontrakttype | Kategorisk | Rammeavtale / Enkeltkontrakt / Minikonkurranse / Åpen anbudskonkurranse |
+| Leverandørkategori | Kategorisk | IT / Konsulenttjenester / Bygg / Energi / Forbruksmateriell / Renhold / Transport / Vedlikehold |
+| Gj.snitt dager forsinket (leverandør) | Numerisk | Leverandørens historiske gjennomsnitt – antall dager betalt etter forfall |
+| Antall fakturaer (leverandør) | Numerisk | Totalt antall fakturaer per leverandør i datasettet |
+| Risikokategori leverandør | Kategorisk | Lav / Medium / Høy / Kritisk – forhåndsdefinert i datasettet |
+
+**Datakvalitet**
+
+Datasettet er komplett uten manglende verdier i de fakturaene som benyttes til modellering. 29 fakturaer (2,9 %) med betalingsstatus «Ubetalt» ble identifisert under EDA. Ettersom utfallet er ukjent for disse fakturaene, er de ekskludert fra treningsdatasettet i samsvar med antagelse A4 (avsnitt 1.4). Det endelige modelleringsdatasettet består av 971 fakturaer.
+
+**Klasseubalanse**
+
+Av de 971 fakturaene er 643 (66,2 %) betalt i tide og 328 (33,8 %) forsinket. Ubalansen på om lag 2:1 er moderat sammenlignet med mange klassifiseringsdatasett, men tilstrekkelig til at enkel nøyaktighet er et misvisende ytelsesmål – en modell som alltid predikerer «i tide» oppnår 66,2 % nøyaktighet uten å ha lært noe nyttig.
+
+<figure style="text-align:center;">
+<img src="../004 data/eda_figurer/01_klasseubalanse.png" alt="Klasseubalanse" width="55%">
+<figcaption><small>Figur 1: Av de 971 fakturaene i analysedatasettet er 643 (66,2 %) betalt i tide (klasse 0) og 328 (33,8 %) forsinket (klasse 1). Ubalansen på om lag 2:1 medfører at enkel nøyaktighet er et misvisende ytelsesmål – en naiv modell som alltid predikerer «i tide» oppnår 66,2 % uten å ha lært noe nyttig.</small></figcaption>
+</figure>
 
 ---
 
 ## 6.0 Modellering
 
-*Skriv her.*
+### 6.1 Feature engineering
+
+Feature engineering transformerte de 15 råkolonnene til 34 prediktorvariabler i to steg.
+
+**Datobaserte og betalingsbetingelsesfeatures** er utledet direkte fra råverdiene:
+
+| Feature | Beskrivelse |
+|---|---|
+| betalingsfrist_dager | Antall dager fra fakturadato til forfallsdato |
+| netto_dager | Betalingsbetingelse som heltall (10, 14, 30, 60 eller 90) |
+| faktura_maned | Måneden fakturaen ble utstedt (1–12) |
+| faktura_kvartal | Kvartal fakturaen ble utstedt (1–4) |
+
+**One-hot-enkoding** er benyttet for alle fire kategoriske variabler:
+
+| Variabel | Antall kategorier | Antall nye kolonner |
+|---|---|---|
+| Leverandørkategori | 8 | 8 |
+| Kontrakttype | 4 | 4 |
+| INCOTERMS | 11 | 11 |
+| Risikokategori leverandør | 4 | 4 |
+
+I tillegg beholdes de to leverandørhistoriske variablene fra rådata: gjennomsnittlig antall dager forsinket og antall fakturaer per leverandør. Disse er direkte analoge til de viktigste historiske featurene identifisert av Schoonbee et al. (2022): *AveDaysLate* og leverandørvolum. Totalt gir dette 34 prediktorvariabler.
+
+Numeriske variabler standardiseres (StandardScaler) for logistisk regresjon. Ensemblemodellene er invariante for lineær skalering og benytter råverdier.
+
+### 6.2 Baseline-modeller
+
+Tre baseline-modeller trenes uten hyperparameterjustering for å etablere et referansepunkt:
+
+- **Logistisk regresjon:** `class_weight='balanced'`, `max_iter=1000`, standardiserte features
+- **Random Forest:** `n_estimators=100`, `class_weight='balanced'`
+- **XGBoost:** `n_estimators=100`, `scale_pos_weight=1.96`
+
+### 6.3 Hyperparameterjustering
+
+Random Forest og XGBoost justeres med RandomizedSearchCV over 5-fold stratifisert kryssvalidering, med AUC-ROC som optimaliseringskriterium.
+
+**Random Forest** søker over 40 tilfeldige kombinasjoner av: `n_estimators` (100–500), `max_depth` (5, 10, 15, 20 og ubegrenset), `min_samples_split` (2, 5, 10), `min_samples_leaf` (1, 2, 4) og `class_weight` (balanced / balanced_subsample).
+
+**XGBoost** søker over 50 tilfeldige kombinasjoner av: `n_estimators` (100–500), `max_depth` (3, 5, 7, 9), `learning_rate` (0,01–0,30), `subsample` (0,6–1,0), `colsample_bytree` (0,6–1,0), `scale_pos_weight` og `min_child_weight` (1, 3, 5).
+
+Beste parameterkombinasjon for hver modell evalueres deretter på hold-out testsettet.
 
 ---
 
 ## 7.0 Analyse
 
-*Skriv her.*
+### 7.1 Eksplorativ dataanalyse (EDA)
+
+**Klasseubalanse**
+
+Av 971 fakturaer er 643 (66,2 %) betalt i tide og 328 (33,8 %) forsinket, en 2:1-ubalanse som krever klassevekting i alle modeller (se avsnitt 5.1).
+
+<figure style="text-align:center;">
+<img src="../004 data/eda_figurer/01_klasseubalanse.png" alt="Klasseubalanse" width="55%">
+<figcaption><small>Figur 1: Søylediagram over antall fakturaer i klasse 0 (betalt i tide, 643 stk.) og klasse 1 (forsinket, 328 stk.). Ubalansen krever klassevekting i alle modeller for å unngå at majoritetsklassen dominerer prediksjonen.</small></figcaption>
+</figure>
+
+**Forsinkelsesdistribusjon**
+
+Distribusjonen av antall dager forsinket blant de 328 forsinkede fakturaene er skjev mot høyre: de fleste forsinkede fakturaer er relativt kort forsinket, men det finnes en hale av fakturaer med svært lang forsinkelse. Distribusjonen inneholder KDE-estimat som visualiserer tetthetstopper.
+
+<figure style="text-align:center;">
+<img src="../004 data/eda_figurer/02_distribusjon_forsinkelse.png" alt="Distribusjon forsinkelse" width="60%">
+<figcaption><small>Figur 2: Histogram med KDE-kurve over antall dager forsinket for de 328 forsinkede fakturaene. Fordelingen er høyreskjev – de fleste forsinkelser er kortvarige, men en hale av fakturaer med svært lang forsinkelse drar gjennomsnittet opp over medianen.</small></figcaption>
+</figure>
+
+**Forsinkelse per leverandørkategori**
+
+Andelen forsinkede fakturaer varierer mellom leverandørkategoriene. Figuren viser at visse kategorier har systematisk høyere forsinkelsesrate, noe som indikerer at leverandørkategori er en informativ prediktorvariabel.
+
+<figure style="text-align:center;">
+<img src="../004 data/eda_figurer/03_andel_per_kategori.png" alt="Forsinkelse per leverandørkategori" width="65%">
+<figcaption><small>Figur 3: Prosentandel forsinkede fakturaer per leverandørkategori, sortert synkende. Kategorier med høy forsinkelsesrate er systematisk mer risikable og bør prioriteres i oppfølgingsarbeidet. Dette bekrefter at leverandørkategori er en informativ prediktorvariabel.</small></figcaption>
+</figure>
+
+**Forsinkelse per betalingsbetingelse**
+
+Forsinkelsesraten undersøkes på tvers av betalingsbetingelsene Netto 10, 14, 30, 60 og 90. Figuren viser om lengre kredittid er assosiert med høyere eller lavere andel forsinkede fakturaer.
+
+<figure style="text-align:center;">
+<img src="../004 data/eda_figurer/04_andel_per_betingelse.png" alt="Forsinkelse per betalingsbetingelse" width="60%">
+<figcaption><small>Figur 4: Prosentandel forsinkede fakturaer per betalingsbetingelse (Netto 10/14/30/60/90 dager). Figuren viser om lengre kredittid er assosiert med høyere forsinkelsesrisiko, og gir grunnlag for vurdering av betalingsbetingelse som prediktor.</small></figcaption>
+</figure>
+
+**Forsinkelse per risikokategori (leverandør)**
+
+Den forhåndsdefinerte leverandørrisikokategorien viser tydelig separasjon i forsinkelsesrate mellom risikogruppene, noe som bekrefter at variabelen er valid og informativ for modelltrening.
+
+<figure style="text-align:center;">
+<img src="../004 data/eda_figurer/05_andel_per_risiko.png" alt="Forsinkelse per risikokategori" width="55%">
+<figcaption><small>Figur 5: Prosentandel forsinkede fakturaer per forhåndsdefinert leverandørrisikokategori (Medium / Høy / Kritisk). Den tydelige separasjonen mellom risikogruppene bekrefter at denne variabelen er valid og informativ for modelltrening.</small></figcaption>
+</figure>
+
+**Korrelasjonsmatrise**
+
+Korrelasjonsanalysen for numeriske variabler viser at gjennomsnittlig antall dager forsinket per leverandør (historisk) har sterkest lineær korrelasjon med målvariabelen (er_forsinket). Fakturabeløp viser lav korrelasjon med forsinkelse, noe som underbygger at beløpsbasert prioritering alene er utilstrekkelig som beslutningsgrunnlag – konsistent med Appel et al. (2020, s. Kendalls τ = 0,003).
+
+<figure style="text-align:center;">
+<img src="../004 data/eda_figurer/06_korrelasjonsmatrise.png" alt="Korrelasjonsmatrise" width="55%">
+<figcaption><small>Figur 6: Korrelasjonsmatrise (Pearson) for numeriske variabler. Gjennomsnittlig antall dager forsinket per leverandør har sterkest lineær korrelasjon med målvariabelen (er_forsinket), mens fakturabeløp viser lav korrelasjon – konsistent med Appel et al. (2020).</small></figcaption>
+</figure>
+
+### 7.2 Leverandørprofil og risikoscore
+
+Leverandøranalysen aggregerer betalingsadferd per leverandør og beregner en sammensatt risikoscore: 60 % vektet på andel forsinkede fakturaer, 40 % på normalisert gjennomsnittlig forsinkelse (i dager). Risikoscoren rangerer leverandørene fra 0 (ingen historisk risiko) til 1 (maksimal risiko).
+
+<figure style="text-align:center;">
+<img src="../004 data/eda_figurer/07_leverandor_risikoscore.png" alt="Leverandør risikoscore" width="65%">
+<figcaption><small>Figur 7: Topp 15 leverandører rangert etter sammensatt risikoscore (60 % vektet andel forsinkede fakturaer + 40 % normalisert gjennomsnittlig forsinkelse), fargekodert etter risikokategori. Disse leverandørene bør prioriteres for tett oppfølging.</small></figcaption>
+</figure>
+
+Scatter-plottet nedenfor illustrerer forholdet mellom andel forsinkede fakturaer og gjennomsnittlig forsinkelse per leverandør, der sirkelstørrelsen angir antall fakturaer. Leverandører øverst til høyre i plottet – høy andel forsinket kombinert med lang gjennomsnittlig forsinkelse – utgjør den høyeste samlede risikoen.
+
+<figure style="text-align:center;">
+<img src="../004 data/eda_figurer/08_leverandor_scatter.png" alt="Leverandør scatter" width="65%">
+<figcaption><small>Figur 8: Scatter-plot over andel forsinkede fakturaer (x-akse) mot gjennomsnittlig antall dager forsinket (y-akse) per leverandør. Sirkelstørrelse angir antall fakturaer; farge angir risikokategori. Leverandører øverst til høyre utgjør den høyeste samlede risikoen.</small></figcaption>
+</figure>
+
+Trendanalysen viser betalingsatferden over tid (per kvartal) for de fem høyest rangerte risiko-leverandørene, og indikerer om forsinkelsesmønstrene er stabile eller endrer seg over tid.
+
+<figure style="text-align:center;">
+<img src="../004 data/eda_figurer/09_leverandor_trend.png" alt="Leverandør trend" width="65%">
+<figcaption><small>Figur 9: Prosentandel forsinkede fakturaer per kvartal for de fem høyest rangerte risiko-leverandørene. Stabile trender over tid støtter antagelse A1 om at historisk betalingsadferd er representativ for fremtidig atferd.</small></figcaption>
+</figure>
 
 ---
 
 ## 8.0 Resultat
 
-*Skriv her.*
+### 8.1 Modellytelse
+
+Tabell 8.1 viser ytelsesmålene for alle fem modeller evaluert på hold-out testsettet (195 fakturaer, aldri sett under trening).
+
+**Tabell 8.1 – Modellresultater på hold-out testsett**
+
+| Modell | AUC-ROC | F1-score | Presisjon | Recall | Nøyaktighet |
+|---|---|---|---|---|---|
+| Log.reg (baseline) | 0,706 | 0,627 | 0,515 | 0,803 | 0,677 |
+| RF (baseline) | 0,695 | 0,471 | 0,528 | 0,424 | 0,677 |
+| XGBoost (baseline) | 0,661 | 0,476 | 0,432 | 0,530 | 0,605 |
+| RF (tunet) | 0,698 | 0,610 | 0,486 | 0,818 | 0,646 |
+| **XGBoost (tunet)** | **0,720** | **0,621** | **0,495** | **0,833** | **0,656** |
+| *Benchmark* | *≥ 0,750* | *≥ 0,700* | *–* | *–* | *–* |
+
+Ingen av de fem modellene når benchmarkene satt med referanse til Appel et al. (2020). Beste modell er XGBoost med hyperparameterjustering, som oppnår AUC-ROC 0,720 og F1-score 0,621. Hyperparameterjustering bidrar positivt for begge ensemblemetoder: Random Forest øker fra AUC 0,695 til 0,698, mens XGBoost øker fra 0,661 til 0,720 – en forbedring på 5,9 prosentpoeng og den største enkeltgevinsten i eksperimentet.
+
+Logistisk regresjon utmerker seg som en overraskende sterk baseline med AUC 0,706, noe som indikerer at lineære sammenhenger mellom prediktorvariabler og forsinkelse er fremtredende i datasettet. RF baseline skiller seg negativt ut med lav recall (0,424), noe som betyr at modellen uten tuning i stor grad predikerer majoritetsklassen og overser forsinkede fakturaer.
+
+> *[FIGUR HER: **10_roc_kurver.png** – ROC-kurver for alle fem modeller med AUC-verdier i legende, samt diagonallinje for tilfeldig gjetting (AUC = 0,50). Viser at XGBoost tunet har den største arealen under kurven.]*
+
+> *[FIGUR HER: **11_auc_sammenligning.png** – Søylediagram: AUC-ROC per modell, med horisontal benchmark-linje ved 0,75. Tydeliggjør gapet mellom oppnådd ytelse og benchmark.]*
+
+> *[FIGUR HER: **14_presisjon_recall_f1.png** – Gruppert søylediagram: presisjon, recall og F1-score for alle fem modeller, med benchmark-linje for F1 ved 0,70. Viser avveiningen mellom presisjon og recall på tvers av modeller.]*
+
+### 8.2 Konfusjonsmatrise og feature importance
+
+Konfusjonsmatrisen for beste modell (XGBoost tunet) bryter ned klassifiseringsresultatene i de fire utfallstypene: sanne positive (forsinkede fakturaer korrekt flagget), sanne negative (i tide korrekt klassifisert), falske positive (i tide feilaktig flagget) og falske negative (forsinkede fakturaer som ikke ble fanget opp).
+
+> *[FIGUR HER: **12_konfusjonsmatrise.png** – Konfusjonsmatrise for XGBoost tunet på testsettet (195 fakturaer). Merk antall falske negative – disse representerer forsinkede fakturaer som «glapp igjennom» modellen.]*
+
+Feature importance fra XGBoost tunet identifiserer de variablene som bidrar mest til modellens prediksjoner. Gjennomsnittlig antall dager forsinket per leverandør (historisk) er den klart viktigste prediktoren, konsistent med Schoonbee et al. (2022) som identifiserer *AveDaysLate* som den mest prediktive variabelen i sitt datasett. Leverandørens risikokategori og volumbaserte variabler er blant de øvrige sentrale prediktorene.
+
+> *[FIGUR HER: **13_feature_importance.png** – Horisontalt søylediagram: topp 15 viktigste features i XGBoost tunet, rangert etter feature importance (Gini-basert). Bekrefter at historiske leverandørvariabler dominerer.]*
+
+### 8.3 Risikoklassifisering av fakturaer
+
+Sluttmodellen – XGBoost tunet, retrent på hele datasettet (971 fakturaer) for full dekning – klassifiserer alle fakturaer i tre risikogrupper basert på predikert sannsynlighet for forsinkelse:
+
+| Risikoklasse | Terskel | Antall fakturaer | Faktisk forsinkelsesrate |
+|---|---|---|---|
+| Lav | p < 0,30 | 273 | 7 % |
+| Middels | 0,30 ≤ p < 0,55 | 279 | 28 % |
+| Høy | p ≥ 0,55 | 419 | 55 % |
+
+Separasjonen mellom risikogruppene er tydelig: forsinkelsesraten i høy-gruppen (55 %) er nær åtte ganger høyere enn i lav-gruppen (7 %). Dette viser at modellen skiller mellom leverandørprofiler på en meningsfull og praktisk anvendbar måte. For en innkrever innebærer dette at ressursinnsatsen kan konsentreres mot de 419 høyrisikofakturaene fremfor å behandle alle 971 likt.
+
+> *[FIGUR HER: **15_risikokategorier.png** – To panel: venstre: søylediagram over antall fakturaer per risikoklasse (Lav 273 / Middels 279 / Høy 419); høyre: søylediagram over faktisk forsinkelsesrate per risikoklasse (7 % / 28 % / 55 %). Tydelig separasjon bekrefter modellens sorteringsevne.]*
+
+> *[FIGUR HER: **16_sannsynlighet_fordeling.png** – Histogram over predikert forsinkelsessannsynlighet for alle 971 fakturaer, fargekodert etter faktisk utfall (blå = i tide / rød = forsinket), med vertikale terskellinjer ved p = 0,30 og p = 0,55. Viser overlapp mellom klassene og modellens usikkerhetssone.]*
+
+> *[FIGUR HER: **17_risiko_vs_belop.png** – Scatter-plot: fakturabeløp (TNOK) på x-aksen, predikert forsinkelsessannsynlighet på y-aksen, fargekodert etter risikoklasse. Illustrerer at høy risiko ikke korrelerer med høyt beløp – den risikobaserte sorteringen gir en vesentlig annerledes prioriteringsliste enn beløpsbasert sortering.]*
 
 ---
 
