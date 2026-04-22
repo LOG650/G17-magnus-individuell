@@ -54,6 +54,11 @@
 | 3.5.2 | Klassifisering av fakturaer i risikokategorier                  | ✅ Fullført    | Lav 273 (7 % forsinket) / Middels 279 (28 %) / Høy 419 (55 %) – risiko_klassifisering.csv |
 | 3.6   | Diskusjon – tolke funn mot teori og problemstilling             | ✅ Fullført    | Seksjon 9.0 skrevet inn i rapport_mal.md – tre delkapitler: modellytelse, beslutningsstøtteverdi, begrensninger |
 | 3.7   | Peer-to-peer review av annen gruppes utkast                     | ⬜ Ikke startet |       |
+| 3.8   | Godkjent hovedutkast til forskningsrapport (komplett struktur, min. 80–90 % ferdig innhold) | ⬜ Ikke startet | |
+| 3.8.1 | Ferdigstille alle rapportseksjoner (seksjon 1–9 komplett)       | ⬜ Ikke startet |       |
+| 3.8.2 | Intern gjennomgang og korrektur av hele utkastet                | ⬜ Ikke startet |       |
+| 3.8.3 | Levere utkast til veileder for tilbakemelding                   | ⬜ Ikke startet |       |
+| 3.8.4 | Motta og innarbeide veiledertilbakemelding – oppnå godkjenning  | ⬜ Ikke startet |       |
 
 ### Fase 4 – Avslutning (27. apr – 31. mai)
 | ID  | Oppgave                                        | Status         | Notat |
@@ -67,8 +72,10 @@
 ## Neste steg (prioritert)
 
 1. **[NESTE]** Peer-to-peer review av annen gruppes utkast (3.7)
-2. Konklusjon – besvar problemstillingen eksplisitt (4.1)
-3. Ferdigstille introduksjon (4.2)
+2. Ferdigstille alle rapportseksjoner – seksjon 1–9 komplett (3.8.1)
+3. Konklusjon – besvar problemstillingen eksplisitt (4.1)
+4. Intern gjennomgang og korrektur av utkast (3.8.2)
+5. Levere utkast til veileder for godkjenning (3.8.3)
 
 ---
 
@@ -124,6 +131,7 @@
 | 2026-04-17 | 3.5.1 fullført: alle 5 modeller evaluert med AUC, F1, presisjon, recall, nøyaktighet | Arbeidsøkt 5 |
 | 2026-04-17 | 3.5.2 fullført: 971 fakturaer klassifisert – Lav 273 / Middels 279 / Høy 419. 3 nye figurer (15–17) + risiko_klassifisering.csv | Arbeidsøkt 5 |
 | 2026-04-17 | 3.6 fullført: diskusjon skrevet inn i rapport_mal.md – modellytelse mot benchmark, beslutningsstøtteverdi og begrensninger | Arbeidsøkt 6 |
+| 2026-04-20 | 3.8 lagt til i WBS: Godkjent hovedutkast (80–90 % ferdig innhold) med deloppgaver 3.8.1–3.8.4 | Planlegging |
 
 ---
 
