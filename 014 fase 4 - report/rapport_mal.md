@@ -131,9 +131,9 @@ Problemstillingen er formulert som et **binært klassifiseringsproblem**: for hv
 
 **Logistisk regresjon** er en lineær klassifikasjonsmetode som modellerer log-odds for binært utfall som en lineær kombinasjon av prediktorvariabler. Metoden er enkel å tolke og egner seg godt som baseline-modell; begrensningen er at den ikke fanger ikke-lineære sammenhenger i dataene.
 
-**Random Forest** er en ensemblemetode basert på bagging av beslutningstrær. Et stort antall trær (typisk 100–1000) trenes på tilfeldige utvalg av både rader og variabler, og prediksjonene aggregeres ved majoritetsavstemning (klassifisering) eller gjennomsnitt (regresjon). Random Forest er robust mot overfitting, tolererer manglende verdier og gir feature importance som biprodukt.
+**Random Forest** er en ensemblemetode basert på bagging av beslutningstrær (Breiman, 2001). Et stort antall trær (typisk 100–1000) trenes på tilfeldige utvalg av både rader og variabler, og prediksjonene aggregeres ved majoritetsavstemning (klassifisering) eller gjennomsnitt (regresjon). Random Forest er robust mot overfitting, tolererer manglende verdier og gir feature importance som biprodukt.
 
-**Gradient Boosting (XGBoost)** er en sekvensiell ensemblemetode der nye trær trenes for å korrigere residualfeil fra foregående trær, og tapsfunksjonen minimeres via gradientnedstigning. XGBoost er en effektiv implementasjon av gradient boosting med regularisering og støtte for parallell prosessering. Metoden oppnår gjennomgående høy prediksjonsytelse på tabulære datasett og var beste enkeltmodell i Appel et al. (2019).
+**Gradient Boosting (XGBoost)** er en sekvensiell ensemblemetode der nye trær trenes for å korrigere residualfeil fra foregående trær, og tapsfunksjonen minimeres via gradientnedstigning. XGBoost er en effektiv implementasjon av gradient boosting med regularisering og støtte for parallell prosessering (Chen & Guestrin, 2016). Metoden oppnår gjennomgående høy prediksjonsytelse på tabulære datasett og var beste enkeltmodell i Appel et al. (2019).
 
 ### 3.3 Evalueringsmetrikker
 
@@ -192,6 +192,8 @@ Prosjektet følger en prosessstruktur inspirert av CRISP-DM (Cross-Industry Stan
 **Klasseubalanse** håndteres gjennom klassevekting: `class_weight='balanced'` for logistisk regresjon og Random Forest, og `scale_pos_weight` (satt til forholdet mellom majoritets- og minoritetsklassen, ca. 1,96) for XGBoost.
 
 **Evalueringsmetrikker** er primært AUC-ROC og F1-score, med benchmarks satt til AUC ≥ 0,75 og F1 ≥ 0,70 basert på Appel et al. (2019). I tillegg rapporteres presisjon, recall og nøyaktighet for alle modeller. Recall prioriteres fremfor presisjon fordi det for beslutningsstøtteformål er mer kostbart å overse en forsinket faktura (falsk negativ) enn å flagge en faktura feilaktig (falsk positiv).
+
+**Bruk av KI-verktøy:** Kodeimplementasjonen i dette prosjektet er utviklet med støtte fra Claude Code (Anthropic, 2025), en KI-basert programmeringsassistent. KI-verktøyet ble benyttet til å generere, debugge og refaktorere Python-kode for databehandling, feature engineering, modelltrening og visualisering. Alle metodiske valg, tolkninger og konklusjoner er gjort av forfatteren. Generert kode er gjennomgått og validert manuelt.
 
 ### 5.2 Data
 
@@ -498,7 +500,13 @@ Prosjektet demonstrerer at maskinlæringsbasert fakturapredikering er gjennomfø
 
 ## 11.0 Bibliografi
 
+Anthropic. (2025). *Claude Code* (claude-sonnet-4-6) [KI-programmeringsassistent]. https://claude.ai/code
+
 Appel, A. P., Oliveira, V., Lima, B., Malfatti, G. L., Santana, V. F., & Paula, R. (2019). *Optimize cash collection: Use machine learning to predicting invoice payment* (arXiv:1912.10828). arXiv. https://arxiv.org/abs/1912.10828
+
+Breiman, L. (2001). Random forests. *Machine Learning, 45*(1), 5–32. https://doi.org/10.1023/A:1010933404324
+
+Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 785–794. https://doi.org/10.1145/2939672.2939785
 
 Schoonbee, L., Moore, W. R., & van Vuuren, J. H. (2022). A machine-learning approach towards solving the invoice payment prediction problem. *South African Journal of Industrial Engineering, 33*(4), 126–146. https://doi.org/10.7166/33-4-2726
 
