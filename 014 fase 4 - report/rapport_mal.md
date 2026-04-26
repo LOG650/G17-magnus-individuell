@@ -478,7 +478,21 @@ For det tredje er andelen fakturaer i høy risikogruppe (43 %) høyere enn hva s
 
 ## 10.0 Konklusjon
 
-*Skriv her.*
+Prosjektet viser at maskinlæring kan benyttes til å predikere sannsynligheten for at en faktura betales etter forfallsdato, og at en slik tilnærming gir et bedre grunnlag for fakturaprioritering enn tradisjonell beløpsbasert oppfølging. Problemstillingen besvares bekreftende: KI kan brukes til formålet – men med et viktig forbehold. For å skape reelle, driftsstabile resultater kreves trening på ekte historiske fakturadata fra virksomheten. Det er ikke metodikken, men datagrunnlaget, som setter taket for hva som er oppnåelig.
+
+Det viktigste funnet er at historisk betalingsatferd er den klart sterkeste prediktoren for forsinkelse. Gjennomsnittlig antall dager forsinket per leverandør er den variabelen som bidrar mest til modellens prediksjonsevne – et funn som er konsistent med begge primærstudier (Appel et al., 2019; Schoonbee et al., 2022). Dette bekrefter at leverandørspesifikk betalingshistorikk er en nødvendig komponent i ethvert fakturaprediksjonsystem, og understreker at slik data bør samles systematisk og strukturert av virksomheten.
+
+Beste modell er XGBoost med hyperparameterjustering, med AUC-ROC 0,720 og recall 0,833 på hold-out testsettet. Benchmarkene fra primærlitteraturen (AUC ≥ 0,75, F1 ≥ 0,70) ble ikke nådd. Dette tilskrives primært datasettets begrensede størrelse og at det er syntetisk generert – noe som komprimerer den variasjonen ekte transaksjonsdata ville tilført. Resultatet er et bevisst proof-of-concept: en demonstrasjon av at metodikken virker og kan skaleres, ikke en validering av en produksjonsklar modell. Målet for en fremtidig, ekte implementasjon er en modell som er tilstrekkelig treffsikker til at den kan driftes og distribueres med full tillit.
+
+I beslutningsstøttekontekst er recall det mest relevante enkeltmålet: det er mer kostbart å overse en faktura som faktisk betales sent enn å flagge en feilaktig. Recall på 0,833 betyr at modellen identifiserer 83 % av faktisk forsinkede fakturaer, og det er et resultat som allerede i proof-of-concept-form gir beslutningsstøtteverdi. Risikoklassifiseringen bekrefter dette: forsinkelsesraten er 7 % i lav risikogruppe mot 55 % i høy risikogruppe – en separasjon som gir innkrevere et datadrevet grunnlag for å konsentrere ressursinnsatsen der risikoen er reell.
+
+For at Bedriften skal realisere det fulle potensialet i en slik tilnærming, anbefales følgende:
+
+1. **Trene modellen på ekte historiske fakturadata.** Syntetisk data har demonstrert metodikken, men ekte transaksjonsdata er nødvendig for produksjonsrelevant ytelse.
+2. **Gjennomføre en kontrollert innfasingsperiode.** Modellen bør ikke overta beslutningsprosessen fullt ut fra dag én. En periode der prediksjoner valideres mot faktiske utfall og vurderes av saksbehandlere gir nødvendig grunnlag for kalibrering og tilpasning.
+3. **Etablere periodisk retrening.** Betalingsatferd endrer seg over tid; modellen bør retreneres jevnlig – og helst med en window size-parameter i tråd med Appel et al. (2019) – for å holde prediksjonsevnen aktuell.
+
+Prosjektet demonstrerer at maskinlæringsbasert fakturapredikering er gjennomførbart og metodisk velfundert, og at tilnærmingen er overførbar til virksomheter på tvers av bransjer og sektorer som håndterer et betydelig fakturavolum og ønsker et mer datadrevet grunnlag for betalingsoppfølging.
 
 ---
 
