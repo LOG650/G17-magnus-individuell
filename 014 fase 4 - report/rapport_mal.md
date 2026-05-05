@@ -1,22 +1,22 @@
-# Finansiell logistikk og beslutningstøtte ved hjelp av KI
+# Finansiell logistikk og beslutningsstøtte ved hjelp av KI
 
 **Forfatter:** Magnus Ødegård  
 **Totalt antall sider inkludert forsiden:**  
-**Sted, Innleveringsdato:** Molde,  
-**Studiepoeng:**  
+**Sted, Innleveringsdato:** Molde, 2026-05-31  
+**Studiepoeng:** 10  
 **Veileder:**  
 
 ---
 
 ## Sammendrag
 
-*Skrives til slutt – kort oppsummering av problemstilling, metode, funn og konklusjon.*
+Denne oppgaven undersøker hvordan maskinlæring kan benyttes til å predikere sannsynligheten for at en faktura betales etter forfallsdato, basert på fakturainformasjon som INCOTERMS, betalingsbetingelser og historisk betalingsatferd. Datagrunnlaget er et syntetisk datasett med 971 fakturaer produsert av veileder, etter eksklusjon av 29 fakturaer med ukjent betalingsstatus. Det er gjennomført eksplorativ dataanalyse og feature engineering som produserte 34 prediktorvariabler. Tre maskinlæringsalgoritmer – logistisk regresjon, Random Forest og Gradient Boosting (XGBoost) – er trent og evaluert med 5-fold stratifisert kryssvalidering og hyperparameterjustering. Beste modell er XGBoost med hyperparameterjustering, som oppnår AUC-ROC 0,720 og recall 0,833 på hold-out testsettet. Benchmarkene fra primærlitteraturen (AUC ≥ 0,75, F1 ≥ 0,70) ble ikke nådd, primært på grunn av datasettets begrensede størrelse og syntetiske opphav. Risikoklassifisering i tre grupper viser en forsinkelsesrate på 7 % i lav risikogruppe, 28 % i middels og 55 % i høy risikogruppe. Resultatene demonstrerer at maskinlæring gir et vesentlig bedre grunnlag for fakturaprioritering enn tradisjonell beløpsbasert sortering, og at prosjektet fungerer som et metodisk proof-of-concept for videre arbeid med ekte historiske data.
 
 ---
 
 ## Abstract
 
-*Written last – English summary of problem, method, findings and conclusion.*
+This thesis investigates how machine learning can be used to predict the probability that an invoice will be paid after its due date, based on invoice information such as INCOTERMS, payment terms, and historical payment behaviour. The dataset is a synthetic dataset of 971 invoices produced by the course supervisor, after excluding 29 invoices with unknown payment status. Exploratory data analysis and feature engineering produced 34 predictor variables. Three machine learning algorithms – logistic regression, Random Forest, and Gradient Boosting (XGBoost) – were trained and evaluated using 5-fold stratified cross-validation and hyperparameter tuning. The best model is tuned XGBoost, achieving AUC-ROC 0.720 and recall 0.833 on the hold-out test set. The benchmarks from the primary literature (AUC ≥ 0.75, F1 ≥ 0.70) were not met, primarily due to the limited size and synthetic nature of the dataset. Risk classification into three groups yields delay rates of 7 % in the low-risk group, 28 % in the medium-risk group, and 55 % in the high-risk group. The results demonstrate that machine learning provides a substantially better basis for invoice prioritisation than traditional amount-based sorting, and that the project serves as a methodological proof-of-concept for further work with genuine historical data.
 
 ---
 
@@ -32,13 +32,13 @@ Håndtering av fakturaer og innkommende betalinger er en sentral del av finansie
 
 De siste årene har maskinlæring vist seg å være et effektivt verktøy for å forutsi betalingsadferd i fakturadatasett. Appel et al. (2019) demonstrerte at ensemblemodeller basert på Random Forest og Gradient Boosting kan predikere forsinkede betalinger med en nøyaktighet på om lag 77–80 %, og at en risikoscore kombinert med fakturabeløp gir et vesentlig bedre grunnlag for prioritering enn beløp alene. Schoonbee et al. (2022) utvidet dette arbeidet ved å formalisere problemet som «Invoice Payment Prediction Problem» (IPPP) og integrere en maskinlæringsmodell i et beslutningsstøttesystem (DSS). Deres resultater viser at historiske betalingsvariabler – særlig gjennomsnittlig antall dager forsinket og andel fakturaer betalt i tide – er de mest prediktive variablene, og at Random Forest oppnår AUC-verdier på 79–84 % etter hyperparameterjustering.
 
-Denne oppgaven anvender en tilsvarende tilnærming på fakturadata fra en norsk offentlig virksomhet (heretter kalt Bedriften, anonymisert). Målet er å utvikle en maskinlæringsmodell som kan støtte beslutningstakere i å identifisere fakturaer med høy risiko for sen betaling, og dermed bidra til mer effektiv ressursprioritering i fakturahåndteringen.
+Denne oppgaven anvender en tilsvarende tilnærming på et syntetisk fakturadatasett generert for å simulere fakturamønstre fra en norsk offentlig virksomhet (heretter kalt Bedriften). Målet er å utvikle en maskinlæringsmodell som kan støtte beslutningstakere i å identifisere fakturaer med høy risiko for sen betaling, og dermed bidra til mer effektiv ressursprioritering i fakturahåndteringen.
 
 ### 1.1 Problemstilling
 
 **Hvordan kan KI brukes til å predikere sannsynligheten for at en faktura betales etter forfallsdato, basert på fakturainformasjon som INCOTERMS, betalingsbetingelser og historisk betalingsatferd?**
 
-### 1.2 Delproblemer (valgfri)
+### 1.2 Delproblemer
 
 Problemstillingen operasjonaliseres gjennom følgende beslutningsvariabler:
 
@@ -50,7 +50,7 @@ Disse variablene benyttes som beslutningsstøtte for å avgjøre hvilke fakturae
 
 ### 1.3 Avgrensinger
 
-Oppgaven avgrenses til én virksomhet (Bedriften, anonymisert). Avgrensingen er gjort fordi betalingsadferd varierer betydelig mellom virksomheter og bransjer – en modell trent på én virksomhets historikk vil ikke uten videre være overførbar til andre kontekster. Analysen baseres utelukkende på historiske fakturadata og inkluderer ikke sanntidsdata eller fremtidige kontraktsforhold.
+Oppgaven avgrenses til én virksomhet (Bedriften, hypotetisk). Avgrensingen er gjort fordi betalingsadferd varierer betydelig mellom virksomheter og bransjer – en modell trent på én virksomhets historikk vil ikke uten videre være overførbar til andre kontekster. Analysen baseres utelukkende på historiske fakturadata og inkluderer ikke sanntidsdata eller fremtidige kontraktsforhold.
 
 Tvistesaker, kontraktsendringer underveis og generelle makroøkonomiske forhold er holdt utenfor analysen, ettersom slik informasjon ikke er registrert i det tilgjengelige datasettet. Det gjøres heller ingen juridisk vurdering av kontrakter eller betalingsbetingelser; fokuset er datadrevet prediksjon og beslutningsstøtte.
 
@@ -60,7 +60,7 @@ Følgende antagelser er lagt til grunn for analysen:
 
 **A1 – Historisk atferd er representativ for fremtidig atferd.** Modellen trenes på tidligere fakturamønstre og anvendes til å predikere nye fakturaer. Dette forutsetter at leverandørenes betalingsadferd er relativt stabil over tid. Antagelsen er standard i litteraturen (Appel et al., 2019; Schoonbee et al., 2022), men innebærer at modellen bør evalueres periodisk.
 
-**A2 – Det anonymiserte datasettet reflekterer reelle betalingsmønstre.** Enkelte variabler er justert for å ivareta konfidensialitet. Det antas at disse justeringene ikke har endret de statistiske sammenhengene som er relevante for prediksjon.
+**A2 – Det syntetisk genererte datasettet reflekterer realistiske betalingsmønstre.** Datasettet er generert av veileder for å simulere fakturamønstre fra en norsk offentlig virksomhet. Det antas at de statistiske sammenhengene i det genererte datasettet er tilstrekkelig realistiske til at metodikken er meningsfull å teste.
 
 **A3 – Registrerte datoer og betalingsbetingelser er korrekte.** Analysen forutsetter at forfallsdato, faktisk betalingsdato og kontraktsbetingelser (INCOTERMS, betalingsbetingelser) er korrekt registrert i systemet. Datafeil i disse feltene vil direkte påvirke modellens evne til å lære riktige mønstre.
 
@@ -167,13 +167,13 @@ Appel et al. (2019) foreslår en risikoscore som kombinerer predikert forsinkels
 
 ## 4.0 Casebeskrivelse
 
-Bedriften er en norsk offentlig virksomhet som håndterer innkjøp av varer og tjenester fra et bredt spekter av leverandører. Av konfidensialitetshensyn er virksomhetens identitet og identifiserende detaljer anonymisert i sin helhet. Datasettet er tilpasset og omstrukturert for å ivareta konfidensialitetskravene i overensstemmelse med antagelse A2 (avsnitt 1.4), uten å forringe de statistiske egenskapene som er relevante for modelltrening.
+Bedriften er en hypotetisk norsk offentlig virksomhet konstruert som case-ramme for dette prosjektet. Det syntetiske datasettet er generert av veileder for å simulere fakturamønstre fra en offentlig virksomhet med de karakteristika som beskrives i dette kapitlet. Bedriften eksisterer ikke som en reell enhet; strukturen er utformet for å gi datasettet en faglig realistisk kontekst i tråd med antagelse A2 (avsnitt 1.4).
 
 Virksomheten benytter standardiserte kontraktsformer for offentlig anskaffelse: rammeavtaler, enkeltkontrakter, minikonkurranser og åpne anbudskonkurranser. Leverandørmassen spenner over åtte kategorier: IT, konsulenttjenester, bygg, energi, forbruksmateriell, renhold, transport og vedlikehold. Fakturaene er regulert av internasjonale leveringsbetingelser (INCOTERMS 2020) og norske betalingsbetingelser med kredittider på 10, 14, 30, 60 og 90 dager netto.
 
 Utfordringen Bedriften ønsker å adressere er mangelen på systematisk, datadrevet identifisering av fakturaer med høy risiko for sen betaling. Tradisjonell prioritering av betalingsoppfølging baseres på forfallsdato og fakturabeløp, uten systematisk hensyn til leverandørspesifikk betalingshistorikk. Konsekvensen er at fakturaer fra leverandører med konsekvent forsinkede betalingsmønstre behandles på lik linje med fakturaer fra pålitelige leverandører – en ressursbruk som er ineffektiv og reaktiv.
 
-Prosjektet tar utgangspunkt i et historisk fakturadatasett fra Bedriften og utvikler en maskinlæringsmodell som klassifiserer fakturaer etter risiko for sen betaling. Modellen er ment som beslutningsstøtte for prioritering av fakturakontroll og innkrevingsoppfølging, og er ikke designet for automatisert beslutning uten menneskelig vurdering.
+Prosjektet tar utgangspunkt i et syntetisk fakturadatasett generert av veileder og utvikler en maskinlæringsmodell som klassifiserer fakturaer etter risiko for sen betaling. Modellen er ment som beslutningsstøtte for prioritering av fakturakontroll og innkrevingsoppfølging, og er ikke designet for automatisert beslutning uten menneskelig vurdering.
 
 ---
 
@@ -183,11 +183,13 @@ Prosjektet tar utgangspunkt i et historisk fakturadatasett fra Bedriften og utvi
 
 Prosjektet følger en prosessstruktur inspirert av CRISP-DM (Cross-Industry Standard Process for Data Mining), det rammeverket Schoonbee et al. (2022) benytter som grunnlag for sitt veikart for Invoice Payment Prediction Problem (IPPP). CRISP-DM strukturerer datadrevne prosjekter i seks faser: forretningsforståelse, dataforståelse, dataforberedelse, modellering, evaluering og implementasjon.
 
+Prosjektet benytter binær klassifisering (forsinket / ikke forsinket) fremfor den multiklasse-tilnærmingen som Schoonbee et al. (2022) beskriver (fire betalingsintervaller). Valget er begrunnet i datasettets størrelse: med 971 fakturaer og 328 forsinkede tilfeller vil ytterligere oppsplitting i forsinkelsesintervaller gi klasser med for få observasjoner til meningsfull modellering. Binær formulering maksimerer antall treningseksempler per klasse og er konsistent med tilnærmingen i Appel et al. (2019), som er prosjektets primære metodereferanse.
+
 **Dataforståelse og forberedelse** gjennomføres gjennom eksplorativ dataanalyse (EDA) som kartlegger klasseubalanse, forsinkelsesdistribusjon og bivariate relasjoner mellom prediktorvariabler og målvariabelen. Feature engineering transformerer rådata til et modelleringsklart datasett.
 
 **Modellering** tester tre algoritmetyper med ulik kompleksitet: logistisk regresjon som lineær baseline, Random Forest og Gradient Boosting (XGBoost) som ensemblemetoder. For ensemblemetodene gjennomføres hyperparameterjustering med RandomizedSearchCV og 5-fold stratifisert kryssvalidering (StratifiedKFold, k=5), med AUC-ROC som optimaliseringskriterium. Stratifisert kryssvalidering sikrer at klassefordelingen er representativ i hvert valideringsfold.
 
-**Datadeling** følger en 80/20 stratifisert splitt: 776 fakturaer til trening og 195 til testing. Testsettet holdes tilbake gjennom hele hyperparameterjusteringsprosessen og benyttes kun for endelig evaluering. Denne tilnærmingen gir ærlige ytelsestall og motvirker datalekkasje.
+**Datadeling** følger en 80/20 stratifisert splitt: 776 fakturaer til trening og 195 til testing. Testsettet holdes tilbake gjennom hele hyperparameterjusteringsprosessen og benyttes kun for endelig evaluering. Denne tilnærmingen gir ærlige ytelsestall og motvirker datalekkasje. Merk at datadelingen er tilfeldig stratifisert og ikke tidsbasert. En tidsbasert splitt – der de eldste fakturaene brukes til trening og de nyeste til test – ville i prinsippet gitt en mer realistisk simulering av produksjonsbetingelser. Med et datasett uten garantert tidssekvens og begrenset størrelse er tilfeldig splitt valgt for å sikre tilstrekkelig representasjon av minoritetsklassen i begge sett.
 
 **Klasseubalanse** håndteres gjennom klassevekting: `class_weight='balanced'` for logistisk regresjon og Random Forest, og `scale_pos_weight` (satt til forholdet mellom majoritets- og minoritetsklassen, ca. 1,96) for XGBoost.
 
@@ -197,7 +199,7 @@ Prosjektet følger en prosessstruktur inspirert av CRISP-DM (Cross-Industry Stan
 
 ### 5.2 Data
 
-Datasettet ble mottatt fra veileder som en anonymisert representasjon av Bedriftens fakturadatasett, og inneholder 1 000 fakturaer med 15 variabler. Tabell 5.1 gir en oversikt over variabelskjemaet.
+Datasettet ble mottatt fra veileder som et syntetisk generert datasett konstruert for å simulere fakturamønstre fra en norsk offentlig virksomhet, og inneholder 1 000 fakturaer med 15 variabler. Tabell 5.1 gir en oversikt over variabelskjemaet.
 
 **Tabell 5.1 – Variabelskjema for rådata**
 
@@ -225,12 +227,7 @@ Datasettet er komplett uten manglende verdier i de fakturaene som benyttes til m
 
 **Klasseubalanse**
 
-Av de 971 fakturaene er 643 (66,2 %) betalt i tide og 328 (33,8 %) forsinket. Ubalansen på om lag 2:1 er moderat sammenlignet med mange klassifiseringsdatasett, men tilstrekkelig til at enkel nøyaktighet er et misvisende ytelsesmål – en modell som alltid predikerer «i tide» oppnår 66,2 % nøyaktighet uten å ha lært noe nyttig.
-
-<figure style="text-align:center;">
-<img src="../004 data/eda_figurer/01_klasseubalanse.png" alt="Klasseubalanse" width="55%">
-<figcaption><small>Figur 1: Av de 971 fakturaene i analysedatasettet er 643 (66,2 %) betalt i tide (klasse 0) og 328 (33,8 %) forsinket (klasse 1). Ubalansen på om lag 2:1 medfører at enkel nøyaktighet er et misvisende ytelsesmål – en naiv modell som alltid predikerer «i tide» oppnår 66,2 % uten å ha lært noe nyttig.</small></figcaption>
-</figure>
+Av de 971 fakturaene er 643 (66,2 %) betalt i tide og 328 (33,8 %) forsinket. Ubalansen på om lag 2:1 er moderat sammenlignet med mange klassifiseringsdatasett, men tilstrekkelig til at enkel nøyaktighet er et misvisende ytelsesmål – en modell som alltid predikerer «i tide» oppnår 66,2 % nøyaktighet uten å ha lært noe nyttig. Se Figur 1 i avsnitt 7.1 for visuell fremstilling av klassefordelingen.
 
 ---
 
@@ -297,7 +294,7 @@ Av 971 fakturaer er 643 (66,2 %) betalt i tide og 328 (33,8 %) forsinket, en 2:1
 
 **Forsinkelsesdistribusjon**
 
-Distribusjonen av antall dager forsinket blant de 328 forsinkede fakturaene er skjev mot høyre: de fleste forsinkede fakturaer er relativt kort forsinket, men det finnes en hale av fakturaer med svært lang forsinkelse. Distribusjonen inneholder KDE-estimat som visualiserer tetthetstopper.
+Av 328 forsinkede fakturaer varierer forsinkelsen fra 1 til flere hundre dager. Distribusjonen er høyreskjev, noe som er typisk for fakturadata: majoriteten av forsinkelsene er kortvarige, men det finnes en hale av fakturaer med ekstrem forsinkelse. Distribusjonen inneholder KDE-estimat som visualiserer tetthetstopper.
 
 <figure style="text-align:center;">
 <img src="../004 data/eda_figurer/02_distribusjon_forsinkelse.png" alt="Distribusjon forsinkelse" width="60%">
@@ -306,7 +303,7 @@ Distribusjonen av antall dager forsinket blant de 328 forsinkede fakturaene er s
 
 **Forsinkelse per leverandørkategori**
 
-Andelen forsinkede fakturaer varierer mellom leverandørkategoriene. Figuren viser at visse kategorier har systematisk høyere forsinkelsesrate, noe som indikerer at leverandørkategori er en informativ prediktorvariabel.
+Andelen forsinkede fakturaer varierer mellom leverandørkategoriene. Leverandørkategori er en informativ prediktorvariabel – forsinkelsesraten varierer mellom kategoriene, noe som underbygger at kategorisert leverandørhistorikk bør inkluderes i modellen.
 
 <figure style="text-align:center;">
 <img src="../004 data/eda_figurer/03_andel_per_kategori.png" alt="Forsinkelse per leverandørkategori" width="65%">
@@ -427,6 +424,8 @@ Sluttmodellen – XGBoost tunet, retrent på hele datasettet (971 fakturaer) for
 | Middels | 0,30 ≤ p < 0,55 | 279 | 28 % |
 | Høy | p ≥ 0,55 | 419 | 55 % |
 
+Det bemerkes at risikoklassifiseringen i denne seksjonen er basert på en modell trent på alle 971 fakturaer og deretter anvendt på de samme 971 fakturaene. Dette innebærer at de rapporterte forsinkelsesratene er in-sample-estimater: modellen har sett disse dataene under trening og vil naturlig separere dem bedre enn den ville separert nye, usette fakturaer. Forsinkelsesratene (7 % / 28 % / 55 %) reflekterer modellens sorteringsevne på treningsdata og skal tolkes som en illustrasjon av metodikkens potensial, ikke som et ut-av-utvalg ytelsesmål. For operativ bruk bør klassifiseringsevnen valideres på ekte, nye fakturadata.
+
 Separasjonen mellom risikogruppene er tydelig: forsinkelsesraten i høy-gruppen (55 %) er nær åtte ganger høyere enn i lav-gruppen (7 %). Dette viser at modellen skiller mellom leverandørprofiler på en meningsfull og praktisk anvendbar måte. For en innkrever innebærer dette at ressursinnsatsen kan konsentreres mot de 419 høyrisikofakturaene fremfor å behandle alle 971 likt.
 
 <figure style="text-align:center;">
@@ -450,21 +449,21 @@ Separasjonen mellom risikogruppene er tydelig: forsinkelsesraten i høy-gruppen 
 
 ### 9.1 Modellytelse mot benchmark
 
-Beste modell i dette prosjektet er XGBoost med hyperparameterjustering, med en AUC-ROC på 0.720, F1-score på 0.621 og recall på 0.833. Benchmarkene satt fra primærlitteraturen – AUC ≥ 0.75 og F1 ≥ 0.70 (Appel et al., 2019) – ble ikke nådd. Dette er et funn som krever tolkning, ikke et fiasko.
+Beste modell i dette prosjektet er XGBoost med hyperparameterjustering, med en AUC-ROC på 0,720, F1-score på 0,621 og recall på 0,833. Benchmarkene satt fra primærlitteraturen – AUC ≥ 0,75 og F1 ≥ 0,70 (Appel et al., 2019) – ble ikke nådd. Dette er et funn som krever tolkning, ikke et fiasko.
 
 Den mest sannsynlige forklaringen på gapet er datasettets størrelse og opphav. Appel et al. (2019) trente på 175 552 fakturaer og Schoonbee et al. (2022) på over én million fakturaoppføringer. Dette prosjektets treningsgrunnlag består av 971 fakturaer – en størrelsesorden som ikke gir modellen tilstrekkelig eksponering mot de subtile mønstrene som skiller betalingsatferd. Med et lite datasett øker variansen i estimatene, og modellen har begrenset kapasitet til å lære generaliserbare sammenhenger.
 
 I tillegg er datasettet syntetisk generert. Variabelskjemaet ble utformet med utgangspunkt i hva primærlitteraturen identifiserer som prediktive variabler, og dataen ble generert innenfor disse rammene. Dette innebærer at de statistiske sammenhengene i datasettet er renere og mer konsistente enn hva ekte fakturadata typisk er. Reell betalingsadferd inneholder støy, unntak og irregulariteter som paradoksalt nok er det modellen trenger for å lære robuste mønstre. Syntetisk data med lav varians setter således et tak på oppnåelig AUC som ikke er sammenlignbart med benchmarks fra studier basert på ekte transaksjonsdata.
 
-At XGBoost er beste modell er konsistent med Appel et al. (2019), som fant at Gradient Boosting oppnådde høyest nøyaktighet blant de testede algoritmene. Random Forest var best i Schoonbee et al. (2022), men oppnådde også sterke resultater i dette prosjektet (AUC 0.698 etter tuning). Ensemblemetodenes overlegenhet over logistisk regresjon (AUC 0.706 baseline) er i tråd med litteraturens generelle funn om at ikke-lineære modeller fanger mer komplekse betalingsmønstre.
+At XGBoost er beste modell er konsistent med Appel et al. (2019), som fant at Gradient Boosting oppnådde høyest nøyaktighet blant de testede algoritmene. Random Forest var best i Schoonbee et al. (2022), men oppnådde også sterke resultater i dette prosjektet (AUC 0,698 etter tuning). Ensemblemetodenes overlegenhet over logistisk regresjon (AUC 0,706 baseline) er i tråd med litteraturens generelle funn om at ikke-lineære modeller fanger mer komplekse betalingsmønstre.
 
 ### 9.2 Beslutningsstøtteverdi utover dagens praksis
 
 Prosjektets formål er ikke å bygge en produksjonsklar modell, men å demonstrere at en KI-basert tilnærming kan gi bedre grunnlag for fakturaprioritering enn eksisterende praksis. Tradisjonell prioritering baseres typisk på en kombinasjon av forfallsdato og fakturabeløp – den fakturaen som forfaller snart og har høyest beløp følges opp først. Denne logikken er intuitiv, men ignorerer en avgjørende variabel: sannsynligheten for at fakturaen faktisk betales sent.
 
-Appel et al. (2019) viser at risikoscore definert som R = Verdi × P(Forsinket) gir en radikalt annerledes prioriteringsliste sammenlignet med beløpsbasert sortering (Kendalls τ = 0.003). En faktura på 50 000 kr fra en leverandør som historisk betaler i tide er reelt sett lavere prioritet enn en faktura på 20 000 kr fra en leverandør med høy forsinkelsesrate. Modellen i dette prosjektet tilbyr nettopp denne tredje dimensjonen – leverandørrisiko basert på historisk atferd.
+Appel et al. (2019) viser at risikoscore definert som R = Verdi × P(Forsinket) gir en radikalt annerledes prioriteringsliste sammenlignet med beløpsbasert sortering (Kendalls τ = 0,003). En faktura på 50 000 kr fra en leverandør som historisk betaler i tide er reelt sett lavere prioritet enn en faktura på 20 000 kr fra en leverandør med høy forsinkelsesrate. Modellen i dette prosjektet tilbyr nettopp denne tredje dimensjonen – leverandørrisiko basert på historisk atferd.
 
-Risikoklassifiseringen av 971 fakturaer resulterte i 273 fakturaer i lav risikogruppe (7 % forsinket), 279 i middels (28 % forsinket) og 419 i høy risikogruppe (55 % forsinket). Separasjonen mellom gruppene er tydelig og viser at modellen skiller mellom leverandørprofiler på en meningsfull måte. For en innkrever betyr dette at ressursinnsatsen kan konsentreres mot de 419 høyrisikofakturaene fremfor å behandle alle 971 likt. Recall på 0.833 innebærer at modellen fanger 83 % av faktisk forsinkede fakturaer – et tall som er direkte relevant for formålet om å redusere andel forsinkede betalinger.
+Risikoklassifiseringen av 971 fakturaer resulterte i 273 fakturaer i lav risikogruppe (7 % forsinket), 279 i middels (28 % forsinket) og 419 i høy risikogruppe (55 % forsinket). Separasjonen mellom gruppene er tydelig og viser at modellen skiller mellom leverandørprofiler på en meningsfull måte. For en innkrever betyr dette at ressursinnsatsen kan konsentreres mot de 419 høyrisikofakturaene fremfor å behandle alle 971 likt. Recall på 0,833 innebærer at modellen fanger 83 % av faktisk forsinkede fakturaer – et tall som er direkte relevant for formålet om å redusere andel forsinkede betalinger.
 
 Som beslutningsstøtte, slik Schoonbee et al. (2022) formaliserer det i sitt DSS-rammeverk, er modellens verdi ikke primært i den absolutte AUC-verdien, men i dens evne til å rangere fakturaer etter risiko og gi innkrevere et datadrevet grunnlag for prioritering.
 
@@ -475,6 +474,8 @@ Tre begrensninger er sentrale å adressere. For det første begrenser datasettet
 For det andre er konseptdrift ikke håndtert. Appel et al. (2019) løser dette med en window size-parameter som begrenser historiske features til de siste 2–3 månedene, slik at modellen ikke lærer av foreldet betalingsadferd. I dette prosjektet er dette erkjent som en begrensning; ved eventuell drift av modellen i produksjon bør periodisk retrening eller tilsvarende mekanisme implementeres.
 
 For det tredje er andelen fakturaer i høy risikogruppe (43 %) høyere enn hva som er intuitivt forventet. Dette kan delvis forklares av at syntetisk data har komprimert leverandørvariasjonen, slik at flere profiler ligner risikable mønstre enn hva ekte data ville vist. Klassifiseringsterskler bør kalibreres på nytt mot ekte data før modellen tas i operativ bruk.
+
+En fjerde begrensning angår etiske og personvernmessige hensyn. Modellen bruker leverandørkategori og historisk betalingsadferd som prediktorer. Dette innebærer en risiko for at leverandører i visse kategorier – f.eks. renhold eller transport – systematisk klassifiseres som høyrisiko fordi historiske betalingsmønstre i disse kategoriene tilfeldigvis er skjevere enn i andre. Slik algoritmisk skjevhet (bias) kan forsterke eksisterende ulikhet i hvordan leverandørene behandles av virksomheten. I offentlig sektor er transparens og etterprøvbarhet særlig viktig: beslutninger om fakturaprioritering som styres av en black-box-modell som XGBoost krever at virksomheten kan forklare og forsvare prioriteringen overfor leverandørene. Bruk av SHAP-verdier (SHapley Additive exPlanations) for å forklare individuelle prediksjoner anbefales ved eventuell produksjonssetting. GDPR-hensyn ved behandling av leverandørdata bør avklares med virksomhetens personvernombud.
 
 ---
 
@@ -508,7 +509,17 @@ Breiman, L. (2001). Random forests. *Machine Learning, 45*(1), 5–32. https://d
 
 Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 785–794. https://doi.org/10.1145/2939672.2939785
 
+Gama, J., Žliobaitė, I., Bifet, A., Pechenizkiy, M., & Bouchachia, A. (2014). A survey on concept drift adaptation. *ACM Computing Surveys, 46*(4), 44:1–44:37. https://doi.org/10.1145/2523813
+
+Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The elements of statistical learning: Data mining, inference, and prediction* (2. utg.). Springer.
+
+James, G., Witten, D., Hastie, T., & Tibshirani, R. (2021). *An introduction to statistical learning: With applications in R* (2. utg.). Springer.
+
+Kuhn, M., & Johnson, K. (2019). *Feature engineering and selection: A practical approach for predictive models*. CRC Press.
+
 Schoonbee, L., Moore, W. R., & van Vuuren, J. H. (2022). A machine-learning approach towards solving the invoice payment prediction problem. *South African Journal of Industrial Engineering, 33*(4), 126–146. https://doi.org/10.7166/33-4-2726
+
+Turban, E., Sharda, R., & Delen, D. (2011). *Decision support and business intelligence systems* (9. utg.). Pearson.
 
 ---
 
