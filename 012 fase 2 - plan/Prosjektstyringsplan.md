@@ -2,11 +2,11 @@
 for
 Finansiell logistikk og beslutningstøtte ved hjelp av KI
 
-**Dato:** 2026-03-14
+**Dato:** 2026-03-14 | **Sist oppdatert:** 2026-04-20
+**Utarbeidet av:** Magnus Ødegård | **Kurs:** LOG650
+**Autorisert av:**
 
-**Utarbeidet av:** Magnus Ødegård
-
-**Autorisert av:** 
+> **Nåværende fase:** FASE 3 – Gjennomføring (9. mar – 27. apr 2026)
 
 ---
 
@@ -16,23 +16,22 @@ Finansiell logistikk og beslutningstøtte ved hjelp av KI
 2. [Omfang](#omfang)
 3. [Fremdrift](#fremdrift)
 4. [Risiko](#risiko)
-6. [Saker](#saker)
-7. [Interessenter](#interessenter)
-8. [Ressurser](#ressurser)
-9. [Kommunikasjon](#kommunikasjon)
-10. [Kvalitet](#kvalitet)
-11. [Anskaffelser](#anskaffelser)
-12. [Endringskontrollprosess](#endringskontrollprosess)
+5. [Saker](#saker)
+6. [Interessenter](#interessenter)
+7. [Ressurser](#ressurser)
+8. [Kommunikasjon](#kommunikasjon)
+9. [Kvalitet](#kvalitet)
+10. [Anskaffelser](#anskaffelser)
+11. [Endringskontrollprosess](#endringskontrollprosess)
+12. [Endringslogg](#endringslogg)
 
 ---
 
 ## Sammendrag
 
-Dette dokumentet utgjør prosjektstyringsplanen for prosjektet «Finansiell logistikk og beslutningstøtte ved hjelp av KI». Det dokumenterer planbaselines for omfang, fremdrift og risiko, og gir tilleggsinformasjon for å støtte prosjektleder i vellykket gjennomføring.
+Dette dokumentet utgjør prosjektstyringsplanen for prosjektet «Finansiell logistikk og beslutningstøtte ved hjelp av KI». Det dokumenterer planbaselines for omfang, fremdrift og risiko, og gir tilleggsinformasjon for å støtte prosjektleder i vellykket gjennomføring. Dokumentet fungerer også som et levende statusstyringsdokument og oppdateres løpende gjennom prosjektets faser.
 
 Dette prosjektet støtter følgende mål: Å forbedre Bedriftens evne til å identifisere fakturaer med høy risiko for sen betaling gjennom datadrevet prediksjon og beslutningsstøtte.
-
-Dette er et levende dokument, og skal oppdateres av prosjektleder ved behov gjennom prosjektets løpetid.
 
 ### Behov
 
@@ -108,7 +107,7 @@ Prosjektkravene inkluderer:
 - Datahåndtering og anonymisering av fakturadatasett.
 - Eksplorativ dataanalyse (EDA) og feature engineering.
 - Utvikling og evaluering av prediksjonsmodell(er).
-- Klassifisering av fakturaer i risikoategorier.
+- Klassifisering av fakturaer i risikokategorier.
 - Beslutningsstøtterapport med anbefalinger.
 
 ### Løsning
@@ -162,16 +161,16 @@ Feature engineering er en kritisk del av prosjektet og deles inn i to kategorier
 
 **Historiske betalingsvariabler (beregnes per leverandør, inspirert av Schoonbee et al.):**
 
-| Feature                   | Beskrivelse                                                         |
-|---------------------------|---------------------------------------------------------------------|
+| Feature                    | Beskrivelse                                                         |
+|----------------------------|---------------------------------------------------------------------|
 | GjennomsnittDagerForsinket | Gjennomsnittlig antall dager forsinket på tidligere fakturaer       |
-| AntallFakturerITide       | Antall tidligere fakturaer betalt innen forfall                     |
-| AntallFakturerForsinket   | Antall tidligere fakturaer betalt etter forfall                     |
-| AndelITide                | Andel av tidligere fakturaer betalt i tide                          |
-| DagerSidenSisteBetaling   | Antall dager siden forrige betaling                                 |
-| BetalingsdagIMåned        | Gjennomsnittlig dag i måneden betaling skjer                        |
-| UteståendeFaktura         | Binær: 1 hvis leverandør har utestående faktura, 0 ellers           |
-| GlobalTrend               | Gjennomsnittlig økning/reduksjon i forsinkelse siste måned          |
+| AntallFakturerITide        | Antall tidligere fakturaer betalt innen forfall                     |
+| AntallFakturerForsinket    | Antall tidligere fakturaer betalt etter forfall                     |
+| AndelITide                 | Andel av tidligere fakturaer betalt i tide                          |
+| DagerSidenSisteBetaling    | Antall dager siden forrige betaling                                 |
+| BetalingsdagIMåned         | Gjennomsnittlig dag i måneden betaling skjer                        |
+| UteståendeFaktura          | Binær: 1 hvis leverandør har utestående faktura, 0 ellers           |
+| GlobalTrend                | Gjennomsnittlig økning/reduksjon i forsinkelse siste måned          |
 
 Historiske variabler beregnes med eksponentiell vekting (vektfaktor ~1.5) for å gi nyere atferd større betydning, i tråd med funn fra Schoonbee et al. (2022).
 
@@ -194,34 +193,51 @@ Basert på Appel et al. (2020), som oppnådde 77 % nøyaktighet i tilsvarende pr
 
 ### Arbeidsnedbrytningsstruktur (WBS)
 
-| ID    | Leveranse                                                         | Eier            |
-|-------|-------------------------------------------------------------------|-----------------|
-| 1.0   | Fase 1 – Proposal                                                 | Magnus Ødegård  |
-| 2.0   | Fase 2 – Prosjektstyringsplan                                     | Magnus Ødegård  |
-| 2.1   | Utarbeide og strukturere prosjektstyringsplan                     | Magnus Ødegård  |
-| 2.2   | Gjennomgang og godkjenning av veileder                            | Magnus Ødegård  |
-| 3.0   | Fase 3 – Gjennomføring (9. mar – 27. apr)                         | Magnus Ødegård  |
-| 3.1   | Introduksjon og problemstilling – første utkast                   | Magnus Ødegård  |
-| 3.2   | Teori og litteratursøk                                            | Magnus Ødegård  |
-| 3.2.1 | Søk og gjennomgang av relevante artikler                          | Magnus Ødegård  |
-| 3.2.2 | Oppsummering av teorigrunnlag for rapporten                       | Magnus Ødegård  |
-| 3.3   | Casebeskrivelse og datainnsamling                                 | Magnus Ødegård  |
-| 3.3.1 | Anonymisering og klargjøring av fakturadatasett                   | Magnus Ødegård  |
-| 3.3.2 | Eksplorativ dataanalyse (EDA)                                     | Magnus Ødegård  |
-| 3.4   | Data, metode og modellering (KI-implementasjon)                   | Magnus Ødegård  |
-| 3.4.1 | Feature engineering – fakturaspesifikke variabler                 | Magnus Ødegård  |
-| 3.4.2 | Feature engineering – historiske betalingsvariabler               | Magnus Ødegård  |
-| 3.4.3 | Trening av kandidatmodeller                                       | Magnus Ødegård  |
-| 3.4.4 | Hyperparameterjustering og modellvalg                             | Magnus Ødegård  |
-| 3.5   | Analyse og resultater – kjøre modeller og dokumentere funn        | Magnus Ødegård  |
-| 3.5.1 | Evaluering av modellytelse (AUC-ROC, F1-score, presisjon/recall)  | Magnus Ødegård  |
-| 3.5.2 | Klassifisering av fakturaer i risikoategorier                     | Magnus Ødegård  |
-| 3.6   | Diskusjon – tolke funn mot teori og problemstilling               | Magnus Ødegård  |
-| 3.7   | Peer-to-peer review av annen gruppes utkast                       | Magnus Ødegård  |
-| 4.0   | Fase 4 – Avslutning (27. apr – 31. mai)                           | Magnus Ødegård  |
-| 4.1   | Konklusjon – besvar problemstillingen eksplisitt                  | Magnus Ødegård  |
-| 4.2   | Ferdigstille introduksjon                                         | Magnus Ødegård  |
-| 4.3   | Kvalitetssikring, korrektur og referanseliste                     | Magnus Ødegård  |
+Tabellen nedenfor viser fullstendig arbeidsnedbrytning med nåværende fremdriftsstatus for alle leveranser.
+
+#### Fase 1 & 2 – Proposal og Plan
+
+| ID  | Leveranse                                       | Eier           | Status        | Notat |
+|-----|-------------------------------------------------|----------------|---------------|-------|
+| 1.0 | Fase 1 – Proposal                               | Magnus Ødegård | ✅ Fullført   |       |
+| 2.0 | Fase 2 – Prosjektstyringsplan                   | Magnus Ødegård | ✅ Fullført   |       |
+| 2.1 | Utarbeide og strukturere prosjektstyringsplan   | Magnus Ødegård | ✅ Fullført   |       |
+| 2.2 | Gjennomgang og godkjenning av veileder          | Magnus Ødegård | ✅ Fullført   |       |
+
+#### Fase 3 – Gjennomføring (aktiv)
+
+| ID    | Leveranse                                                         | Eier           | Status          | Notat |
+|-------|-------------------------------------------------------------------|----------------|-----------------|-------|
+| 3.1   | Introduksjon og problemstilling – første utkast                   | Magnus Ødegård | ✅ Fullført     | Seksjon 1.0–1.4 skrevet inn i rapport_mal.md |
+| 3.2   | Teori og litteratursøk                                            | Magnus Ødegård | ✅ Fullført     | Seksjon 2.0 og 3.0 skrevet inn i rapport_mal.md |
+| 3.2.1 | Søk og gjennomgang av relevante artikler                          | Magnus Ødegård | ✅ Fullført     | Appel et al. (2020) og Schoonbee et al. (2022) gjennomgått |
+| 3.2.2 | Oppsummering av teorigrunnlag for rapporten                       | Magnus Ødegård | ✅ Fullført     | 2.0 Litteratur og 3.0 Teori (6 delkapitler) skrevet inn |
+| 3.3   | Casebeskrivelse og datainnsamling                                 | Magnus Ødegård | ✅ Fullført     | 1 000 fakturaer, 15 kolonner mottatt fra veileder |
+| 3.3.1 | Anonymisering og klargjøring av fakturadatasett                   | Magnus Ødegård | ✅ Fullført     | 29 fakturaer med status «Ubetalt» identifisert og ekskludert |
+| 3.3.2 | Eksplorativ dataanalyse (EDA)                                     | Magnus Ødegård | ✅ Fullført     | eda.py – 9 figurer, leverandørprofil og features.csv produsert |
+| 3.4   | Data, metode og modellering (KI-implementasjon)                   | Magnus Ødegård | ✅ Fullført     |       |
+| 3.4.1 | Feature engineering – fakturaspesifikke variabler                 | Magnus Ødegård | ✅ Fullført     | betalingsfrist_dager, netto_dager, faktura_maned, faktura_kvartal |
+| 3.4.2 | Feature engineering – historiske betalingsvariabler               | Magnus Ødegård | ✅ Fullført     | Leverandørrisikoscore, one-hot-enkoding av kategoriske variabler |
+| 3.4.3 | Trening av kandidatmodeller                                       | Magnus Ødegård | ✅ Fullført     | Log.reg (AUC 0.706), RF (0.695), XGBoost (0.661) baseline |
+| 3.4.4 | Hyperparameterjustering og modellvalg                             | Magnus Ødegård | ✅ Fullført     | RF tunet (AUC 0.698), XGBoost tunet (AUC 0.720) – beste modell |
+| 3.5   | Analyse og resultater – kjøre modeller og dokumentere funn        | Magnus Ødegård | ✅ Fullført     |       |
+| 3.5.1 | Evaluering av modellytelse (AUC-ROC, F1-score, presisjon/recall)  | Magnus Ødegård | ✅ Fullført     | Beste: XGBoost tunet – AUC 0.720, F1 0.621, Recall 0.833 |
+| 3.5.2 | Klassifisering av fakturaer i risikoategorier                     | Magnus Ødegård | ✅ Fullført     | Lav 273 (7 % forsinket) / Middels 279 (28 %) / Høy 419 (55 %) |
+| 3.6   | Diskusjon – tolke funn mot teori og problemstilling               | Magnus Ødegård | ✅ Fullført     | Seksjon 9.0 skrevet inn – modellytelse, beslutningsstøtteverdi, begrensninger |
+| 3.7   | Peer-to-peer review av annen gruppes utkast                       | Magnus Ødegård | ⬜ Ikke startet |       |
+| 3.8   | Godkjent hovedutkast til forskningsrapport (min. 80–90 % ferdig) | Magnus Ødegård | ⏳ Pågår        | Seksjon 1–9 komplett; gjenstår: 10.0 Konklusjon, Sammendrag/Abstract, 11.0 Bibliografi |
+| 3.8.1 | Ferdigstille alle rapportseksjoner (seksjon 1–9 komplett)         | Magnus Ødegård | ✅ Fullført     | Seksjon 1–9 skrevet inn i rapport_mal.md; 10.0, Sammendrag/Abstract og 11.0 håndteres i Fase 4 |
+| 3.8.2 | Intern gjennomgang og korrektur av hele utkastet                  | Magnus Ødegård | ✅ Fullført     | AI-assistert gjennomgang fullført; funn dokumentert i SENSORRAPPORT_OG_AI_INSTRUKS.md – 6 kritiske mangler og 4 metodiske svakheter identifisert |
+| 3.8.3 | Levere utkast til veileder for tilbakemelding                     | Magnus Ødegård | ⬜ Ikke startet |       |
+| 3.8.4 | Motta og innarbeide veiledertilbakemelding – oppnå godkjenning    | Magnus Ødegård | ⬜ Ikke startet |       |
+
+#### Fase 4 – Avslutning (27. apr – 31. mai)
+
+| ID  | Leveranse                                       | Eier           | Status          | Notat |
+|-----|-------------------------------------------------|----------------|-----------------|-------|
+| 4.1 | Konklusjon – besvar problemstillingen eksplisitt| Magnus Ødegård | ⬜ Ikke startet |       |
+| 4.2 | Ferdigstille introduksjon                       | Magnus Ødegård | ⬜ Ikke startet |       |
+| 4.3 | Kvalitetssikring, korrektur og referanseliste   | Magnus Ødegård | ⬜ Ikke startet |       |
 
 ### Omfangsverifikasjon
 
@@ -239,11 +255,9 @@ Proposal → Prosjektstyringsplan → Datainnsamling → EDA → Modellutvikling
 
 ### Gantt-plan
 
-Skrives i MS-project og legges ved i TEAMS-delt mappe ved "G-17 - MAGNUS INDIVIDUELL" . Oppdateres jevnlig ved nådde tidsfrister og vis det oppdages ekstra oppgaver som kreves planlegging i henhold til gantt plan. 
+Skrives i MS-project og legges ved i TEAMS-delt mappe ved "G-17 - MAGNUS INDIVIDUELL". Oppdateres jevnlig ved nådde tidsfrister og dersom det oppdages ekstra oppgaver som krever planlegging.
 
 ### Kritisk linje
-
-Den kritiske linjen er:
 
 **Proposal → Prosjektstyringsplan → Datainnsamling → EDA → Modellutvikling → Rapport**
 
@@ -251,14 +265,14 @@ Forsinkelse i noen av disse fasene vil direkte påvirke sluttleveransen.
 
 ### Milepæler
 
-| Milepæl                              | Planlagt dato |
-|--------------------------------------|---------------|
-| Godkjent proposal (Fase 1)           | 2026-02-09    |
-| Godkjent prosjektstyringsplan(fase 2)| 2026-03-17    |
-| Ferdig datagrunnlag (fase 3)         | 2026-04-11    | Behov for data fra veileder
-| Ferdig EDA og feature engineering    | 2026-04-18    |
-| Ferdig og evaluert modell            | 2026-05-09    |
-| Innlevert endelig rapport (Fase 4)   | 2026-05-31    |
+| #  | Milepæl                               | Planlagt dato | Status        |
+|----|---------------------------------------|---------------|---------------|
+| M1 | Godkjent proposal (Fase 1)            | 2026-02-09    | ✅ Fullført   |
+| M2 | Godkjent prosjektstyringsplan (Fase 2)| 2026-03-17    | ✅ Fullført   |
+| M3 | Ferdig datagrunnlag (Fase 3)          | 2026-04-11    | ✅ Fullført   |
+| M4 | Ferdig EDA og feature engineering     | 2026-04-18    | ✅ Fullført   |
+| M5 | Ferdig og evaluert modell             | 2026-04-17    | ✅ Fullført   |
+| M6 | Innlevert endelig rapport (Fase 4)    | 2026-05-31    | ⏳ Kommende  |
 
 ---
 
@@ -270,24 +284,25 @@ Risikoer identifiseres og vurderes av prosjektleder (Magnus Ødegård) gjennom h
 
 ### Risikoregister
 
-| ID  | Risiko                                   | Sannsynlighet | Konsekvens | Tiltak                                               |
-|-----|------------------------------------------|---------------|------------|------------------------------------------------------|
-| R1  | Utilstrekkelig datakvalitet              | Middels       | Høy        | Grundig datarensing og simulering av manglende data  |
-| R2  | Manglende tilgang til data               | Lav           | Høy        | Anonymisere og tilpasse datasett tidlig i prosjektet |
-| R3  | Modellen gir lav prediksjonsyteevne      | Middels       | Middels    | Teste flere modeller og tuning av hyperparametere    |
-| R4  | Tidspress mot innleveringsfrist          | Middels       | Middels    | Følge Gantt-plan; justere omfang ved behov           |
-| R5  | Konfidensialitetsproblemer med data      | Lav           | Høy        | Full anonymisering; bruk av syntetiske data ved behov|
-| R6  | Konseptdrift – relasjon mellom variabler og utfall endrer seg over tid | Middels | Middels | Tidsbasert datadeling; periodisk retrening av modell; overvåke ytelsesmål |
+| ID | Risiko                                   | Sannsynlighet | Konsekvens | Nåværende nivå | Tiltak / Kommentar                                                                                                        |
+|----|------------------------------------------|---------------|------------|----------------|---------------------------------------------------------------------------------------------------------------------------|
+| R1 | Utilstrekkelig datakvalitet              | Middels       | Høy        | Lav            | EDA gjennomført – datasett komplett; 29 ubetalte fakturaer ekskludert, 971 fakturaer brukes til trening                  |
+| R2 | Manglende tilgang til data               | Lav           | Høy        | Lukket         | Datasett mottatt og bekreftet 2026-04-16 – S1 løst                                                                       |
+| R3 | Modellen gir lav prediksjonsytelse       | Middels       | Middels    | Lukket         | Ubetalt-klassen ekskludert; XGBoost tunet gir beste ytelse (AUC 0.720) – benchmark ≥ 0.75 ikke nådd, tolkes i diskusjon |
+| R4 | Tidspress mot innleveringsfrist          | Middels       | Middels    | Middels        | Modell og seksjon 1–9 fullført; neste kritiske frist: ferdig rapport 2026-05-31. Gjenstår: 11 utbedringsoppgaver fra intern gjennomgang |
+| R5 | Konfidensialitetsproblemer med data      | Lav           | Høy        | Lav            | Full anonymisering gjennomført; bruk av syntetiske data ved behov                                                         |
+| R6 | Konseptdrift – relasjon mellom variabler endrer seg over tid | Middels | Middels | Lav       | Tidsbasert datadeling ble ikke implementert (tilfeldig 80/20-splitt brukt) – erkjent som metodisk begrensning i seksjon 5.1 og 9.3    |
 
 ---
 
 ## Saker
 
-Ingen åpne saker per oppstart av prosjektet. Saker vil registreres og følges opp løpende.
+Saker registreres, følges opp og lukkes løpende gjennom prosjektets levetid.
 
-| ID  | Sak | Status | Ansvarlig | Frist |
-|-----|-----|--------|-----------|-------|
-| –   | –   | –      | –         | –     |
+| ID | Sak                                                              | Status    | Ansvarlig      | Frist      |
+|----|------------------------------------------------------------------|-----------|----------------|------------|
+| S1 | Avklare datatilgang fra veileder                                 | ✅ Løst   | Magnus Ødegård | 2026-04-16 |
+| S2 | Avklare håndtering av 29 «Ubetalt»-fakturaer (ekskludere/label) | ✅ Løst   | Magnus Ødegård | 2026-04-16 |
 
 ---
 
@@ -312,7 +327,7 @@ Ingen åpne saker per oppstart av prosjektet. Saker vil registreres og følges o
 
 ### Kritiske ressurser
 
-- **Historisk fakturadata (Bedriften):** Nødvendig for modelltrening. Må anonymiseres og klargjøres tidlig.
+- **Historisk fakturadata (Bedriften):** Nødvendig for modelltrening. Mottatt og anonymisert 2026-04-16 – 1 000 fakturaer, 15 kolonner.
 - **Tid:** Individuelt prosjekt – alt avhenger av studentens tilgjengelige tid og arbeidskapasitet.
 
 ---
@@ -325,7 +340,7 @@ Veiledermøter gjennomføres etter behov for å sikre faglig kvalitet og fremdri
 
 ### Statusoppdateringer
 
-Prosjektleder (Magnus Ødegård) oppdaterer Gantt-plan og risikoregister jevnlig gjennom prosjektet.
+Prosjektleder (Magnus Ødegård) oppdaterer dette dokumentet, Gantt-plan og risikoregister jevnlig gjennom prosjektet.
 
 ### Fase-leveranser
 
@@ -345,11 +360,29 @@ Leveranser for hver fase (proposal, plan, rapport) leveres i henhold til kursets
 
 Prosjektleder gjennomfører egenvurdering av alle leveranser før innlevering. Veileder gjennomfører formell vurdering.
 
-### Omfangsverifikasjon
+### Modellytelse og benchmark
 
-Modellens ytelse evalueres med standardmål: presisjon, recall, F1-score og AUC-ROC. Terskler fastsettes basert på bruksscenarioet (prioritering av oppfølging vs. automasjon).
+Appel et al. (2020) oppnådde 77 % nøyaktighet i et tilsvarende prediksjonsproblem for fakturabetaling. Dette brukes som referansepunkt (benchmark) for prosjektets modell. Målnivå er satt til AUC-ROC ≥ 0.75 og F1-score ≥ 0.70 på hold-out testsettet.
 
-Appel et al. (2020) oppnådde 77 % nøyaktighet i et tilsvarende prediksjonsproblem for fakturabetaling. Dette brukes som referansepunkt (benchmark) for prosjektets modell. Målnivå settes til AUC-ROC ≥ 0.75 og F1-score ≥ 0.70 på hold-out testsettet. Alle kandidatmodeller dokumenteres og sammenlignes i rapporten.
+**Oppnådde resultater:**
+
+| Modell                    | AUC-ROC | F1-score | Presisjon | Recall |
+|---------------------------|---------|----------|-----------|--------|
+| Logistisk regresjon       | 0.706   | –        | –         | –      |
+| Random Forest (baseline)  | 0.695   | –        | –         | –      |
+| XGBoost (baseline)        | 0.661   | –        | –         | –      |
+| Random Forest (tunet)     | 0.698   | –        | –         | –      |
+| **XGBoost (tunet)**       | **0.720** | **0.621** | –      | **0.833** |
+
+Beste modell er XGBoost (tunet) med AUC-ROC 0.720. Benchmark på ≥ 0.75 ble ikke nådd, noe som diskuteres i rapportens diskusjonsseksjon (9.0) i lys av datasettets størrelse og klasseubalanse.
+
+**Risikoklassifisering av 971 fakturaer:**
+
+| Klasse  | Antall fakturaer | Andel forsinket |
+|---------|-----------------|-----------------|
+| Lav     | 273             | 7 %             |
+| Middels | 279             | 28 %            |
+| Høy     | 419             | 55 %            |
 
 ---
 
@@ -367,7 +400,35 @@ Alle vesentlige endringer i omfang, fremdriftsplan eller metode etter at denne p
 2. Diskuteres med veileder.
 3. Oppdateres i prosjektstyringsplanen og Gantt-plan ved godkjenning.
 
-Mindre justeringer som ikke påvirker prosjektmålet eller sluttleveransen kan gjennomføres av prosjektleder uten formell godkjenning, men skal loggføres.
+Mindre justeringer som ikke påvirker prosjektmålet eller sluttleveransen kan gjennomføres av prosjektleder uten formell godkjenning, men skal loggføres i endringsloggen nedenfor.
+
+---
+
+## Endringslogg
+
+| Dato       | Endring                                                                              | Arbeidsøkt / Grunn       |
+|------------|--------------------------------------------------------------------------------------|--------------------------|
+| 2026-04-16 | Statussporing lagt til i dokumentet; milepæler og WBS oppdatert med statuskolonne   | Initiell statusintegrasjon |
+| 2026-04-16 | Datasett bekreftet mottatt (1 000 fakturaer, 15 kolonner) – S1 lukket               | Arbeidsøkt 2             |
+| 2026-04-16 | EDA fullført: klasseubalanse, forsinkelsesdist., kategori- og leverandøranalyse      | Arbeidsøkt 2             |
+| 2026-04-16 | Feature engineering fullført: 34 features, features.csv produsert                   | Arbeidsøkt 2             |
+| 2026-04-16 | Leverandørrisikoprofil laget: risikoscore per leverandør, 9 figurer generert        | Arbeidsøkt 2             |
+| 2026-04-16 | M3 og M4 markert fullført – ny åpen sak S2 (Ubetalt-klassen)                        | Arbeidsøkt 2             |
+| 2026-04-16 | S2 løst: 29 Ubetalt-fakturaer ekskludert fra trening (971 brukes)                   | Arbeidsøkt 3             |
+| 2026-04-16 | model.py opprettet: Log.reg (AUC 0.706), RF (0.695), XGBoost (0.661) – 3.4.3 ✅    | Arbeidsøkt 3             |
+| 2026-04-16 | 5 figurer generert (10–14), modell_resultater.csv produsert                         | Arbeidsøkt 3             |
+| 2026-04-16 | 3.1 fullført: seksjon 1.0–1.4 skrevet inn i rapport_mal.md                         | Arbeidsøkt 4             |
+| 2026-04-16 | 3.2 fullført: seksjon 2.0 Litteratur og 3.0 Teori skrevet inn i rapport_mal.md     | Arbeidsøkt 4             |
+| 2026-04-17 | model.py gjenopprettet og kjørt på nytt; 29 Ubetalt-fakturaer ekskludert korrekt   | Arbeidsøkt 5             |
+| 2026-04-17 | 3.4.4 fullført: RF tunet AUC 0.698, XGBoost tunet AUC 0.720 – benchmark ikke nådd | Arbeidsøkt 5             |
+| 2026-04-17 | 3.5.1 fullført: alle 5 modeller evaluert med AUC, F1, presisjon, recall, nøyaktighet| Arbeidsøkt 5             |
+| 2026-04-17 | 3.5.2 fullført: 971 fakturaer klassifisert – Lav 273 / Middels 279 / Høy 419       | Arbeidsøkt 5             |
+| 2026-04-17 | 3.6 fullført: diskusjon skrevet inn i rapport_mal.md (seksjon 9.0)                  | Arbeidsøkt 6             |
+| 2026-04-20 | 3.8 lagt til i WBS: Godkjent hovedutkast med deloppgaver 3.8.1–3.8.4               | Planlegging              |
+| 2026-04-22 | 3.8.1 markert fullført: seksjon 1–9 skrevet inn i rapport_mal.md; gjenstår i Fase 4: 10.0, Sammendrag/Abstract, 11.0 Bibliografi | Statusoppdatering |
+| 2026-04-22 | M5 markert fullført (modell ferdig og evaluert 2026-04-17)                          | Statusoppdatering        |
+| 2026-04-22 | 3.8.2 fullført: AI-assistert intern gjennomgang; SENSORRAPPORT_OG_AI_INSTRUKS.md produsert med 6 kritiske mangler og 4 metodiske svakheter | Arbeidsøkt 7 |
+| 2026-04-22 | R4 oppdatert: ny kritisk frist er rapport 2026-05-31 (modell ferdig). R6 korrigert: tidsbasert splitt ikke implementert, erkjent i rapporten | Statusoppdatering |
 
 ---
 
@@ -379,6 +440,4 @@ Mindre justeringer som ikke påvirker prosjektmålet eller sluttleveransen kan g
 
 ### Vedlegg B – WBS-ordliste
 
-*(Se tabell under Omfang)*
-
-
+*(Se WBS-tabeller under Omfang)*
