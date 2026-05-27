@@ -377,7 +377,7 @@ Av 971 fakturaer er 643 (66,2 %) betalt i tide og 328 (33,8 %) forsinket, en 2:1
 
 **Forsinkelsesdistribusjon**
 
-Av 328 forsinkede fakturaer varierer forsinkelsen fra 1 til flere hundre dager. Distribusjonen er høyreskjev, noe som er typisk for fakturadata: majoriteten av forsinkelsene er kortvarige, men det finnes en hale av fakturaer med ekstrem forsinkelse. Distribusjonen inneholder KDE-estimat som visualiserer tetthetstopper.
+Av 328 forsinkede fakturaer varierer forsinkelsen fra 1 til flere hundre dager. Distribusjonen er høyreskjev, noe som er typisk for fakturadata: majoriteten av forsinkelsene er kortvarige, men det finnes en hale av fakturaer med ekstrem forsinkelse.
 
 <figure style="text-align:center;">
 <img src="../004 data/eda_figurer/02_distribusjon_forsinkelse.png" alt="Distribusjon forsinkelse" width="60%">
@@ -386,7 +386,7 @@ Av 328 forsinkede fakturaer varierer forsinkelsen fra 1 til flere hundre dager. 
 
 **Forsinkelse per leverandørkategori**
 
-Andelen forsinkede fakturaer varierer mellom leverandørkategoriene. Leverandørkategori er en informativ prediktorvariabel – forsinkelsesraten varierer mellom kategoriene, noe som underbygger at kategorisert leverandørhistorikk bør inkluderes i modellen.
+Andelen forsinkede fakturaer varierer mellom leverandørkategoriene, noe som er synlig i Figur 3.
 
 <figure style="text-align:center;">
 <img src="../004 data/eda_figurer/03_andel_per_kategori.png" alt="Forsinkelse per leverandørkategori" width="65%">
@@ -404,7 +404,7 @@ Forsinkelsesraten undersøkes på tvers av betalingsbetingelsene Netto 10, 14, 3
 
 **Forsinkelse per risikokategori (leverandør)**
 
-Den forhåndsdefinerte leverandørrisikokategorien viser tydelig separasjon i forsinkelsesrate mellom risikogruppene, noe som bekrefter at variabelen er valid og informativ for modelltrening.
+Den forhåndsdefinerte leverandørrisikokategorien viser tydelig separasjon i forsinkelsesrate mellom risikogruppene.
 
 <figure style="text-align:center;">
 <img src="../004 data/eda_figurer/05_andel_per_risiko.png" alt="Forsinkelse per risikokategori" width="55%">
@@ -413,7 +413,7 @@ Den forhåndsdefinerte leverandørrisikokategorien viser tydelig separasjon i fo
 
 **Korrelasjonsmatrise**
 
-Korrelasjonsanalysen for numeriske variabler viser at gjennomsnittlig antall dager forsinket per leverandør (historisk) har sterkest lineær korrelasjon med målvariabelen (er_forsinket). Fakturabeløp viser lav korrelasjon med forsinkelse, noe som underbygger at beløpsbasert prioritering alene er utilstrekkelig som beslutningsgrunnlag – konsistent med Appel et al. (2019, Kendalls τ = 0,003).
+Korrelasjonsanalysen for numeriske variabler viser at gjennomsnittlig antall dager forsinket per leverandør (historisk) har sterkest lineær korrelasjon med målvariabelen (er_forsinket). Fakturabeløp viser lav korrelasjon med forsinkelse.
 
 <figure style="text-align:center;">
 <img src="../004 data/eda_figurer/06_korrelasjonsmatrise.png" alt="Korrelasjonsmatrise" width="55%">
@@ -475,7 +475,7 @@ Ingen av de fem modellene når benchmarkene satt med referanse til Appel et al. 
 </figure>
 
 <figure style="text-align:center;">
-<img src="../004 data/modell_figurer/14_presisjon_recall_f1.png" alt="Presisjon recall F1" width="65%">
+<img src="../004 data/modell_figurer/12_presisjon_recall_f1.png" alt="Presisjon recall F1" width="65%">
 <figcaption><small>Figur 12: Gruppert søylediagram over presisjon, recall og F1-score for alle fem modeller, med benchmark-linje for F1 ved 0,70. Høy recall er prioritert ettersom det er mer kostbart å overse en forsinket faktura enn å flagge en feilaktig.</small></figcaption>
 </figure>
 
@@ -484,14 +484,14 @@ Ingen av de fem modellene når benchmarkene satt med referanse til Appel et al. 
 Konfusjonsmatrisen for beste modell (XGBoost tunet) bryter ned klassifiseringsresultatene i de fire utfallstypene: sanne positive (forsinkede fakturaer korrekt flagget), sanne negative (i tide korrekt klassifisert), falske positive (i tide feilaktig flagget) og falske negative (forsinkede fakturaer som ikke ble fanget opp).
 
 <figure style="text-align:center;">
-<img src="../004 data/modell_figurer/12_konfusjonsmatrise.png" alt="Konfusjonsmatrise" width="50%">
+<img src="../004 data/modell_figurer/13_konfusjonsmatrise.png" alt="Konfusjonsmatrise" width="50%">
 <figcaption><small>Figur 13: Konfusjonsmatrise for XGBoost tunet på testsettet (195 fakturaer). Falske negative representerer forsinkede fakturaer som ikke ble fanget opp av modellen – den mest kostbare feiltypen i beslutningsstøttekontekst.</small></figcaption>
 </figure>
 
 Feature importance fra XGBoost tunet identifiserer de variablene som bidrar mest til modellens prediksjoner. Gjennomsnittlig antall dager forsinket per leverandør (historisk) er den klart viktigste prediktoren, etterfulgt av leverandørens risikokategori og volumbaserte variabler.
 
 <figure style="text-align:center;">
-<img src="../004 data/modell_figurer/13_feature_importance.png" alt="Feature importance" width="65%">
+<img src="../004 data/modell_figurer/14_feature_importance.png" alt="Feature importance" width="65%">
 <figcaption><small>Figur 14: Topp 15 viktigste features i XGBoost tunet, rangert etter Gini-basert feature importance. Gjennomsnittlig antall dager forsinket per leverandør er klart viktigste prediktor, konsistent med Schoonbee et al. (2022).</small></figcaption>
 </figure>
 
@@ -625,3 +625,5 @@ Turban, E., Sharda, R., & Delen, D. (2011). *Decision support and business intel
 ---
 
 ## 12.0 Vedlegg
+
+Vedlegg er ikke inkludert i denne innleveringen. Python-kode og datasett er tilgjengelig på forespørsel.
