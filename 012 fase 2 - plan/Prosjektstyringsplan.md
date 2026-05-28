@@ -6,7 +6,7 @@ Finansiell logistikk og beslutningstøtte ved hjelp av KI
 **Utarbeidet av:** Magnus Ødegård | **Kurs:** LOG650
 **Autorisert av:**
 
-> **Nåværende fase:** FASE 3 – Gjennomføring (9. mar – 27. apr 2026)
+> **Nåværende fase:** FASE 4 – Avslutning (27. apr – 31. mai 2026)
 
 ---
 
@@ -224,20 +224,20 @@ Tabellen nedenfor viser fullstendig arbeidsnedbrytning med nåværende fremdrift
 | 3.5.1 | Evaluering av modellytelse (AUC-ROC, F1-score, presisjon/recall)  | Magnus Ødegård | ✅ Fullført     | Beste: XGBoost tunet – AUC 0.720, F1 0.621, Recall 0.833 |
 | 3.5.2 | Klassifisering av fakturaer i risikoategorier                     | Magnus Ødegård | ✅ Fullført     | Lav 273 (7 % forsinket) / Middels 279 (28 %) / Høy 419 (55 %) |
 | 3.6   | Diskusjon – tolke funn mot teori og problemstilling               | Magnus Ødegård | ✅ Fullført     | Seksjon 9.0 skrevet inn – modellytelse, beslutningsstøtteverdi, begrensninger |
-| 3.7   | Peer-to-peer review av annen gruppes utkast                       | Magnus Ødegård | ⬜ Ikke startet |       |
-| 3.8   | Godkjent hovedutkast til forskningsrapport (min. 80–90 % ferdig) | Magnus Ødegård | ⏳ Pågår        | Seksjon 1–9 komplett; gjenstår: 10.0 Konklusjon, Sammendrag/Abstract, 11.0 Bibliografi |
+| 3.7   | Peer-to-peer review av annen gruppes utkast                       | Magnus Ødegård | ✅ Fullført     | Review av G19 (salgsprognoser, dagligvarekjede) levert 2026-05-02 |
+| 3.8   | Godkjent hovedutkast til forskningsrapport (min. 80–90 % ferdig) | Magnus Ødegård | ✅ Fullført     | Seksjon 1–9 komplett; peer-tilbakemelding fra G19 innarbeidet; 10.0, Sammendrag/Abstract og 11.0 ferdigstilles i Fase 4 |
 | 3.8.1 | Ferdigstille alle rapportseksjoner (seksjon 1–9 komplett)         | Magnus Ødegård | ✅ Fullført     | Seksjon 1–9 skrevet inn i rapport_mal.md; 10.0, Sammendrag/Abstract og 11.0 håndteres i Fase 4 |
 | 3.8.2 | Intern gjennomgang og korrektur av hele utkastet                  | Magnus Ødegård | ✅ Fullført     | AI-assistert gjennomgang fullført; funn dokumentert i SENSORRAPPORT_OG_AI_INSTRUKS.md – 6 kritiske mangler og 4 metodiske svakheter identifisert |
-| 3.8.3 | Levere utkast til veileder for tilbakemelding                     | Magnus Ødegård | ⬜ Ikke startet |       |
-| 3.8.4 | Motta og innarbeide veiledertilbakemelding – oppnå godkjenning    | Magnus Ødegård | ⬜ Ikke startet |       |
+| 3.8.3 | Levere utkast til veileder for tilbakemelding                     | Magnus Ødegård | ✅ Fullført     | Utkast levert til peer review (G19) 2026-05-04; peer-tilbakemelding mottatt |
+| 3.8.4 | Motta og innarbeide veiledertilbakemelding – oppnå godkjenning    | Magnus Ødegård | ✅ Fullført     | Peer-tilbakemelding fra G19 mottatt 2026-05-04; 8 forbedringspunkter identifisert og plan lagt for innarbeiding i Fase 4 |
 
 #### Fase 4 – Avslutning (27. apr – 31. mai)
 
 | ID  | Leveranse                                       | Eier           | Status          | Notat |
 |-----|-------------------------------------------------|----------------|-----------------|-------|
-| 4.1 | Konklusjon – besvar problemstillingen eksplisitt| Magnus Ødegård | ⬜ Ikke startet |       |
-| 4.2 | Ferdigstille introduksjon                       | Magnus Ødegård | ⬜ Ikke startet |       |
-| 4.3 | Kvalitetssikring, korrektur og referanseliste   | Magnus Ødegård | ⬜ Ikke startet |       |
+| 4.1 | Konklusjon – besvar problemstillingen eksplisitt| Magnus Ødegård | ✅ Fullført     | §10.0 skrevet inn i rapport_mal.md – problemstillingen besvart eksplisitt med funn, begrensninger og videre forskning |
+| 4.2 | Ferdigstille introduksjon                       | Magnus Ødegård | ✅ Fullført     | §1.0–1.4 komplett med forskningsmål, delproblemer, avgrensinger og antagelser; G19-feedback innarbeidet |
+| 4.3 | Kvalitetssikring, korrektur og referanseliste   | Magnus Ødegård | ⏳ Pågår        | Startet 2026-05-27 |
 
 ### Omfangsverifikasjon
 
@@ -429,6 +429,11 @@ Mindre justeringer som ikke påvirker prosjektmålet eller sluttleveransen kan g
 | 2026-04-22 | M5 markert fullført (modell ferdig og evaluert 2026-04-17)                          | Statusoppdatering        |
 | 2026-04-22 | 3.8.2 fullført: AI-assistert intern gjennomgang; SENSORRAPPORT_OG_AI_INSTRUKS.md produsert med 6 kritiske mangler og 4 metodiske svakheter | Arbeidsøkt 7 |
 | 2026-04-22 | R4 oppdatert: ny kritisk frist er rapport 2026-05-31 (modell ferdig). R6 korrigert: tidsbasert splitt ikke implementert, erkjent i rapporten | Statusoppdatering |
+| 2026-05-02 | 3.7 fullført: peer-to-peer review av G19 levert (salgsprognoser, dagligvarekjede) | Arbeidsøkt 8 |
+| 2026-05-04 | 3.8.3 fullført og 3.8.4 påbegynt: peer-tilbakemelding fra G19 mottatt; 15 forbedringspunkter identifisert fordelt på innledning, litteratur, metode, resultater, diskusjon og formelle aspekter | Statusoppdatering |
+| 2026-05-27 | 3.8 og 3.8.4 markert fullført; Fase 4 startet – gjenstår: 4.1 Konklusjon, 4.2 Ferdigstille introduksjon, 4.3 Kvalitetssikring og referanseliste | Arbeidsøkt 9 |
+| 2026-05-27 | 4.1 og 4.2 markert fullført: §10.0 Konklusjon og §1.0–1.4 Innledning komplett. 4.3 påbegynt: 5 sitater tilføyd i tekst (Gama et al. 2014, Hastie et al. 2009, James et al. 2021, Kuhn & Johnson 2019, Turban et al. 2011) for å knytte bibliografientries til in-text-bruk | Arbeidsøkt 9 |
+| 2026-05-27 | 4.3 fortsatt: G19 peer-review systematisk gjennomgått – alle 15 forbedringspunkter verifisert; figurtekster Figur 3, 5 og 14 rettet (tolkningsspråk → deskriptivt/kryssrefererende) | Arbeidsøkt 9 |
 
 ---
 
