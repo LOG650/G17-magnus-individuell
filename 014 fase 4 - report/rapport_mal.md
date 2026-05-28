@@ -238,7 +238,7 @@ Prosjektet tar utgangspunkt i et syntetisk fakturadatasett generert av veileder 
 |---|---|
 | Totalt antall fakturaer i datasettet | 1 000 |
 | Fakturaer inkludert i analyse (kjent utfall) | 971 |
-| Andel forsinkede fakturaer | 33,8 % (328 av 971) |
+| Andel forsinkede fakturaer | 34,1 % (331 av 971) |
 | Antall leverandørkategorier | 8 (IT, konsulenttjenester, bygg, energi, forbruksmateriell, renhold, transport, vedlikehold) |
 | Antall kontrakttyper | 4 (rammeavtale, enkeltkontrakt, minikonkurranse, åpen anbudskonkurranse) |
 | Betalingsbetingelser | Netto 10, 14, 30, 60 og 90 dager |
@@ -260,7 +260,7 @@ Prosjektet benytter binær klassifisering (forsinket / ikke forsinket) fremfor d
 
 **Datadeling** følger en 80/20 stratifisert splitt: 776 fakturaer til trening og 195 til testing. Testsettet holdes tilbake gjennom hele hyperparameterjusteringsprosessen og benyttes kun for endelig evaluering. Denne tilnærmingen gir ærlige ytelsestall og motvirker datalekkasje. Merk at datadelingen er tilfeldig stratifisert og ikke tidsbasert. En tidsbasert splitt – der de eldste fakturaene brukes til trening og de nyeste til test – ville i prinsippet gitt en mer realistisk simulering av produksjonsbetingelser. Med et datasett uten garantert tidssekvens og begrenset størrelse er tilfeldig splitt valgt for å sikre tilstrekkelig representasjon av minoritetsklassen i begge sett.
 
-**Klasseubalanse** håndteres gjennom klassevekting: `class_weight='balanced'` for logistisk regresjon og Random Forest, og `scale_pos_weight` (satt til forholdet mellom majoritets- og minoritetsklassen, ca. 1,96) for XGBoost.
+**Klasseubalanse** håndteres gjennom klassevekting: `class_weight='balanced'` for logistisk regresjon og Random Forest, og `scale_pos_weight` (satt til forholdet mellom majoritets- og minoritetsklassen, ca. 1,93) for XGBoost.
 
 **Evalueringsmetrikker** er primært AUC-ROC og F1-score, med benchmarks satt til AUC ≥ 0,75 og F1 ≥ 0,70 basert på Appel et al. (2019). I tillegg rapporteres presisjon, recall og nøyaktighet for alle modeller. Recall prioriteres fremfor presisjon som sekundært ytelsesmål – begrunnelsen er utlagt i §3.3.
 
@@ -296,7 +296,7 @@ Datasettet er komplett uten manglende verdier i de fakturaene som benyttes til m
 
 **Klasseubalanse**
 
-Av de 971 fakturaene er 643 (66,2 %) betalt i tide og 328 (33,8 %) forsinket. Ubalansen på om lag 2:1 er moderat sammenlignet med mange klassifiseringsdatasett, men tilstrekkelig til at enkel nøyaktighet er et misvisende ytelsesmål – en modell som alltid predikerer «i tide» oppnår 66,2 % nøyaktighet uten å ha lært noe nyttig. Se Figur 1 i avsnitt 7.1 for visuell fremstilling av klassefordelingen.
+Av de 971 fakturaene er 640 (65,9 %) betalt i tide og 331 (34,1 %) forsinket. Ubalansen på om lag 2:1 er moderat sammenlignet med mange klassifiseringsdatasett, men tilstrekkelig til at enkel nøyaktighet er et misvisende ytelsesmål – en modell som alltid predikerer «i tide» oppnår 65,9 % nøyaktighet uten å ha lært noe nyttig. Se Figur 1 i avsnitt 7.1 for visuell fremstilling av klassefordelingen.
 
 ### 5.3 Validitet, reliabilitet og etiske hensyn
 
@@ -348,7 +348,7 @@ Tre baseline-modeller trenes uten hyperparameterjustering for å etablere et ref
 
 - **Logistisk regresjon:** `class_weight='balanced'`, `max_iter=1000`, standardiserte features
 - **Random Forest:** `n_estimators=100`, `class_weight='balanced'`
-- **XGBoost:** `n_estimators=100`, `scale_pos_weight=1.96`
+- **XGBoost:** `n_estimators=100`, `scale_pos_weight=1.93`
 
 ### 6.3 Hyperparameterjustering
 
@@ -368,11 +368,11 @@ Beste parameterkombinasjon for hver modell evalueres deretter på hold-out tests
 
 **Klasseubalanse**
 
-Av 971 fakturaer er 643 (66,2 %) betalt i tide og 328 (33,8 %) forsinket, en 2:1-ubalanse som krever klassevekting i alle modeller (se avsnitt 5.1).
+Av 971 fakturaer er 640 (65,9 %) betalt i tide og 331 (34,1 %) forsinket, en 2:1-ubalanse som krever klassevekting i alle modeller (se avsnitt 5.1).
 
 <figure style="text-align:center;">
 <img src="../004 data/eda_figurer/01_klasseubalanse.png" alt="Klasseubalanse" width="55%">
-<figcaption><small>Figur 1: Søylediagram over antall fakturaer i klasse 0 (betalt i tide, 643 stk.) og klasse 1 (forsinket, 328 stk.). Ubalansen krever klassevekting i alle modeller for å unngå at majoritetsklassen dominerer prediksjonen.</small></figcaption>
+<figcaption><small>Figur 1: Søylediagram over antall fakturaer i klasse 0 (betalt i tide, 640 stk.) og klasse 1 (forsinket, 331 stk.). Ubalansen krever klassevekting i alle modeller for å unngå at majoritetsklassen dominerer prediksjonen.</small></figcaption>
 </figure>
 
 **Forsinkelsesdistribusjon**
@@ -488,11 +488,11 @@ Konfusjonsmatrisen for beste modell (XGBoost tunet) bryter ned klassifiseringsre
 <figcaption><small>Figur 13: Konfusjonsmatrise for XGBoost tunet på testsettet (195 fakturaer). Falske negative representerer forsinkede fakturaer som ikke ble fanget opp av modellen – den mest kostbare feiltypen i beslutningsstøttekontekst.</small></figcaption>
 </figure>
 
-Feature importance fra XGBoost tunet identifiserer de variablene som bidrar mest til modellens prediksjoner. Gjennomsnittlig antall dager forsinket per leverandør (historisk) er den klart viktigste prediktoren, etterfulgt av leverandørens risikokategori og volumbaserte variabler.
+Feature importance fra XGBoost tunet identifiserer de variablene som bidrar mest til modellens prediksjoner. Risikokategori leverandør_Høy er den sterkeste enkelt-featuren (Gini-importance ≈ 0,155), etterfulgt av gjennomsnittlig antall dager forsinket per leverandør (≈ 0,093) og de øvrige risikokategori-indikatorene. Risikokategoriens dominans må tolkes i lys av potensiell sirkulær validering i det syntetiske datasettet – se drøfting i §9.3.
 
 <figure style="text-align:center;">
 <img src="../004 data/modell_figurer/14_feature_importance.png" alt="Feature importance" width="65%">
-<figcaption><small>Figur 14: Topp 15 viktigste features i XGBoost tunet, rangert etter Gini-basert feature importance. Gjennomsnittlig antall dager forsinket per leverandør er klart viktigste prediktor – en observasjon som drøftes mot Schoonbee et al. (2022) i §9.1.</small></figcaption>
+<figcaption><small>Figur 14: Topp 15 viktigste features i XGBoost tunet, rangert etter Gini-basert feature importance. Risikokategori leverandør_Høy topper listen (≈ 0,155), etterfulgt av gjennomsnittlig antall dager forsinket per leverandør (≈ 0,093). Blant rene historiske betalingsfeatures er gjennomsnittlig forsinkelse sterkeste prediktor, konsistent med Schoonbee et al. (2022). Risikokategoriens dominans drøftes i §9.3.</small></figcaption>
 </figure>
 
 ### 8.3 Risikoklassifisering av fakturaer
@@ -505,7 +505,7 @@ Sluttmodellen – XGBoost tunet, retrent på hele datasettet (971 fakturaer) for
 | Middels | 0,30 ≤ p < 0,55 | 279 | 28 % |
 | Høy | p ≥ 0,55 | 419 | 55 % |
 
-Tersklene er satt med utgangspunkt i sannsynlighetsfordelingens struktur og klassens prevalensrate. Den nedre terskelen p = 0,30 er valgt under klassens prevalensrate (33,8 %), slik at fakturaer i lav-gruppen er de modellen med tydelig tiltro forventer betales i tide – altså fakturaer der den predikerte forsinkelsessannsynligheten er vesentlig lavere enn den gjennomsnittlige forekomsten av forsinkelse i datasettet. Den øvre terskelen p = 0,55 er satt over den naturlige beslutningsgrensen (0,50), slik at høy-gruppen representerer fakturaer der modellen har klar majoritetssannsynlighet for forsinkelse. I operativ bruk bør tersklene kalibreres mot faktisk innkrevingskapasitet og akseptert falsk-positiv-rate – en virksomhet med begrenset manuell oppfølgingskapasitet vil typisk velge en høyere øvre terskel for å konsentrere ressursene mot de aller høyeste risikoene.
+Tersklene er satt med utgangspunkt i sannsynlighetsfordelingens struktur og klassens prevalensrate. Den nedre terskelen p = 0,30 er valgt under klassens prevalensrate (34,1 %), slik at fakturaer i lav-gruppen er de modellen med tydelig tiltro forventer betales i tide – altså fakturaer der den predikerte forsinkelsessannsynligheten er vesentlig lavere enn den gjennomsnittlige forekomsten av forsinkelse i datasettet. Den øvre terskelen p = 0,55 er satt over den naturlige beslutningsgrensen (0,50), slik at høy-gruppen representerer fakturaer der modellen har klar majoritetssannsynlighet for forsinkelse. I operativ bruk bør tersklene kalibreres mot faktisk innkrevingskapasitet og akseptert falsk-positiv-rate – en virksomhet med begrenset manuell oppfølgingskapasitet vil typisk velge en høyere øvre terskel for å konsentrere ressursene mot de aller høyeste risikoene.
 
 Det bemerkes at risikoklassifiseringen i denne seksjonen er basert på en modell trent på alle 971 fakturaer og deretter anvendt på de samme 971 fakturaene. Dette innebærer at de rapporterte forsinkelsesratene er in-sample-estimater: modellen har sett disse dataene under trening og vil naturlig separere dem bedre enn den ville separert nye, usette fakturaer. Forsinkelsesratene (7 % / 28 % / 55 %) reflekterer modellens sorteringsevne på treningsdata og skal tolkes som en illustrasjon av metodikkens potensial, ikke som et ut-av-utvalg ytelsesmål. For operativ bruk bør klassifiseringsevnen valideres på ekte, nye fakturadata.
 
@@ -548,7 +548,7 @@ I tillegg er datasettet syntetisk generert. Variabelskjemaet ble utformet med ut
 
 At XGBoost er beste modell er konsistent med Appel et al. (2019), som fant at Gradient Boosting oppnådde høyest nøyaktighet blant de testede algoritmene. Random Forest var best i Schoonbee et al. (2022), men oppnådde også sterke resultater i dette prosjektet (AUC 0,698 etter tuning). Ensemblemetodenes overlegenhet over logistisk regresjon er i tråd med litteraturens generelle funn om at ikke-lineære modeller fanger mer komplekse betalingsmønstre.
 
-To uventede funn fortjener eksplisitt kommentar. Logistisk regresjon utmerker seg som en uventet sterk baseline med AUC 0,706 – høyere enn begge ensemble-baseline-modeller. Dette indikerer at lineære sammenhenger mellom prediktorvariabler og forsinkelse er fremtredende i det syntetiske datasettet, noe som kan skyldes at datageneratoren har konstruert relativt tydelige, lineærbare mønstre. RF baseline skiller seg negativt ut med lav recall på 0,424, noe som betyr at modellen uten tuning i stor grad predikerer majoritetsklassen og overser forsinkede fakturaer – et klassisk symptom på at klassevektingen alene ikke kompenserer uten tilpasset hyperparameterjustering. Featureviktigheten fra XGBoost bekrefter at gjennomsnittlig antall dager forsinket per leverandør er den klart sterkeste prediktoren, konsistent med Schoonbee et al. (2022) som identifiserer *AveDaysLate* som den mest prediktive variabelen i sitt datasett.
+To uventede funn fortjener eksplisitt kommentar. Logistisk regresjon utmerker seg som en uventet sterk baseline med AUC 0,706 – høyere enn begge ensemble-baseline-modeller. Dette indikerer at lineære sammenhenger mellom prediktorvariabler og forsinkelse er fremtredende i det syntetiske datasettet, noe som kan skyldes at datageneratoren har konstruert relativt tydelige, lineærbare mønstre. RF baseline skiller seg negativt ut med lav recall på 0,424, noe som betyr at modellen uten tuning i stor grad predikerer majoritetsklassen og overser forsinkede fakturaer – et klassisk symptom på at klassevektingen alene ikke kompenserer uten tilpasset hyperparameterjustering. Featureviktigheten fra XGBoost viser at Risikokategori leverandør_Høy er den sterkeste enkelt-featuren (Gini-importance ≈ 0,155), etterfulgt av gjennomsnittlig antall dager forsinket per leverandør (≈ 0,093). Dette funnet må imidlertid tolkes med forsiktighet: risikokategori er en forhåndsdefinert etikett i det syntetiske datasettet, og datageneratoren har med stor sannsynlighet brukt nettopp denne kategorien til å styre betalingsatferd – noe som innebærer sirkulær validering (jf. §9.3). Blant rene historiske betalingsfeatures, der effekten av sirkulær validering er fraværende, er gjennomsnittlig antall dager forsinket den sterkeste prediktoren, konsistent med Schoonbee et al. (2022) som identifiserer *AveDaysLate* som den mest prediktive variabelen i sitt datasett.
 
 ### 9.2 Beslutningsstøtteverdi utover dagens praksis
 
@@ -584,7 +584,7 @@ En femte begrensning angår etiske og personvernmessige hensyn. Modellen bruker 
 
 Prosjektet viser at maskinlæring kan benyttes til å predikere sannsynligheten for at en faktura betales etter forfallsdato, og at en slik tilnærming gir et bedre grunnlag for fakturaprioritering enn tradisjonell beløpsbasert oppfølging. Problemstillingen besvares bekreftende: maskinlæring kan brukes til formålet – men med et viktig forbehold. For å skape reelle, driftsstabile resultater kreves trening på ekte historiske fakturadata fra virksomheten. Det er ikke metodikken, men datagrunnlaget, som setter taket for hva som er oppnåelig.
 
-Det viktigste funnet er at historisk betalingsatferd er den klart sterkeste prediktoren for forsinkelse. Gjennomsnittlig antall dager forsinket per leverandør er den variabelen som bidrar mest til modellens prediksjonsevne – et funn som er konsistent med begge primærstudier (Appel et al., 2019; Schoonbee et al., 2022). Dette bekrefter at leverandørspesifikk betalingshistorikk er en nødvendig komponent i ethvert fakturaprediksjonsystem, og understreker at slik data bør samles systematisk og strukturert av virksomheten.
+Blant modellens prediktorer er Risikokategori leverandør_Høy den sterkeste enkelt-featuren (Gini-importance ≈ 0,155), et funn som delvis reflekterer sirkulær validering i det syntetiske datasettet (jf. §9.3). Blant rene historiske betalingsfeatures er gjennomsnittlig antall dager forsinket per leverandør den sterkeste prediktoren – et funn som er konsistent med begge primærstudier (Appel et al., 2019; Schoonbee et al., 2022). Dette bekrefter at leverandørspesifikk betalingshistorikk er en nødvendig komponent i ethvert fakturaprediksjonsystem, og understreker at slik data bør samles systematisk og strukturert av virksomheten.
 
 Beste modell er XGBoost med hyperparameterjustering, med AUC-ROC 0,720 og recall 0,833 på hold-out testsettet. Benchmarkene fra primærlitteraturen (AUC ≥ 0,75, F1 ≥ 0,70) ble ikke nådd. Dette tilskrives primært datasettets begrensede størrelse og at det er syntetisk generert – noe som komprimerer den variasjonen ekte transaksjonsdata ville tilført. Resultatet er et bevisst proof-of-concept: en demonstrasjon av at metodikken virker og kan skaleres, ikke en validering av en produksjonsklar modell. Målet for en fremtidig, ekte implementasjon er en modell som er tilstrekkelig treffsikker til at den kan driftes og distribueres med full tillit.
 
