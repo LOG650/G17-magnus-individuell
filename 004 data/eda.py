@@ -349,32 +349,56 @@ plt.savefig(OUTDIR / "08_leverandor_scatter.png", dpi=150)
 plt.close()
 print("  → Figur lagret: 08_leverandor_scatter.png")
 
-# ── D. Figur: Betalingsatferd over tid (kvartal) – topp 5 leverandører ──
+# ── D. Figur: Betalingsatferd over tid – heatmap (topp 5 leverandører) ──
 print("\n" + "-" * 60)
-print("  Betalingsatferd over tid – topp 5 risiko-leverandører")
+print("  Betalingsatferd over tid – topp 5 risiko-leverandører (heatmap)")
 print("-" * 60)
 
 df["år_kvartal"] = df["Fakturadato"].dt.to_period("Q").astype(str)
 topp5_lev = lev.head(5)["Leverandør-ID"].tolist()
 df_topp5 = df[df["Leverandør-ID"].isin(topp5_lev)]
 
-trend = (
-    df_topp5.groupby(["Leverandør-ID", "år_kvartal"])["er_forsinket"]
-    .mean()
-    .reset_index()
-)
-trend["er_forsinket"] *= 100
+# Aggreger: andel forsinket (%) og antall fakturaer per leverandør/kvartal
+trend_grp = df_topp5.groupby(["Leverandør-ID", "år_kvartal"])["er_forsinket"]
+trend_pct = (trend_grp.mean() * 100).rename("pct")
+trend_n   = trend_grp.count().rename("n")
+trend = pd.concat([trend_pct, trend_n], axis=1).reset_index()
 
-fig, ax = plt.subplots(figsize=(11, 5))
-for lev_id in topp5_lev:
-    data = trend[trend["Leverandør-ID"] == lev_id].sort_values("år_kvartal")
-    ax.plot(data["år_kvartal"], data["er_forsinket"], marker="o", label=lev_id)
-ax.set_xlabel("Kvartal")
-ax.set_ylabel("Andel forsinkede fakturaer (%)")
+# Pivot til matrise: rader = leverandør, kolonner = kvartal (sortert)
+alle_kvartaler = sorted(df["år_kvartal"].unique())
+heat = trend.pivot(index="Leverandør-ID", columns="år_kvartal", values="pct").reindex(
+    index=topp5_lev, columns=alle_kvartaler
+)
+heat_n = trend.pivot(index="Leverandør-ID", columns="år_kvartal", values="n").reindex(
+    index=topp5_lev, columns=alle_kvartaler
+)
+
+# Lag annoteringmatrise: "XX%\n(n=k)" — tom celle hvis ingen fakturaer
+annot = pd.DataFrame("", index=heat.index, columns=heat.columns)
+for r in heat.index:
+    for c in heat.columns:
+        v = heat.loc[r, c]
+        k = heat_n.loc[r, c]
+        if pd.notna(v):
+            annot.loc[r, c] = f"{v:.0f}%\n(n={int(k)})"
+
+fig, ax = plt.subplots(figsize=(13, 4))
+sns.heatmap(
+    heat,
+    annot=annot,
+    fmt="",
+    cmap="RdYlGn_r",
+    vmin=0, vmax=100,
+    linewidths=0.5,
+    linecolor="white",
+    cbar_kws={"label": "Andel forsinket (%)"},
+    ax=ax,
+)
 ax.set_title("Betalingsatferd over tid – topp 5 risiko-leverandører (per kvartal)")
-ax.legend(title="Leverandør")
-plt.xticks(rotation=30, ha="right")
-ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.0f%%"))
+ax.set_xlabel("Kvartal")
+ax.set_ylabel("Leverandør-ID")
+ax.tick_params(axis="x", rotation=30)
+ax.tick_params(axis="y", rotation=0)
 plt.tight_layout()
 plt.savefig(OUTDIR / "09_leverandor_trend.png", dpi=150)
 plt.close()

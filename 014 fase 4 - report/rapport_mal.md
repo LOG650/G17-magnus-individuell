@@ -604,23 +604,23 @@ Prosjektet demonstrerer at maskinlæringsbasert fakturapredikering er gjennomfø
 
 Anthropic. (2025). *Claude Code* (claude-sonnet-4-6) [KI-programmeringsassistent]. https://claude.ai/code
 
-Appel, A. P., Oliveira, V., Lima, B., Malfatti, G. L., Santana, V. F., & Paula, R. (2019). *Optimize cash collection: Use machine learning to predicting invoice payment* (arXiv:1912.10828). arXiv. https://arxiv.org/abs/1912.10828
+Appel, A. P., Oliveira, V., Lima, B., Malfatti, G. L., Santana, V. F. & Paula, R. (2019). *Optimize cash collection: Use machine learning to predicting invoice payment* (arXiv:1912.10828). arXiv. https://arxiv.org/abs/1912.10828
 
 Breiman, L. (2001). Random forests. *Machine Learning, 45*(1), 5–32. https://doi.org/10.1023/A:1010933404324
 
-Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 785–794. https://doi.org/10.1145/2939672.2939785
+Chen, T. & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 785–794. https://doi.org/10.1145/2939672.2939785
 
-Gama, J., Žliobaitė, I., Bifet, A., Pechenizkiy, M., & Bouchachia, A. (2014). A survey on concept drift adaptation. *ACM Computing Surveys, 46*(4), 44:1–44:37. https://doi.org/10.1145/2523813
+Gama, J., Žliobaitė, I., Bifet, A., Pechenizkiy, M. & Bouchachia, A. (2014). A survey on concept drift adaptation. *ACM Computing Surveys, 46*(4), 44:1–44:37. https://doi.org/10.1145/2523813
 
-Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The elements of statistical learning: Data mining, inference, and prediction* (2. utg.). Springer.
+Hastie, T., Tibshirani, R. & Friedman, J. (2009). *The elements of statistical learning: Data mining, inference, and prediction* (2. utg.). Springer.
 
-James, G., Witten, D., Hastie, T., & Tibshirani, R. (2021). *An introduction to statistical learning: With applications in R* (2. utg.). Springer.
+James, G., Witten, D., Hastie, T. & Tibshirani, R. (2021). *An introduction to statistical learning: With applications in R* (2. utg.). Springer.
 
-Kuhn, M., & Johnson, K. (2019). *Feature engineering and selection: A practical approach for predictive models*. CRC Press.
+Kuhn, M. & Johnson, K. (2019). *Feature engineering and selection: A practical approach for predictive models*. CRC Press.
 
-Schoonbee, L., Moore, W. R., & van Vuuren, J. H. (2022). A machine-learning approach towards solving the invoice payment prediction problem. *South African Journal of Industrial Engineering, 33*(4), 126–146. https://doi.org/10.7166/33-4-2726
+Schoonbee, L., Moore, W. R. & van Vuuren, J. H. (2022). A machine-learning approach towards solving the invoice payment prediction problem. *South African Journal of Industrial Engineering, 33*(4), 126–146. https://doi.org/10.7166/33-4-2726
 
-Turban, E., Sharda, R., & Delen, D. (2011). *Decision support and business intelligence systems* (9. utg.). Pearson.
+Turban, E., Sharda, R. & Delen, D. (2011). *Decision support and business intelligence systems* (9. utg.). Pearson.
 
 ---
 
