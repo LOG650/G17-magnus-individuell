@@ -321,43 +321,7 @@ plt.savefig(OUTDIR / "11_auc_sammenligning.png", dpi=150)
 plt.close()
 print("  → Figur lagret: 11_auc_sammenligning.png")
 
-# ── Figur 12: Konfusjonsmatrise – beste modell ───────────────────────────────
-cm = confusion_matrix(y_test, beste["y_pred"])
-fig, ax = plt.subplots(figsize=(5, 4))
-im = ax.imshow(cm, cmap="Blues")
-plt.colorbar(im, ax=ax)
-ax.set_xticks([0, 1]); ax.set_yticks([0, 1])
-ax.set_xticklabels(["Pred: I tide", "Pred: Forsinket"])
-ax.set_yticklabels(["Faktisk: I tide", "Faktisk: Forsinket"])
-for i in range(2):
-    for j in range(2):
-        ax.text(j, i, str(cm[i, j]), ha="center", va="center",
-                color="white" if cm[i, j] > cm.max() / 2 else "black", fontsize=14)
-ax.set_title(f"Konfusjonsmatrise – {beste_navn}")
-plt.tight_layout()
-plt.savefig(OUTDIR / "12_konfusjonsmatrise.png", dpi=150)
-plt.close()
-print("  → Figur lagret: 12_konfusjonsmatrise.png")
-
-# ── Figur 13: Feature importance – beste tre-baserte modell ──────────────────
-tree_model = (
-    beste["model"]
-    if hasattr(beste["model"], "feature_importances_")
-    else rf_tuned["model"]
-)
-importances = pd.Series(tree_model.feature_importances_, index=X.columns)
-topp15 = importances.nlargest(15)
-
-fig, ax = plt.subplots(figsize=(9, 5))
-topp15[::-1].plot(kind="barh", ax=ax, color="steelblue")
-ax.set_xlabel("Feature importance")
-ax.set_title(f"Topp 15 viktigste features – {beste_navn}")
-plt.tight_layout()
-plt.savefig(OUTDIR / "13_feature_importance.png", dpi=150)
-plt.close()
-print("  → Figur lagret: 13_feature_importance.png")
-
-# ── Figur 14: Presisjon / Recall / F1 – sammenligning ────────────────────────
+# ── Figur 12: Presisjon / Recall / F1 – sammenligning ────────────────────────
 fig, ax = plt.subplots(figsize=(8, 4))
 x_pos = np.arange(len(navnene))
 w = 0.25
@@ -375,9 +339,45 @@ ax.set_title("Presisjon, Recall og F1-score – alle modeller")
 ax.set_ylim(0, 1.05)
 ax.legend()
 plt.tight_layout()
-plt.savefig(OUTDIR / "14_presisjon_recall_f1.png", dpi=150)
+plt.savefig(OUTDIR / "12_presisjon_recall_f1.png", dpi=150)
 plt.close()
-print("  → Figur lagret: 14_presisjon_recall_f1.png")
+print("  → Figur lagret: 12_presisjon_recall_f1.png")
+
+# ── Figur 13: Konfusjonsmatrise – beste modell ───────────────────────────────
+cm = confusion_matrix(y_test, beste["y_pred"])
+fig, ax = plt.subplots(figsize=(5, 4))
+im = ax.imshow(cm, cmap="Blues")
+plt.colorbar(im, ax=ax)
+ax.set_xticks([0, 1]); ax.set_yticks([0, 1])
+ax.set_xticklabels(["Pred: I tide", "Pred: Forsinket"])
+ax.set_yticklabels(["Faktisk: I tide", "Faktisk: Forsinket"])
+for i in range(2):
+    for j in range(2):
+        ax.text(j, i, str(cm[i, j]), ha="center", va="center",
+                color="white" if cm[i, j] > cm.max() / 2 else "black", fontsize=14)
+ax.set_title(f"Konfusjonsmatrise – {beste_navn}")
+plt.tight_layout()
+plt.savefig(OUTDIR / "13_konfusjonsmatrise.png", dpi=150)
+plt.close()
+print("  → Figur lagret: 13_konfusjonsmatrise.png")
+
+# ── Figur 14: Feature importance – beste tre-baserte modell ──────────────────
+tree_model = (
+    beste["model"]
+    if hasattr(beste["model"], "feature_importances_")
+    else rf_tuned["model"]
+)
+importances = pd.Series(tree_model.feature_importances_, index=X.columns)
+topp15 = importances.nlargest(15)
+
+fig, ax = plt.subplots(figsize=(9, 5))
+topp15[::-1].plot(kind="barh", ax=ax, color="steelblue")
+ax.set_xlabel("Feature importance")
+ax.set_title(f"Topp 15 viktigste features – {beste_navn}")
+plt.tight_layout()
+plt.savefig(OUTDIR / "14_feature_importance.png", dpi=150)
+plt.close()
+print("  → Figur lagret: 14_feature_importance.png")
 
 # ══════════════════════════════════════════════════════════════════════════════
 # 7. LAGRE RESULTATER
