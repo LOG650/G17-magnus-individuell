@@ -226,7 +226,7 @@ Appel et al. (2019) foreslår en risikoscore som kombinerer predikert forsinkels
 
 Bedriften er en hypotetisk norsk offentlig virksomhet konstruert som case-ramme for dette prosjektet. Det syntetiske datasettet er generert av veileder for å simulere fakturamønstre fra en offentlig virksomhet med de karakteristika som beskrives i dette kapitlet. Bedriften eksisterer ikke som en reell enhet; strukturen er utformet for å gi datasettet en faglig realistisk kontekst i tråd med antagelse A2 (avsnitt 1.4).
 
-Virksomheten benytter standardiserte kontraktsformer for offentlig anskaffelse: rammeavtaler, enkeltkontrakter, minikonkurranser og åpne anbudskonkurranser. Leverandørmassen spenner over åtte kategorier: IT, konsulenttjenester, bygg, energi, forbruksmateriell, renhold, transport og vedlikehold. Fakturaene er regulert av internasjonale leveringsbetingelser (INCOTERMS 2020) og norske betalingsbetingelser med kredittider på 10, 14, 30, 60 og 90 dager netto.
+Virksomheten benytter standardiserte kontraktsformer for offentlig anskaffelse: rammeavtaler, enkeltkontrakter, minikonkurranser og åpne anbudskonkurranser. Leverandørmassen spenner over åtte kategorier: IT, konsulenttjenester, bygg, energi, forbruksmateriell, renhold, transport og vedlikehold. Fakturaene er regulert av internasjonale leveringsbetingelser (INCOTERMS 2020) og norske betalingsbetingelser med kredittider på 10, 14, 30, 45, 60 og 90 dager netto.
 
 Utfordringen Bedriften ønsker å adressere er mangelen på systematisk, datadrevet identifisering av fakturaer med høy risiko for sen betaling. Tradisjonell prioritering av betalingsoppfølging baseres på forfallsdato og fakturabeløp, uten systematisk hensyn til leverandørspesifikk betalingshistorikk. Konsekvensen er at fakturaer fra leverandører med konsekvent forsinkede betalingsmønstre behandles på lik linje med fakturaer fra pålitelige leverandører – en ressursbruk som er ineffektiv og reaktiv.
 
@@ -241,7 +241,7 @@ Prosjektet tar utgangspunkt i et syntetisk fakturadatasett generert av veileder 
 | Andel forsinkede fakturaer | 34,1 % (331 av 971) |
 | Antall leverandørkategorier | 8 (IT, konsulenttjenester, bygg, energi, forbruksmateriell, renhold, transport, vedlikehold) |
 | Antall kontrakttyper | 4 (rammeavtale, enkeltkontrakt, minikonkurranse, åpen anbudskonkurranse) |
-| Betalingsbetingelser | Netto 10, 14, 30, 60 og 90 dager |
+| Betalingsbetingelser | Netto 10, 14, 30, 45, 60 og 90 dager |
 | Leveringsbetingelser (INCOTERMS 2020) | 11 koder |
 
 ---
@@ -252,7 +252,7 @@ Prosjektet tar utgangspunkt i et syntetisk fakturadatasett generert av veileder 
 
 Prosjektet følger en prosessstruktur inspirert av CRISP-DM (Cross-Industry Standard Process for Data Mining), det rammeverket Schoonbee et al. (2022) benytter som grunnlag for sitt veikart for Invoice Payment Prediction Problem (IPPP). CRISP-DM strukturerer datadrevne prosjekter i seks faser: forretningsforståelse, dataforståelse, dataforberedelse, modellering, evaluering og implementasjon.
 
-Prosjektet benytter binær klassifisering (forsinket / ikke forsinket) fremfor den multiklasse-tilnærmingen som Schoonbee et al. (2022) beskriver (fire betalingsintervaller). Valget er begrunnet i datasettets størrelse: med 971 fakturaer og 328 forsinkede tilfeller vil ytterligere oppsplitting i forsinkelsesintervaller gi klasser med for få observasjoner til meningsfull modellering. Binær formulering maksimerer antall treningseksempler per klasse og er konsistent med tilnærmingen i Appel et al. (2019), som er prosjektets primære metodereferanse.
+Prosjektet benytter binær klassifisering (forsinket / ikke forsinket) fremfor den multiklasse-tilnærmingen som Schoonbee et al. (2022) beskriver (fire betalingsintervaller). Valget er begrunnet i datasettets størrelse: med 971 fakturaer og 331 forsinkede tilfeller vil ytterligere oppsplitting i forsinkelsesintervaller gi klasser med for få observasjoner til meningsfull modellering. Binær formulering maksimerer antall treningseksempler per klasse og er konsistent med tilnærmingen i Appel et al. (2019), som er prosjektets primære metodereferanse.
 
 **Dataforståelse og forberedelse** gjennomføres gjennom eksplorativ dataanalyse (EDA) som kartlegger klasseubalanse, forsinkelsesdistribusjon og bivariate relasjoner mellom prediktorvariabler og målvariabelen. Feature engineering transformerer rådata til et modelleringsklart datasett.
 
@@ -282,7 +282,7 @@ Datasettet ble mottatt fra veileder som et syntetisk generert datasett konstruer
 | Faktisk betalingsdato | Dato | Dato for registrert betaling |
 | Betalingsstatus | Kategorisk | Betalt / Forsinket / Ubetalt |
 | Dager forsinket | Numerisk | Antall dager betalt etter forfall (0 = i tide) |
-| Betalingsbetingelser | Kategorisk | Netto 10 / 14 / 30 / 60 / 90 |
+| Betalingsbetingelser | Kategorisk | Netto 10 / 14 / 30 / 45 / 60 / 90 |
 | INCOTERMS | Kategorisk | Leveringsbetingelse (11 koder: CFR, CIF, CIP, CPT, DAP, DDP, DPU, EXW, FAS, FCA, FOB) |
 | Kontrakttype | Kategorisk | Rammeavtale / Enkeltkontrakt / Minikonkurranse / Åpen anbudskonkurranse |
 | Leverandørkategori | Kategorisk | IT / Konsulenttjenester / Bygg / Energi / Forbruksmateriell / Renhold / Transport / Vedlikehold |
@@ -323,7 +323,7 @@ Feature engineering transformerte de 15 råkolonnene til 34 prediktorvariabler i
 | Feature | Beskrivelse |
 |---|---|
 | betalingsfrist_dager | Antall dager fra fakturadato til forfallsdato |
-| netto_dager | Betalingsbetingelse som heltall (10, 14, 30, 60 eller 90) |
+| netto_dager | Betalingsbetingelse som heltall (10, 14, 30, 45, 60 eller 90) |
 | faktura_maned | Måneden fakturaen ble utstedt (1–12) |
 | faktura_kvartal | Kvartal fakturaen ble utstedt (1–4) |
 
@@ -381,7 +381,7 @@ Av 331 forsinkede fakturaer varierer forsinkelsen fra 1 til flere hundre dager. 
 
 <figure style="text-align:center;">
 <img src="../004 data/eda_figurer/02_distribusjon_forsinkelse.png" alt="Distribusjon forsinkelse" width="60%">
-<figcaption><small>Figur 2: Histogram med KDE-kurve over antall dager forsinket for de 328 forsinkede fakturaene. Fordelingen er høyreskjev – de fleste forsinkelser er kortvarige, men en hale av fakturaer med svært lang forsinkelse drar gjennomsnittet opp over medianen.</small></figcaption>
+<figcaption><small>Figur 2: Histogram med KDE-kurve over antall dager forsinket for de 331 forsinkede fakturaene. Fordelingen er høyreskjev – de fleste forsinkelser er kortvarige, men en hale av fakturaer med svært lang forsinkelse drar gjennomsnittet opp over medianen.</small></figcaption>
 </figure>
 
 **Forsinkelse per leverandørkategori**
@@ -395,11 +395,11 @@ Andelen forsinkede fakturaer varierer mellom leverandørkategoriene, noe som er 
 
 **Forsinkelse per betalingsbetingelse**
 
-Forsinkelsesraten undersøkes på tvers av betalingsbetingelsene Netto 10, 14, 30, 60 og 90. Figuren viser om lengre kredittid er assosiert med høyere eller lavere andel forsinkede fakturaer.
+Forsinkelsesraten undersøkes på tvers av betalingsbetingelsene Netto 10, 14, 30, 45, 60 og 90. Figuren viser om lengre kredittid er assosiert med høyere eller lavere andel forsinkede fakturaer.
 
 <figure style="text-align:center;">
 <img src="../004 data/eda_figurer/04_andel_per_betingelse.png" alt="Forsinkelse per betalingsbetingelse" width="60%">
-<figcaption><small>Figur 4: Prosentandel forsinkede fakturaer per betalingsbetingelse (Netto 10/14/30/60/90 dager). Figuren viser om lengre kredittid er assosiert med høyere forsinkelsesrisiko, og gir grunnlag for vurdering av betalingsbetingelse som prediktor.</small></figcaption>
+<figcaption><small>Figur 4: Prosentandel forsinkede fakturaer per betalingsbetingelse (Netto 10/14/30/45/60/90 dager). Figuren viser om lengre kredittid er assosiert med høyere forsinkelsesrisiko, og gir grunnlag for vurdering av betalingsbetingelse som prediktor.</small></figcaption>
 </figure>
 
 **Forsinkelse per risikokategori (leverandør)**
@@ -408,7 +408,7 @@ Den forhåndsdefinerte leverandørrisikokategorien viser tydelig separasjon i fo
 
 <figure style="text-align:center;">
 <img src="../004 data/eda_figurer/05_andel_per_risiko.png" alt="Forsinkelse per risikokategori" width="55%">
-<figcaption><small>Figur 5: Prosentandel forsinkede fakturaer per forhåndsdefinert leverandørrisikokategori (Medium / Høy / Kritisk). Separasjonen mellom risikogruppene tyder på at variabelen er informativ for modelltrening; kausalretningen og graden av sirkulær validering drøftes i §9.3.</small></figcaption>
+<figcaption><small>Figur 5: Prosentandel forsinkede fakturaer per forhåndsdefinert leverandørrisikokategori (Lav / Medium / Høy / Kritisk). Separasjonen mellom risikogruppene tyder på at variabelen er informativ for modelltrening; kausalretningen og graden av sirkulær validering drøftes i §9.3.</small></figcaption>
 </figure>
 
 **Korrelasjonsmatrise**
@@ -440,7 +440,7 @@ Trendanalysen viser betalingsatferden over tid (per kvartal) for de fem høyest 
 
 <figure style="text-align:center;">
 <img src="../004 data/eda_figurer/09_leverandor_trend.png" alt="Leverandør trend" width="65%">
-<figcaption><small>Figur 9: Prosentandel forsinkede fakturaer per kvartal for de fem høyest rangerte risiko-leverandørene. Stabile trender over tid støtter antagelse A1 om at historisk betalingsadferd er representativ for fremtidig atferd.</small></figcaption>
+<figcaption><small>Figur 9: Andel forsinkede fakturaer per kvartal (med antall fakturaer n) for de fem høyest rangerte risiko-leverandørene. De kvartalsvise ratene svinger betydelig fordi antallet fakturaer per kvartal er lavt (n = 1–7), men leverandørene forblir gjennomgående i det høye risikosjiktet over hele perioden. Dette understøtter antagelse A1 på aggregert leverandørnivå, samtidig som det illustrerer at kvartalsvise punktestimater er for støyutsatte til å lese trender ut av direkte.</small></figcaption>
 </figure>
 
 ---
