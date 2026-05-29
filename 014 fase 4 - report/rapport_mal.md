@@ -377,7 +377,7 @@ Av 971 fakturaer er 640 (65,9 %) betalt i tide og 331 (34,1 %) forsinket, en 2:1
 
 **Forsinkelsesdistribusjon**
 
-Av 328 forsinkede fakturaer varierer forsinkelsen fra 1 til flere hundre dager. Distribusjonen er høyreskjev, noe som er typisk for fakturadata: majoriteten av forsinkelsene er kortvarige, men det finnes en hale av fakturaer med ekstrem forsinkelse.
+Av 331 forsinkede fakturaer varierer forsinkelsen fra 1 til flere hundre dager. Distribusjonen er høyreskjev, noe som er typisk for fakturadata: majoriteten av forsinkelsene er kortvarige, men det finnes en hale av fakturaer med ekstrem forsinkelse.
 
 <figure style="text-align:center;">
 <img src="../004 data/eda_figurer/02_distribusjon_forsinkelse.png" alt="Distribusjon forsinkelse" width="60%">
