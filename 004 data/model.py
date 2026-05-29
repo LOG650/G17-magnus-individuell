@@ -51,12 +51,16 @@ df = pd.read_csv(CSV)
 bool_cols = df.select_dtypes(include="bool").columns
 df[bool_cols] = df[bool_cols].astype(int)
 
-# Ekskluder «Ubetalt»-fakturaer – de har ukjent utfall og er feilmerket
-# som klasse 0 (i tide) i features.csv. Les Betalingsstatus fra råfilen.
+# features.csv er renset i eda.py (de 29 «Ubetalt»-fakturaene med ukjent utfall
+# er allerede ekskludert). Bakoverkompatibel sikring: dersom en eldre, uren
+# features.csv (1000 rader, der Ubetalt er feilmerket som klasse 0) brukes,
+# ekskluderes radene her via råfilen. Begge veier gir identiske 971 rader.
 raw = pd.read_csv(RAW_CSV)
-gyldig_idx = raw[raw["Betalingsstatus"] != "Ubetalt"].index
-df = df.iloc[gyldig_idx].reset_index(drop=True)
-print(f"  29 «Ubetalt»-fakturaer ekskludert – {len(df)} rader brukes til modellering.")
+if len(df) == len(raw):
+    gyldig_idx = raw[raw["Betalingsstatus"] != "Ubetalt"].index
+    df = df.iloc[gyldig_idx].reset_index(drop=True)
+    print(f"  Uren features.csv – {len(raw) - len(df)} «Ubetalt» ekskludert.")
+print(f"  {len(df)} rader brukes til modellering.")
 
 X = df.drop(columns=["er_forsinket"])
 y = df["er_forsinket"]

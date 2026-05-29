@@ -54,6 +54,13 @@ else:
 # ── 3. Lag binær målvariabel ──────────────────────────────────────────────────
 df["er_forsinket"] = (df["Betalingsstatus"] == "Forsinket").astype(int)
 
+# ── 3b. Ekskluder «Ubetalt»-fakturaer (ukjent utfall) ─────────────────────────
+# Disse 29 fakturaene har ukjent betalingsutfall og holdes utenfor både EDA og
+# modellering, slik at EDA-populasjonen (971) er identisk med modelleringssettet.
+n_for = len(df)
+df = df[df["Betalingsstatus"] != "Ubetalt"].reset_index(drop=True)
+print(f"  «Ubetalt»-fakturaer ekskludert: {n_for - len(df)} – {len(df)} rader brukes videre.")
+
 # ── 4. Klasseubalanse ─────────────────────────────────────────────────────────
 print("\n" + "=" * 60)
 print("3. KLASSEUBALANSE (målvariabel)")
@@ -153,12 +160,12 @@ ris = (df.groupby("Risikokategori leverandør")["er_forsinket"]
          .agg(["sum", "count"])
          .rename(columns={"sum": "forsinket", "count": "totalt"}))
 ris["andel_%"] = (ris["forsinket"] / ris["totalt"] * 100).round(1)
-order = ["Medium", "Høy", "Kritisk"]
+order = ["Lav", "Medium", "Høy", "Kritisk"]
 ris = ris.reindex([o for o in order if o in ris.index])
 print(ris.to_string())
 
 fig, ax = plt.subplots(figsize=(6, 4))
-colors = {"Medium": "steelblue", "Høy": "orange", "Kritisk": "tomato"}
+colors = {"Lav": "seagreen", "Medium": "steelblue", "Høy": "orange", "Kritisk": "tomato"}
 bars = ax.bar(ris.index, ris["andel_%"],
               color=[colors.get(k, "gray") for k in ris.index])
 ax.set_ylabel("Andel forsinkede (%)")
@@ -298,7 +305,7 @@ print(bunn10.to_string(index=True))
 topp15 = lev.head(15)
 fig, ax = plt.subplots(figsize=(10, 5))
 colors = topp15["risikokategori"].map(
-    {"Medium": "steelblue", "Høy": "orange", "Kritisk": "tomato"}
+    {"Lav": "seagreen", "Medium": "steelblue", "Høy": "orange", "Kritisk": "tomato"}
 ).fillna("gray")
 bars = ax.barh(topp15["Leverandør-ID"][::-1], topp15["risikoscore"][::-1],
                color=colors[::-1])
@@ -311,6 +318,7 @@ legend_elements = [
     Patch(facecolor="tomato",    label="Kritisk"),
     Patch(facecolor="orange",    label="Høy"),
     Patch(facecolor="steelblue", label="Medium"),
+    Patch(facecolor="seagreen",  label="Lav"),
 ]
 ax.legend(handles=legend_elements, loc="lower right")
 plt.tight_layout()
@@ -321,7 +329,7 @@ print("\n  → Figur lagret: 07_leverandor_risikoscore.png")
 # ── C. Figur: Scatter – andel forsinket vs. snitt dager forsinket ─
 fig, ax = plt.subplots(figsize=(9, 6))
 scatter_colors = lev["risikokategori"].map(
-    {"Medium": "steelblue", "Høy": "orange", "Kritisk": "tomato"}
+    {"Lav": "seagreen", "Medium": "steelblue", "Høy": "orange", "Kritisk": "tomato"}
 ).fillna("gray")
 sc = ax.scatter(
     lev["andel_forsinket_pct"],
