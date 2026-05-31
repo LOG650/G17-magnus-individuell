@@ -1,10 +1,10 @@
 # Finansiell logistikk og beslutningsstøtte ved hjelp av maskinlæring
 
-**Forfatter:** Magnus Ødegård  
+**Forfatter:** Magnus Ødegård Skarsbakk  
 **Totalt antall sider inkludert forsiden:**  
 **Sted, Innleveringsdato:** Molde, 2026-05-31  
-**Studiepoeng:** 10  
-**Veileder:** Bård  
+**Studiepoeng:** 15  
+**Veileder:** Bård Inge Austigard Pettersen  
 
 ---
 
