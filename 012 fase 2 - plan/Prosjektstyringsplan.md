@@ -2,11 +2,11 @@
 for
 Finansiell logistikk og beslutningstøtte ved hjelp av KI
 
-**Dato:** 2026-03-14 | **Sist oppdatert:** 2026-04-20
+**Dato:** 2026-03-14 | **Sist oppdatert:** 2026-06-01
 **Utarbeidet av:** Magnus Ødegård | **Kurs:** LOG650
 **Autorisert av:**
 
-> **Nåværende fase:** FASE 4 – Avslutning (27. apr – 31. mai 2026)
+> **Nåværende fase:** ✅ AVSLUTTET – Prosjektet er fullført og rapporten innlevert 1. juni 2026
 
 ---
 
@@ -237,7 +237,8 @@ Tabellen nedenfor viser fullstendig arbeidsnedbrytning med nåværende fremdrift
 |-----|-------------------------------------------------|----------------|-----------------|-------|
 | 4.1 | Konklusjon – besvar problemstillingen eksplisitt| Magnus Ødegård | ✅ Fullført     | §10.0 skrevet inn i rapport_mal.md – problemstillingen besvart eksplisitt med funn, begrensninger og videre forskning |
 | 4.2 | Ferdigstille introduksjon                       | Magnus Ødegård | ✅ Fullført     | §1.0–1.4 komplett med forskningsmål, delproblemer, avgrensinger og antagelser; G19-feedback innarbeidet |
-| 4.3 | Kvalitetssikring, korrektur og referanseliste   | Magnus Ødegård | ⏳ Pågår        | Startet 2026-05-27 |
+| 4.3 | Kvalitetssikring, korrektur og referanseliste   | Magnus Ødegård | ✅ Fullført     | Fullført 2026-06-01 – rapport korrekturlest, referanseliste ferdigstilt og hele dokumentet innlevert |
+| 4.4 | Innlevering av endelig forskningsrapport        | Magnus Ødegård | ✅ Fullført     | Endelig rapport innlevert 2026-06-01 |
 
 ### Omfangsverifikasjon
 
@@ -272,7 +273,7 @@ Forsinkelse i noen av disse fasene vil direkte påvirke sluttleveransen.
 | M3 | Ferdig datagrunnlag (Fase 3)          | 2026-04-11    | ✅ Fullført   |
 | M4 | Ferdig EDA og feature engineering     | 2026-04-18    | ✅ Fullført   |
 | M5 | Ferdig og evaluert modell             | 2026-04-17    | ✅ Fullført   |
-| M6 | Innlevert endelig rapport (Fase 4)    | 2026-05-31    | ⏳ Kommende  |
+| M6 | Innlevert endelig rapport (Fase 4)    | 2026-05-31    | ✅ Fullført (innlevert 2026-06-01) |
 
 ---
 
@@ -289,7 +290,7 @@ Risikoer identifiseres og vurderes av prosjektleder (Magnus Ødegård) gjennom h
 | R1 | Utilstrekkelig datakvalitet              | Middels       | Høy        | Lav            | EDA gjennomført – datasett komplett; 29 ubetalte fakturaer ekskludert, 971 fakturaer brukes til trening                  |
 | R2 | Manglende tilgang til data               | Lav           | Høy        | Lukket         | Datasett mottatt og bekreftet 2026-04-16 – S1 løst                                                                       |
 | R3 | Modellen gir lav prediksjonsytelse       | Middels       | Middels    | Lukket         | Ubetalt-klassen ekskludert; XGBoost tunet gir beste ytelse (AUC 0.720) – benchmark ≥ 0.75 ikke nådd, tolkes i diskusjon |
-| R4 | Tidspress mot innleveringsfrist          | Middels       | Middels    | Middels        | Modell og seksjon 1–9 fullført; neste kritiske frist: ferdig rapport 2026-05-31. Gjenstår: 11 utbedringsoppgaver fra intern gjennomgang |
+| R4 | Tidspress mot innleveringsfrist          | Middels       | Middels    | Lukket         | Endelig rapport innlevert 2026-06-01 – alle leveranser fullført, ingen gjenstående tidspress |
 | R5 | Konfidensialitetsproblemer med data      | Lav           | Høy        | Lav            | Full anonymisering gjennomført; bruk av syntetiske data ved behov                                                         |
 | R6 | Konseptdrift – relasjon mellom variabler endrer seg over tid | Middels | Middels | Lav       | Tidsbasert datadeling ble ikke implementert (tilfeldig 80/20-splitt brukt) – erkjent som metodisk begrensning i seksjon 5.1 og 9.3    |
 
@@ -434,6 +435,7 @@ Mindre justeringer som ikke påvirker prosjektmålet eller sluttleveransen kan g
 | 2026-05-27 | 3.8 og 3.8.4 markert fullført; Fase 4 startet – gjenstår: 4.1 Konklusjon, 4.2 Ferdigstille introduksjon, 4.3 Kvalitetssikring og referanseliste | Arbeidsøkt 9 |
 | 2026-05-27 | 4.1 og 4.2 markert fullført: §10.0 Konklusjon og §1.0–1.4 Innledning komplett. 4.3 påbegynt: 5 sitater tilføyd i tekst (Gama et al. 2014, Hastie et al. 2009, James et al. 2021, Kuhn & Johnson 2019, Turban et al. 2011) for å knytte bibliografientries til in-text-bruk | Arbeidsøkt 9 |
 | 2026-05-27 | 4.3 fortsatt: G19 peer-review systematisk gjennomgått – alle 15 forbedringspunkter verifisert; figurtekster Figur 3, 5 og 14 rettet (tolkningsspråk → deskriptivt/kryssrefererende) | Arbeidsøkt 9 |
+| 2026-06-01 | 4.3 markert fullført: rapport korrekturlest og referanseliste ferdigstilt. 4.4 lagt til og fullført: endelig forskningsrapport innlevert. M6 og R4 lukket. Prosjektet avsluttet | Innlevering |
 
 ---
 
